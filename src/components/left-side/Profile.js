@@ -31,7 +31,7 @@ const Profile = (props) => {
             }
         })
         setSkills(skillsCopy)
-        setHeaderURL(`../${data.url}`)
+        setHeaderURL(data.url)
         setTemplateColor({...templateColor , color:data.color})
     }
 
@@ -67,7 +67,7 @@ const Profile = (props) => {
                     {skills.map((el,i)=>
                         <Col key={i} span={6} onClick={()=>{handleChangeHeaderBG(el)}}>
                             <div className='skill-logo-col'>
-                                <img style={{transform:el.active?'scale(1.2)':'scale(0.9)'}} src={`../${el.icon}`} alt={el.name}/>
+                                <img style={{transform:el.active?'scale(1.2)':'scale(0.9)'}} src={el.icon} alt={el.name}/>
                             </div>
                         </Col>
                     )}
