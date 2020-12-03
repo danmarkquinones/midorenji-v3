@@ -1,8 +1,8 @@
 import React from "react";
 import {NavLink } from "react-router-dom";
 import { Row, Col , Divider } from 'antd';
-import { Tabs } from 'antd';
-import {Route,Redirect} from "react-router-dom";
+// import { Tabs } from 'antd';
+// import {Route,Redirect} from "react-router-dom";
 
 export default function Routes(props) {
 
