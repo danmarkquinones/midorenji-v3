@@ -41,16 +41,16 @@ const Main = (props) => {
                     <Col span={16}>
                         <div className='pf-body-portion-right'>
                             <Switch>
-                                <Route exact path="/">
+                                <Route exact path="/midorenji-v3">
                                     <Redirect to="/midorenji" />
                                 </Route>
-                                <Route exact path="/midorenji">
+                                <Route exact path="/midorenji-v3/midorenji">
                                     <AboutMe templateColor={templateColor}/>
                                 </Route>
-                                <Route path="/projects">
+                                <Route path="/midorenji-v3/projects">
                                     <Projects templateColor={templateColor}/>
                                 </Route>
-                                <Route path="/experience">
+                                <Route path="/midorenji-v3/experience">
                                     <Works templateColor={templateColor}/>
                                 </Route>
                             </Switch>
