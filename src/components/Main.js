@@ -41,7 +41,7 @@ const Main = (props) => {
                     <Col span={16}>
                         <div className='pf-body-portion-right'>
                             <Switch>
-                                <Route exact path="/">
+                                <Route exact path="/"> 
                                     <Redirect to="/midorenji-v3/profile" />
                                 </Route>
                                 <Route exact path="/midorenji-v3/profile">
