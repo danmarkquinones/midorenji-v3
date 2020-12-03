@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/MainStyles.css'
 import { Row, Col  } from 'antd';
-import {Switch,Route,Redirect} from "react-router-dom";
+import {Switch,Route,Redirect , HashRouter} from "react-router-dom";
 import Routes from './Routes'
 import AboutMe from './right-side/AboutMe';
 import Projects from './right-side/Projects';
@@ -42,15 +42,15 @@ const Main = (props) => {
                         <div className='pf-body-portion-right'>
                             <Switch>
                                 <Route exact path="/"> 
-                                    <Redirect to="/midorenji-v3/profile" />
+                                    <Redirect to="/profile" />
                                 </Route>
-                                <Route exact path="/midorenji-v3/profile">
+                                <Route exact path="/profile">
                                     <AboutMe templateColor={templateColor}/>
                                 </Route>
-                                <Route path="/midorenji-v3/projects">
+                                <Route path="/projects">
                                     <Projects templateColor={templateColor}/>
                                 </Route>
-                                <Route path="/midorenji-v3/experience">
+                                <Route path="/experience">
                                     <Works templateColor={templateColor}/>
                                 </Route>
                             </Switch>

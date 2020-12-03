@@ -5,7 +5,7 @@ import 'antd/dist/antd.css';
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename={"/midorenji-v3"}>
         <Main/>
       </Router>
     </div>
