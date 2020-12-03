@@ -23,7 +23,7 @@ export default function Routes(props) {
             </Tabs> */}
             <Row>
                 <Col span={8} className='navs-col'>
-                    <NavLink className='navs'  to="/midorenji-v3/midorenji" activeStyle={{color:templateColor.color}} >WHO AM I?</NavLink>
+                    <NavLink className='navs'  to="/midorenji-v3/profile" activeStyle={{color:templateColor.color}} >WHO AM I?</NavLink>
                 </Col>
                 <Col span={8} className='navs-col'>
                     <NavLink className='navs'  to="/midorenji-v3/projects" activeStyle={{color:templateColor.color}}>MY PROJECTS</NavLink>

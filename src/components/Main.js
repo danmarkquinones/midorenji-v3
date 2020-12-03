@@ -44,7 +44,7 @@ const Main = (props) => {
                                 <Route exact path="/midorenji-v3">
                                     <Redirect to="/midorenji" />
                                 </Route>
-                                <Route exact path="/midorenji-v3/midorenji">
+                                <Route exact path="/midorenji-v3/profile">
                                     <AboutMe templateColor={templateColor}/>
                                 </Route>
                                 <Route path="/midorenji-v3/projects">
