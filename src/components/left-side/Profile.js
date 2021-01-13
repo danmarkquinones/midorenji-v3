@@ -8,7 +8,7 @@ import { IconButton, Tooltip } from '@material-ui/core';
 const useStyles = makeStyles({
     contactIcon: {
         color:"rgba(0,0,0,0.85)",
-        fontSize: '25px !important',
+        fontSize: '40px !important',
         "&:hover": {
             color: ({templateColor}) => templateColor.color
         }
@@ -55,13 +55,18 @@ const Profile = (props) => {
         <div>
             <div className='profile-header' style={{borderBottom:`5px solid ${templateColor.color}`}}>
                 <img src={headerUrl} style={{ width:'100%'}} alt='header'/>
-                <div className='profile-pic-div' style={{border:`5px solid ${templateColor.color}`}}>
-                    <img className='profile-pic' src={profilePic} style={{ width:'100%'}} alt='profile'/>
+                <div className='profile-pic-div' >
+                    <div className='profile-pic-div-body' style={{border:`5px solid ${templateColor.color}`}}>
+                        <img className='profile-pic' src={profilePic} style={{ width:'100%'}} alt='profile'/>
+                    </div>
+                    <div className='profile-pic-text'>
+                        <p className='profile-name'>Midorenji</p>
+                        <p style={{color:templateColor.color}} className='profile-title'>Application Developer</p>
+                    </div>
                 </div>
             </div>
             <div className='profile-body'>
-                <p className='profile-name'>Midorenji</p>
-                <p style={{color:templateColor.color}} className='profile-title'>Front End Developer</p>
+                
                 <Divider orientation='left' >Skills Highlights</Divider>
                 <Row style={{padding:'0px 20px'}}>  
                     {skills.map((el,i)=>

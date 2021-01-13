@@ -1,5 +1,5 @@
 {
-  "homepage":"https://danmarkquinones.github.io/midorenji-v3",
+  "homepage": "https://danmarkquinones.github.io/midorenji-v3",
   "name": "my-portfolio-v3",
   "version": "0.1.0",
   "private": true,
@@ -12,6 +12,8 @@
     "@testing-library/react": "^11.2.1",
     "@testing-library/user-event": "^12.2.2",
     "antd": "^4.8.4",
+    "framer-motion": "^3.2.1",
+    "gifffer": "^1.5.4",
     "radium": "^0.26.1",
     "react": "^17.0.1",
     "react-animations": "^1.0.0",
@@ -19,11 +21,13 @@
     "react-player": "^2.7.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
+    "react-slick": "^0.27.14",
+    "slick-carousel": "^1.8.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "predeploy":"npm run build",
-    "deploy" : "gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

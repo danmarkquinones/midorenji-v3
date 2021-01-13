@@ -1,62 +1,99 @@
 import React from 'react';
 import '../styles/MainStyles.css'
-import { Row, Col  } from 'antd';
-import {Switch,Route,Redirect , HashRouter} from "react-router-dom";
+import {Switch,Route,Redirect , useLocation} from "react-router-dom";
 import Routes from './Routes'
 import AboutMe from './right-side/AboutMe';
 import Projects from './right-side/Projects';
-import Works from './right-side/Works';
-import Profile from './left-side/Profile';
-import reactjs from '../images/reactjsplain.gif'
+import ContactMe from './right-side/ContactMe';
+import {AnimatePresence , motion} from 'framer-motion'
+import { IconButton } from '@material-ui/core';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import MailIcon from '@material-ui/icons/Mail';
 
+const pageVariants = {
+    initial:{
+        opacity:0,
+        x:"-100vh",
+        scale:0.5
+    },
+    in:{
+        opacity:1,
+        x:"0",
+        scale:1
+    },
+    out:{
+        opacity:0,
+        x:"100vh",
+        scale:0.5
+    }
+}
 
+const pageTransition = {
+    // type:"tween",
+    // ease:"anticipate",
+    duration :"1"
+}
 
 const Main = (props) => {
     
-    const [headerUrl,setHeaderURL] = React.useState(reactjs)
-    const [templateColor , setTemplateColor] = React.useState({
-        color:'#0270b8',
-        backGroundColor :''
-    })
-
+    const location = useLocation()
+    
     return(
-        <div 
-            className='main-div' 
-            style={{
-                backgroundImage:`url(${headerUrl})` , 
-                // background:`linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(${headerUrl}))`,
-                backgroundPosition:'center'
-            }}
-        >
-            <div className='pf-main-body'>
-                <Row>
-                    <Col span={24} className='pf-body-portion'>
-                        <Routes headerUrl={headerUrl} templateColor={templateColor}/>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col span={8} className='pf-body-portion-left'>
-                        <Profile headerUrl={headerUrl} setHeaderURL={setHeaderURL} templateColor={templateColor} setTemplateColor={setTemplateColor}/>
-                    </Col>
-                    <Col span={16}>
-                        <div className='pf-body-portion-right'>
-                            <Switch>
-                                <Route exact path="/"> 
-                                    <Redirect to="/profile" />
-                                </Route>
-                                <Route exact path="/profile">
-                                    <AboutMe templateColor={templateColor}/>
-                                </Route>
-                                <Route path="/projects">
-                                    <Projects templateColor={templateColor}/>
-                                </Route>
-                                <Route path="/experience">
-                                    <Works templateColor={templateColor}/>
-                                </Route>
-                            </Switch>
-                        </div>
-                    </Col>
-                </Row>
+        <div className='main-div' >
+
+            <div className="social-icon-div">
+                <IconButton>
+                    <FacebookIcon style={{fontSize:35}}/>
+                </IconButton>
+                <IconButton>
+                    <TwitterIcon style={{fontSize:35}}/>
+                </IconButton>
+                <IconButton>
+                    <LinkedInIcon style={{fontSize:35}}/>
+                </IconButton>
+                <IconButton>
+                    <MailIcon style={{fontSize:35}}/>
+                </IconButton>
+            </div>
+            
+            <div className="right-side-div">
+
+                <div className='nav-div'>
+                    <Routes/>
+                </div>
+
+                <div className="content-div">
+                    <AnimatePresence>
+                        <Switch location={location} key={location.pathname}>
+                            <Route exact path="/"> 
+                                <Redirect to="/my-projects" />
+                            </Route>
+                            <Route path="/my-projects">
+                                <Projects 
+                                    motion={motion} 
+                                    pageVariants={pageVariants} 
+                                    pageTransition={pageTransition}
+                                />
+                            </Route>
+                            <Route exact path="/about-me">
+                                <AboutMe 
+                                    motion={motion} 
+                                    pageVariants={pageVariants} 
+                                    pageTransition={pageTransition}
+                                />
+                            </Route>
+                            <Route path="/contact-me">
+                                <ContactMe 
+                                    motion={motion} 
+                                    pageVariants={pageVariants} 
+                                    pageTransition={pageTransition}
+                                />
+                            </Route>
+                        </Switch>
+                    </AnimatePresence>
+                </div>
             </div>
         </div>
     )

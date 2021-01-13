@@ -22,7 +22,7 @@ const Projects = (props) => {
             <div style={styles.fadeInLeft}>
                 <div style={{textAlign:'center' , marginTop:'15px'}}>
                     <h3 style={{color:templateColor.color , fontWeight:'bold' , fontSize:'20px'}}>SO YOU WANT TO SEE MY EXPERIENCE. ✌️😁</h3>
-                    <h4 style={{fontSize:'18px'}}><span>You can also download my CV by click this </span> <a href="" download>link</a> . </h4>
+                    <h4 style={{fontSize:'18px'}}><span>You can also download my CV by clicking this </span> <a href="" download>link</a> . </h4>
                 </div>
                 <div className = 'project-divs-height-scroll'>
                     {experienceData.map((el,i)=>

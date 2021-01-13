@@ -79,7 +79,8 @@ export const profileData = {
     skillsFE : ['React','React Native','Javascript','Angular','Vue','CSS'],
     skillsBE : ['PHP/Laravel','MySQL','Python'],
     designingLib : ['Material UI','Ant Design','Bootstrap'],
-    hobbies:['Drawing' , 'Handcrafts' , 'Playing Online Games' , 'Watching Anime']
+    hobbies:['Drawing' , 'Handcrafts' , 'Playing Online Games' , 'Watching Anime'],
+    intro :"YOSH!! Welcome to my page 👋😁. I’m Danmark, but people call me “Dan.” I’m a professional Front End developer, and I specialize in creating React applications that just work across all platforms and browsers. I care about building interfaces that are usable and pleasant for the most number of people possible."
 }
 
 export const projectData = [
@@ -112,7 +113,7 @@ export const projectData = [
         bg:mmcardbg
     },
     {
-        name: 'REACT NATIVE PROJECT',
+        name: 'PokeMania',
         videoLink : '',
         srcCode :'',
         type : 'other',
@@ -125,20 +126,20 @@ export const projectData = [
         url:'',
         bg:underdevbg
     },
-    {
-        name: 'ANGULAR PROJECT',
-        videoLink : '',
-        srcCode :'',
-        type : 'other',
-        hasMobile : false,
-        viewSrc : false,
-        hasVideo : false,
-        hasURL : false,
-        languages : ['Angular' , 'Firebase' ],
-        role : ['Front End' , 'Back End'],
-        url:'',
-        bg:underdevbg
-    },
+    // {
+    //     name: 'ANGULAR PROJECT',
+    //     videoLink : '',
+    //     srcCode :'',
+    //     type : 'other',
+    //     hasMobile : false,
+    //     viewSrc : false,
+    //     hasVideo : false,
+    //     hasURL : false,
+    //     languages : ['Angular' , 'Firebase' ],
+    //     role : ['Front End' , 'Back End'],
+    //     url:'',
+    //     bg:underdevbg
+    // },
     {
         name: 'PostLux',
         videoLink : '',
@@ -222,9 +223,7 @@ export const projectData = [
         role : ['Front End'],
         url:'https://danmarkquinones.github.io/practice/',
         bg:jspracticecardbg
-    },
-
-    
+    }, 
 ]
 
 export const contactsData = [

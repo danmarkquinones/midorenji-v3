@@ -1,7 +1,7 @@
-import React from 'react'
+import React , {useState , useEffect} from "react"
 import {motion} from 'framer-motion'
 
-const AboutMe = (props) => {
+const ContactMe = (props) => {
 
     const {pageVariants, pageTransition} = props
 
@@ -15,10 +15,10 @@ const AboutMe = (props) => {
             className="page-container"
         >
             <div>
-                <h1>aBOUT ME</h1>
+                <h1>Contact ME</h1>
             </div>
         </motion.div>
     )
 }
 
-export default AboutMe
+export default ContactMe
