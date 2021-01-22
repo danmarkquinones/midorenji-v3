@@ -1,17 +1,3 @@
-import reactjs from '../images/reactjs.gif'
-import angularjs from '../images/angularjs.gif'
-import vuejs from '../images/vuejs.gif'
-import javascript from '../images/javascript.gif'
-
-import reactjsplain from '../images/reactjsplain.gif'
-import angularplain from '../images/angularplain.gif'
-import vueplain from '../images/vueplain.gif'
-import jsplain from '../images/jsplain.gif'
-//icons
-import reactIcon from '../images/react.png'
-import angularIcon from '../images/angular.png'
-import vueIcon from '../images/vue.png'
-import jsIcon from '../images/js.png'
 import {FacebookOutlined , GithubOutlined , MailOutlined , PhoneOutlined ,DownloadOutlined} from '@ant-design/icons';
 //mp4
 import baliktanaw from '../videos/baliktanaw.mp4'
@@ -27,48 +13,101 @@ import figuracardbg from '../images/figuracardbg.PNG';
 import baliktanawcardbg from '../images/baliktanawcardbg.PNG';
 import jspracticecardbg from '../images/jspracticecardbg.PNG';
 import underdevbg from'../images/underdev.jpg';
+//exp
+import mediameter from '../images/mwlogopurple.png';
+import accenture from '../images/accenture.png';
+import msa from '../images/msa.png'
 
-export const skillsHighlightsData = [
+//logos
+import reactLogo from '../images/react.png';
+import jsLogo from '../images/js.png';
+import angularLogo from '../images/angular.png';
+import tsLogo from '../images/ts.png';
+import framermotionLogo from '../images/framermotion.png';
+import pythonLogo from '../images/python.png';
+import nodeLogo from '../images/node.png';
+import mysqlLogo from '../images/mysql.png';
+import laravelLogo from '../images/laravel.png';
+
+export const skillsData = [
     {
-        value : 'reactjs',
-        name : 'ReactJS',
-        url : reactjsplain,
-        icon : reactIcon,
-        // color : '#61dafc',
+        text : 'ReactJS',
         color : '#0270b8',
-        active : true,
+        value : 65,
+        top: "50%",
+        left: "50%",
+        logo: reactLogo
     },
     {
-        value : 'angularjs',
-        name : 'Angular',
-        url : angularplain,
-        icon : angularIcon,
-        // color : '#e23237',
+        text : 'Angular',
         color : '#b52e31',
-        active : false,
+        value : 45,
+        top: "5%",
+        left: "50%",
+        logo: angularLogo
     },
     {
-        value : 'vuejs',
-        name : 'VueJS',
-        url : vueplain,
-        icon : vueIcon,
-        color : '#41b883',
-        active : false,
-    },
-    {
-        value : 'javascript',
-        name : 'Javascript',
-        url : jsplain,
-        icon : jsIcon,
-        // color : '#f0db4e',
+        text : 'Javascript',
         color : '#fed401',
-        active : false,
+        value : 55,
+        top: "0%",
+        left: "12%",
+        logo: jsLogo
+    },
+    {
+        text : 'Typecript',
+        color : '#fed401',
+        value : 35,
+        top: "40%",
+        left: "7%",
+        logo: tsLogo
+    },
+    {
+        text : 'PHP/Laravel',
+        color : '#8e6111',
+        value : 45,
+        top: "70%",
+        left: "10%",
+        logo: laravelLogo
+    },
+    {
+        text : 'MySQL',
+        color : '#fbc760',
+        value : 45,
+        top: "-5%",
+        left: "75%",
+        logo: mysqlLogo
+    },
+    {
+        text : 'Python',
+        color : '#4c071d',
+        value : 30,
+        top: "75%",
+        left: "40%",
+        logo: pythonLogo
+    },
+    {
+        text : 'NodeJS',
+        color : '#ed74d4',
+        value : 55,
+        top: "65%",
+        left: "65%",
+        logo: nodeLogo
+    },
+    {
+        text : 'Framer Motion',
+        color : '#2d0527',
+        value : 40,
+        top: "30%",
+        left: "75%",
+        logo: framermotionLogo
     }
 ]
 
 export const profileData = {
     fname : 'Danmark',
     lname : 'Quiñones',
+    codename : 'Midorenji',
     fullName : 'Danmark P. Quiñones',
     nickName : 'Dan',
     age : 24 , 
@@ -76,12 +115,28 @@ export const profileData = {
     contact : '+63 906 509 2731',
     motto: 'Never judge someone based on a season.',
     email : 'danmarkquinones@gmail.com',
-    skillsFE : ['React','React Native','Javascript','Angular','Vue','CSS'],
+    skillsFundamental:['HTML' , 'CSS' , 'Javascript'],
+    skillsMobile:['Expo' , 'React Native'],
+    skillsFE : ['React','Angular'],
     skillsBE : ['PHP/Laravel','MySQL','Python'],
-    designingLib : ['Material UI','Ant Design','Bootstrap'],
+    designingLibraries : ['Bootstrap','Material UI','Ant Design','Framer Motion'],
     hobbies:['Drawing' , 'Handcrafts' , 'Playing Online Games' , 'Watching Anime'],
-    intro :"YOSH!! Welcome to my page 👋😁. I’m Danmark, but people call me “Dan.” I’m a professional Front End developer, and I specialize in creating React applications that just work across all platforms and browsers. I care about building interfaces that are usable and pleasant for the most number of people possible."
+    intro :"YOSH!! Welcome to my page 👋😁. I’m  Dan, a professional Front End developer, and I specialize in creating React applications that just work across all platforms and browsers. I care about building interfaces that are usable and pleasant for the most number of people possible."
 }
+
+export const hobbiesData = [
+    {text:"Drawing" , value : 7 , top:"17%" , left:"0%" ,lc: "#1E824C" , dc : "#00FA9A"},
+    {text:"Sketching" , value : 5 , top:"60%" , left:"5%" ,lc: "#0F4880" , dc : "#00F8FB"},
+    {text:"Handcrafts" , value : 7 , top:"16%" , left:"42%" ,lc: "#9932CC" , dc : "#DCC6E0"},
+    {text:"Dancing" , value : 4 , top:"60%" , left:"55%" ,lc: "#2A2A2A" , dc : "#DADFE1"},
+    {text:"Playing Games" , value : 9 , top:"45%" , left:"10%" ,lc: "#302407" , dc : "#FFD700"},
+    {text:"Watching Anime" , value : 8 , top:"0%" , left:"5%" ,lc: "#802200" , dc : "#EB9532"},
+    {text:"Movie Marathon" , value : 6 , top:"31%" , left:"0%" ,lc: "#8B0000" , dc : "#FF6347"},
+    {text:"Web Layout" , value : 5 , top:"73%" , left:"25%" ,lc: "#1D1905" , dc : "#00D4D4"},
+    {text:"Youtube" , value : 8 , top:"83%" , left:"10%" ,lc: "#360036" , dc : "#C9F227"},
+    {text:"Travel" , value : 0 , top:"73%" , left:"0%" ,lc: "#114C2A" , dc : "#FF00FF"},
+    {text:"FoodTrip" , value : 3 , top:"85%" , left:"60%" ,lc: "#E00000" , dc : "#E7903C"},
+]
 
 export const projectData = [
     {
@@ -279,6 +334,7 @@ export const experienceData = [
         companyName:'Media Meter',
         job:'Front End App Developer',
         date:'Jan 2020 - Present',
+        logo:mediameter,
         responsibilities:[
             "Building an app using React.js , Vue.js , Material Designs/UI and Javascript.",
             "Creates a modular and re-usable script using Javascript and React.",
@@ -292,6 +348,7 @@ export const experienceData = [
         companyName:'Accenture',
         job:'Associate Software Engineer',
         date:'March 2019 - Jan 2020',
+        logo:accenture,
         responsibilities:[
             "Performing enhancements of client's web and app applications using HTML , CSS , Javascript for front end and PLSQL for some back ends.",
             "Analyzing legacy codes and business process to fix app's bugs and issues.",
@@ -304,6 +361,7 @@ export const experienceData = [
         companyName:'MSA Ortigas',
         job:'Academic Consultant in Mathematics',
         date:'May 2017 - June 2018',
+        logo:msa,
         responsibilities:[
             "Teach Mathematics, statistics, and other basic subjects.",
             "Encode grades of the students and make reports as per parent request.",

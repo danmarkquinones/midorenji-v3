@@ -1,4 +1,4 @@
-import React from 'react';
+import React , {useContext} from 'react';
 import '../styles/MainStyles.css'
 import {Switch,Route,Redirect , useLocation} from "react-router-dom";
 import Routes from './Routes'
@@ -11,50 +11,85 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import MailIcon from '@material-ui/icons/Mail';
+import { ThemeContext } from "./context/themeContext";
 
 const pageVariants = {
     initial:{
         opacity:0,
-        x:"-100vh",
+        // x:"-100vh",
         scale:0.5
     },
     in:{
         opacity:1,
-        x:"0",
+        // x:"0",
         scale:1
     },
     out:{
         opacity:0,
-        x:"100vh",
+        // x:"100vh",
         scale:0.5
     }
 }
 
 const pageTransition = {
-    // type:"tween",
-    // ease:"anticipate",
     duration :"1"
 }
 
 const Main = (props) => {
     
     const location = useLocation()
+    const [theme,setTheme] = useContext(ThemeContext)
     
     return(
-        <div className='main-div' >
+        <div 
+            className='main-div' 
+            style={{
+                backgroundColor : theme.primaryBackground
+            }}
+        >
 
-            <div className="social-icon-div">
-                <IconButton>
-                    <FacebookIcon style={{fontSize:35}}/>
+            <div 
+                className="social-icon-div"
+                style={{
+                    backgroundColor : theme.secondaryBackground,
+                    boxShadow: !theme.isDarkMode && "0px 0px 10px gray"
+                }}
+            >
+                <IconButton 
+                    className="social-icon-button"
+                    style={{
+                        margin:"5px 0px",
+                        backgroundColor: theme.isDarkMode ? "rgba(255, 255, 255, 0.15)" : "rgba(0, 0, 0, 0.3)",
+                    }}
+                >
+                    <FacebookIcon style={{fontSize:30 , color:theme.primaryTextColor}}/>
                 </IconButton>
-                <IconButton>
-                    <TwitterIcon style={{fontSize:35}}/>
+                <IconButton
+                    className="social-icon-button"
+                    style={{
+                        margin:"5px 0px",
+                        backgroundColor: theme.isDarkMode ? "rgba(255, 255, 255, 0.15)" : "rgba(0, 0, 0, 0.3)"
+                    }}
+                >
+                    <TwitterIcon style={{fontSize:30 , color:theme.primaryTextColor}}/>
                 </IconButton>
-                <IconButton>
-                    <LinkedInIcon style={{fontSize:35}}/>
+                <IconButton 
+                    className="social-icon-button"
+                    style={{
+                        margin:"5px 0px",
+                        backgroundColor: theme.isDarkMode ? "rgba(255, 255, 255, 0.15)" : "rgba(0, 0, 0, 0.3)"
+                    }}
+                >
+                    <LinkedInIcon style={{fontSize:30 , color:theme.primaryTextColor}}/>
                 </IconButton>
-                <IconButton>
-                    <MailIcon style={{fontSize:35}}/>
+                <IconButton 
+                    className="social-icon-button"
+                    style={{
+                        margin:"5px 0px",
+                        backgroundColor: theme.isDarkMode ? "rgba(255, 255, 255, 0.15)" : "rgba(0, 0, 0, 0.3)"
+                    }}
+                >
+                    <MailIcon style={{fontSize:30 , color:theme.primaryTextColor}}/>
                 </IconButton>
             </div>
             
@@ -77,7 +112,7 @@ const Main = (props) => {
                                     pageTransition={pageTransition}
                                 />
                             </Route>
-                            <Route exact path="/about-me">
+                            <Route exact path="/profile">
                                 <AboutMe 
                                     motion={motion} 
                                     pageVariants={pageVariants} 
