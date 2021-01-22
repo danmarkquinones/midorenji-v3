@@ -4,6 +4,7 @@ import Main from './components/Main'
 import {BrowserRouter as Router} from "react-router-dom";
 import 'antd/dist/antd.css';
 import {ThemeContextProvider} from './components/context/themeContext'
+import {isMobile} from 'react-device-detect';
 
 
 function App() {
@@ -11,7 +12,10 @@ function App() {
     <div className="App">
       <ThemeContextProvider>
         <Router basename={"/midorenji-v3"}>
-          <Main/>
+          {isMobile?
+            <h2>Not AVAILABLE</h2>
+            :<Main/>
+          }
         </Router>
       </ThemeContextProvider>
     </div>
