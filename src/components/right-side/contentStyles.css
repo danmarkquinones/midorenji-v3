@@ -1,14 +1,14 @@
 .projects-main-div{
-    height: 350px;
+    height: 100%;
     padding: 20px 30px;
     display: flex;
     flex:1;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: -50px;
 }
 .slider-div{
-    height: 300px;
+    /* height: 300px; */
     width: 100%;
     padding: 0px 10px;
 }
@@ -19,10 +19,10 @@
 
 /* INDIVIDUAL CARD STYLE */
 .card-indiv-div{
-    /* background-color: #6f6f6f; */
-    height: 100%;
+    /* background-color: #fff; */
+    /* height: 100%; */
     /* box-shadow: 2px 2px 5px lightgray; */
-    border-radius: 5px;
+    border-radius: 10px;
     position: relative;
     padding: 10px 0px;
     overflow: hidden;
@@ -67,25 +67,25 @@
     color: #fff;
 }
 .card-icons{
-    margin-right: 10px;
+    margin-right: 5px;
     transition: 0.5s;
 }
 .card-icons:hover{
-    margin-right: 10px;
-    color: coral !important;
+    color: #3578E5 !important;
     transition: 0.5s;
 }
 .card-indiv-body{
-    /* background-color: #2f2f2f; */
-    height: 200px;
-    object-fit: contain;
+    /* background-color: #fff; */
+    /* height: 200px;     */
+    border-radius: 5px;
+    overflow: hidden;
 }
 .card-indiv-body img{
     width: 100%;
-    height: 280px;
-    /* object-fit: contain; */
-    /* box-shadow: inset 0px 0px 5px black; */
-    border-radius: 5px;
+    height: 250px;
+    object-fit: cover;
+    /* object-position: left; */
+    /* border-radius: 5px; */
 }
 .slick-prev:before , .slick-next:before{
     color : gray !important;
@@ -177,4 +177,31 @@
     width: 150px;
     /* -webkit-filter: drop-shadow(0px 0px 5px #f2f2f2);
     filter: drop-shadow(0px 0px 5px #f2f2f2); */
+}
+
+.skill-label{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.skill-div:hover .skill-label{
+    opacity: 1;
+    transition: 0.5s;
+}
+.skill-img{
+    transform: scale(1);
+    transition: 0.5s;
+}
+.skill-div:hover > .skill-img{
+    transform: scale(0.8);
+    transition: 0.5s;
 }

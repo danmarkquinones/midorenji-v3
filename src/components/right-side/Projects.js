@@ -6,7 +6,6 @@ import Slider from 'react-slick'
 import { ThemeContext } from "../context/themeContext";
 import ReactPlayer from 'react-player'
 import ProjectCards from '../shared_components/ProjectCards'
-import { Modal, Button , Row, Col ,Divider} from 'antd';
 
 const Projects = (props) => {
 
@@ -23,7 +22,7 @@ const Projects = (props) => {
 
     const variants = {
         initial:{
-            width:1,
+            width:0,
             opacity:0
         },
         in:{
@@ -31,7 +30,7 @@ const Projects = (props) => {
             opacity:1
         },
         out:{
-            width:1,
+            width:0,
             opacity:0
         }
     }
@@ -48,7 +47,8 @@ const Projects = (props) => {
             <div 
                 className="projects-main-div"
                 style={{
-                    backgroundColor: theme.isDarkMode ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)"
+                    display:"flex",
+                    // backgroundColor: theme.isDarkMode ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)"
                 }}
             >
                 <div className="slider-div">
@@ -61,7 +61,7 @@ const Projects = (props) => {
                                 key={index} 
                             >
                                     <div className="card-div">
-                                        <ProjectCards project={project} theme={theme}/>
+                                        <ProjectCards project={project} index={index} theme={theme}/>
                                     </div>
                             </motion.div>
                         )}

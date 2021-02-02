@@ -22,12 +22,14 @@ import msa from '../images/msa.png'
 import reactLogo from '../images/react.png';
 import jsLogo from '../images/js.png';
 import angularLogo from '../images/angular.png';
-import tsLogo from '../images/ts.png';
+import mongoLogo from '../images/mongo.png';
 import framermotionLogo from '../images/framermotion.png';
 import pythonLogo from '../images/python.png';
 import nodeLogo from '../images/node.png';
 import mysqlLogo from '../images/mysql.png';
 import laravelLogo from '../images/laravel.png';
+import watching from '../images/watching.PNG'
+import drawing from '../images/drawing.png'
 
 export const skillsData = [
     {
@@ -55,27 +57,27 @@ export const skillsData = [
         logo: jsLogo
     },
     {
-        text : 'Typecript',
+        text : 'Mongo',
         color : '#fed401',
         value : 35,
         top: "40%",
         left: "7%",
-        logo: tsLogo
+        logo: mongoLogo
     },
     {
-        text : 'PHP/Laravel',
+        text : 'Framer Motion',
         color : '#8e6111',
         value : 45,
         top: "70%",
         left: "10%",
-        logo: laravelLogo
+        logo: framermotionLogo
     },
     {
         text : 'MySQL',
         color : '#fbc760',
-        value : 45,
-        top: "-5%",
-        left: "75%",
+        value : 60,
+        top: "-25%",
+        left: "70%",
         logo: mysqlLogo
     },
     {
@@ -95,12 +97,12 @@ export const skillsData = [
         logo: nodeLogo
     },
     {
-        text : 'Framer Motion',
+        text : 'Laravel',
         color : '#2d0527',
         value : 40,
         top: "30%",
         left: "75%",
-        logo: framermotionLogo
+        logo: laravelLogo
     }
 ]
 
@@ -125,22 +127,13 @@ export const profileData = {
 }
 
 export const hobbiesData = [
-    {text:"Drawing" , value : 7 , top:"17%" , left:"0%" ,lc: "#1E824C" , dc : "#00FA9A"},
-    {text:"Sketching" , value : 5 , top:"60%" , left:"5%" ,lc: "#0F4880" , dc : "#00F8FB"},
-    {text:"Handcrafts" , value : 7 , top:"16%" , left:"42%" ,lc: "#9932CC" , dc : "#DCC6E0"},
-    {text:"Dancing" , value : 4 , top:"60%" , left:"55%" ,lc: "#2A2A2A" , dc : "#DADFE1"},
-    {text:"Playing Games" , value : 9 , top:"45%" , left:"10%" ,lc: "#302407" , dc : "#FFD700"},
-    {text:"Watching Anime" , value : 8 , top:"0%" , left:"5%" ,lc: "#802200" , dc : "#EB9532"},
-    {text:"Movie Marathon" , value : 6 , top:"31%" , left:"0%" ,lc: "#8B0000" , dc : "#FF6347"},
-    {text:"Web Layout" , value : 5 , top:"73%" , left:"25%" ,lc: "#1D1905" , dc : "#00D4D4"},
-    {text:"Youtube" , value : 8 , top:"83%" , left:"10%" ,lc: "#360036" , dc : "#C9F227"},
-    {text:"Travel" , value : 0 , top:"73%" , left:"0%" ,lc: "#114C2A" , dc : "#FF00FF"},
-    {text:"FoodTrip" , value : 3 , top:"85%" , left:"60%" ,lc: "#E00000" , dc : "#E7903C"},
+    {name: "Art is Life" , bg : drawing , activity:["Drawing Animes" , "Sketching Portraits" , "Handcrafts"]},
+    {name: "Watch & Reflect" , bg : watching , activity:["Watching Animes" , "Movie Marathon" , "Youtube"]}
 ]
 
 export const projectData = [
     {
-        name: 'Topic Modelling',
+        name: 'Zeno',
         videoLink : '',
         srcCode :'',
         type : 'cp',
@@ -152,6 +145,7 @@ export const projectData = [
         role : ['Front End'],
         url:'',
         bg:tmcardbg,
+        position:"center"
     },
     {
         name: 'Media Meter V3',
@@ -165,7 +159,8 @@ export const projectData = [
         languages : ['React' , 'React Native' , 'Material UI'],
         role : ['Front End (Web and Mobile App)'],
         url:'https://media-meter.net/mm-client/',
-        bg:mmcardbg
+        bg:mmcardbg,
+        position:"left"
     },
     {
         name: 'PokeMania',
@@ -179,7 +174,8 @@ export const projectData = [
         languages : ['React Native' , 'Firebase' ],
         role : ['Front End' , 'Back End'],
         url:'',
-        bg:underdevbg
+        bg:underdevbg,
+        position:"left"
     },
     // {
     //     name: 'ANGULAR PROJECT',
@@ -196,7 +192,7 @@ export const projectData = [
     //     bg:underdevbg
     // },
     {
-        name: 'PostLux',
+        name: 'ANGULAR ZOOM',
         videoLink : '',
         srcCode :'',
         type : 'other',
@@ -204,10 +200,11 @@ export const projectData = [
         viewSrc : false,
         hasVideo : false,
         hasURL : false,
-        languages : ['VueJS' , 'NuxtJS', 'Ant Design'],
-        role : ['Front End'],
+        languages : ['MEAN' , 'Socket.io', 'PeerJS'],
+        role : ['Front End' , 'Back End'],
         url:'',
-        bg:underdevbg
+        bg:underdevbg,
+        position:"left"
     },
     {
         name: 'RAGING REINDEER',
@@ -221,7 +218,8 @@ export const projectData = [
         languages : ['HTML' , 'CSS' , 'Adobe Photoshop'],
         role : ['Front End'],
         url:'https://danmarkquinones.github.io/ragingreindeer/',
-        bg:rrcardbg
+        bg:rrcardbg,
+        position:"center"
     },
     {
         name: 'FSRJ',
@@ -235,7 +233,8 @@ export const projectData = [
         languages : ['Laravel' , 'MySQL' , 'Javascript'],
         role : ['Front End' , 'Back End'],
         url:'https://fsrjconstruction.000webhostapp.com/',
-        bg:fsrjcardbg
+        bg:fsrjcardbg,
+        position:"left"
     },
     {
         name: 'FIGURA',
@@ -249,7 +248,8 @@ export const projectData = [
         languages : ['PHP' , 'MySQL' , 'Javascript'],
         role : ['Front End' , 'Back End'],
         url:'https://figura-toys.000webhostapp.com/figura/app/views/index.php',
-        bg:figuracardbg
+        bg:figuracardbg,
+        position:"left"
     },
     {
         name: 'BALIKTANAW',
@@ -263,7 +263,8 @@ export const projectData = [
         languages : ['HTML' , 'CSS' , 'Javascript'],
         role : ['Front End'],
         url:'https://danmarkquinones.github.io/baliktanaw/',
-        bg:baliktanawcardbg
+        bg:baliktanawcardbg,
+        position:"right"
     },
     {
         name: 'JS Practice',
@@ -277,7 +278,8 @@ export const projectData = [
         languages : ['JQuery'],
         role : ['Front End'],
         url:'https://danmarkquinones.github.io/practice/',
-        bg:jspracticecardbg
+        bg:jspracticecardbg,
+        position:"center"
     }, 
 ]
 

@@ -16,7 +16,7 @@ const Profile = (props) => {
                 // backgroundPosition:"bottom"
             }}
         >
-            <Grid container style={{padding:10}}>
+            <Grid container style={{padding:"10px 0px"}}>
                 <Grid item sm={4}>
                     <div className="about-me-left-grid">
                         <div 
@@ -34,16 +34,13 @@ const Profile = (props) => {
                     </div>
                 </Grid>
                 <Grid item sm={8}>
-                    <div 
-                        className="about-me-right-grid"  
-                        style={{position:"relative"}}  
-                    >
+                    <div className="about-me-right-grid" style={{marginLeft:"40px"}}>
                         <div
                             style={{
                                 backgroundColor:theme.secondaryBackground,
                                 // border:`1px dashed ${theme.primaryTextColor}`,
-                                borderRadius:"5%",
-                                padding:"5px 20px"
+                                // borderRadius:"5%",
+                                padding:"5px 10px"
                             }}
                         >
                             <h4 style={{color:theme.primaryTextColor}}>{profileData.codename}</h4>
@@ -51,28 +48,13 @@ const Profile = (props) => {
                                 {profileData.intro}
                             </p>
                         </div>
-
-                        <div
-                            style={{
-                                position:"absolute",
-                                height:"93%",
-                                width:"95%",
-                                border:"5px double #3578E5",
-                                bottom:10,
-                                left:10,
-                                borderRadius:"10px"
-                            }}
-                        >
-                            {/* hello */}
-                        </div>
                         
                         <div 
                             style={{
-                                // textAlign:"right",
                                 position:"absolute",
                                 zIndex:5,
-                                bottom:0,
-                                right:20
+                                bottom:15,
+                                right:10
                             }}
                         >
                             <Button
@@ -87,7 +69,7 @@ const Profile = (props) => {
                                 onClick={()=>showModal("profile")}
                             >
                                 <div
-                                    style={{display:"flex" , alignItems:"center" , fontSize:"10px"}}
+                                    style={{display:"flex" , alignItems:"center" , fontSize:"10px" ,color:"#fff"}}
                                 >
                                     <span style={{lineHeight:"20px"}}>READ MORE</span> 
                                     <DoubleArrowIcon style={{fontSize:"10px"}}/>

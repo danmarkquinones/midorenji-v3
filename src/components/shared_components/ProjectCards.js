@@ -2,60 +2,96 @@ import React , {useContext} from 'react'
 import LinkIcon from '@material-ui/icons/Link';
 import CodeIcon from '@material-ui/icons/Code';
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
-import { IconButton } from '@material-ui/core';
+import { Grid, IconButton } from '@material-ui/core';
 
 const ProjectCards = (props) => {
 
-    const {project , theme} = props
+    const {project ,index, theme} = props
     
     return (
         <div 
             className="card-indiv-div"
             style={{
-                // backgroundColor : theme.secondaryBackground
+                height:"auto",
+                backgroundColor : theme.secondaryBackground,
+                padding:"20px",
+                // top: index%2===0 ? "50px" : "20px"
+                boxShadow : theme.isDarkMode? null : "3px 3px 5px gray"
             }}
         >
-            <div 
-                className="card-indiv-header"
+            <div
                 style={{
-                    backgroundColor : theme.secondaryBackground,
-                    boxShadow : !theme.isDarkMode && "0px 0px 5px gray"
+                    position:"relative"
                 }}
             >
-                <div 
-                    className="active-indicator" 
+                <div
                     style={{
-                        border : `2px solid ${theme.primaryTextColor}`,
-                        backgroundColor:!project.hasURL?"orange":"lime"
-                    }}
-                >    
-                </div>
-                <h2
-                    style={{
-                        color : theme.primaryTextColor
+                        height:"200px",
+                        borderRadius:"10px",
+                        overflow:"hidden",
+                        boxShadow: theme.isDarkMode? null : "0px 0px 5px lightgray"
                     }}
                 >
-                    {project.name}
-                </h2>
-            </div>
-
-            <div className="card-indiv-body" >
-                <img 
+                    <img 
+                        style={{
+                            height:"100%",
+                            width:"100%",
+                            objectPosition:project.position,
+                            objectFit:"cover"
+                        }} 
+                        src={project.bg} alt={"background"}
+                    />
+                </div>
+                <div
                     style={{
-                        border: `10px solid ${theme.secondaryBackground}`
-                    }} 
-                    src={project.bg} alt={"background"}
-                />
+                        position:"absolute",
+                        bottom:"-10px",
+                        left:"10px"
+                    }}
+                >
+                    <div 
+                        style={{
+                            height:"20px",
+                            width:"20px",
+                            borderRadius:"50%",
+                            backgroundImage:!project.hasURL? "linear-gradient(to right, red , orange)":"linear-gradient(to right, green , lime)"
+                        }}
+                    >    
+                    </div>
+                </div>
             </div>
-
-            <div 
-                className="card-indiv-footer"
+            <div
                 style={{
-                    backgroundColor : theme.secondaryBackground,
-                    boxShadow : !theme.isDarkMode && "0px 0px 5px gray"
+                    color:theme.primaryTextColor,
+                    marginLeft:"10px"
                 }}
             >
-                <div className="card-indiv-icons-div">
+                <p
+                    style={{
+                        fontSize:"20px",
+                        fontWeight:"bold",
+                        margin:"10px 0px 0px 0px"
+                    }}
+                >{project.name}</p>
+                <div
+                    style={{display:"flex" , flexDirection:"row" , alignItems:"center"}}
+                >
+                    <p style={{margin:"0px"}}>Coding Language Used</p>
+                    <p style={{margin:"0px 5px"}}>:</p>
+                    <p style={{margin:"0px"}}>{project.languages.join(" | ")}</p>
+                </div>
+                <div
+                    style={{display:"flex" , flexDirection:"row" , alignItems:"center"}}
+                >
+                    <p style={{margin:"0px"}}>Role</p>
+                    <p style={{margin:"0px 5px"}}>:</p>
+                    <p style={{margin:"0px"}}>{project.role.join(" | ")}</p>
+                </div>
+                
+            </div>
+
+            <div>
+                <div style={{textAlign:"right"}}>
                     <IconButton 
                         style={{padding:0 , backgroundColor:"transparent"}} 
                         disableRipple
@@ -90,7 +126,6 @@ const ProjectCards = (props) => {
                     </IconButton>
                 </div>
             </div>
-
         </div>
     )
 }

@@ -1,63 +1,72 @@
-import { colors } from "@material-ui/core";
 import React , {useState , useEffect} from "react"
-import ReactWordcloud from 'react-wordcloud';
-import bg from '../../../images/hobbiesbg.png'
+import { Grid } from "@material-ui/core"
+import RadioButtonCheckedIcon from '@material-ui/icons/RadioButtonChecked';
 
 const Hobbies = (props) => {
 
+
     const {theme , hobbiesData} = props
-    const [textColors , setTextColors] = useState([])
-
-    useEffect(()=>{
-        const lightModeColors = ["#1E824C" , "#0F4880" , "#9932CC" , "#2A2A2A" , "#302407" , "#802200" , "#8B0000"]
-
-        const darkModeColors = ["#00FA9A" , "#00F8FB" , "#DCC6E0" , "#DADFE1" , "#FFD700" , "#EB9532" , "#FF6347"]
-
-        if(theme.isDarkMode){
-            setTextColors([...darkModeColors])
-        }else{
-            setTextColors([...lightModeColors])
-        }
-    },[theme])
 
     return(
         <div 
             style={{
-                padding:"40px 0px 0px 0px" , 
+                padding:"50px 10px 0px 10px" , 
                 height:"240px" , 
                 width:"100%",
-                backgroundImage:`url(${bg})`,
-                backgroundSize:"cover",
-                backgroundPosition:"center"
             }}
         >
-            <div style={{ width: "100%", height: "100%" , position:"relative"}}>
+            <div>
                 {hobbiesData.map((hobby,index)=>
-                    <div
-                        key={index}
+                    <Grid 
+                        container
                         style={{
-                            position:"absolute",
-                            // backgroundColor:theme.isDarkMode? hobby.dc : hobby.lc,
-                            top:hobby.top,
-                            left:hobby.left,
-                            textAlign:"center",
-                            // border:`2px solid ${theme.primaryBackground}`,
-                            padding:"0px 10px",
-                            // borderRadius:"50px"
+                            padding:"5px",
+                            backgroundColor:theme.primaryBackground,
+                            marginBottom:"10px",
+                            borderRadius:"10px"
                         }}
                     >
-                        <p 
-                            style={{
-                                fontFamily:"impact",
-                                fontWeight:"bold",
-                                letterSpacing:"1px",
-                                fontSize:hobby.value+15,
-                                // color:theme.primaryBackground
-                                color:theme.isDarkMode? hobby.dc : hobby.lc,
-                                "-webkit-text-stroke": `1px ${theme.primaryBackground}`
-                            }}
-                        >{hobby.text}</p>
-                    </div>
+                        <Grid item sm={4} style={{padding:"2px"}}>
+                            <div
+                                style={{
+                                    height:"70px",
+                                    width:"70px",
+                                    borderRadius:"10px",
+                                    overflow:"hidden",
+                                    // marginTop:"10px"
+                                }}
+                            >
+                                <img alt="hobby" src={hobby.bg} style={{height:"70px" , width:"70px"}}/>
+                            </div>
+                            
+                        </Grid>
+                        <Grid item sm={8}>
+                            <div
+                                style={{padding:"5px 0px"}}
+                            >
+                                <h4
+                                    style={{fontWeight:"bold" , margin:0 , color:theme.primaryTextColor}} 
+                                >
+                                    {/* {hobby.name} */}
+                                </h4>
+                                {hobby.activity.map((act,i)=>
+                                    <div style={{display:"flex",flexDirection:"row" , alignItems:"flex-start" , justifyContent:"flex-end"}}>
+                                        <div>
+                                            <p
+                                            style={{margin:0 , fontSize:"12px" , fontWeight:600, color:theme.primaryTextColor}}
+                                            >
+                                                {/* <RadioButtonCheckedIcon style={{fontSize:"12px"}}/> */}
+                                                {act}
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <RadioButtonCheckedIcon style={{fontSize:"12px" , marginLeft:"5px" , color:"#3578E5"}}/>
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                        </Grid>
+                    </Grid>
                 )}
             </div>
         </div>

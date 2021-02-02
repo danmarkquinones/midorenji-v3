@@ -1,15 +1,17 @@
 import React , {useState} from "react";
-import { Button, Grid } from '@material-ui/core';
+import { Grid , IconButton} from '@material-ui/core';
 import Profile from './Profile';
 import Skills from './Skills';
 import {profileData , skillsData , hobbiesData , experienceData} from "../../../helpers/data";
 import Hobbies from "./Hobbies";
 import { AnimatePresence } from "framer-motion";
 import Experience from "./Experience";
+import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 
 const AboutIndex = (props) => {
 
-    const {theme , motion , showModal} = props
+    const {theme , motion , showModal , modalType , setModalType} = props
+
     const [profileCards , setProfileCards] = useState([
         {value:"about" , title:"About Me" , gridRow : 8 , expanded:false, height : "240px"},
         {value:"skills" , title:"Skills" , gridRow : 4 ,expanded:false, height : "240px"},
@@ -17,70 +19,140 @@ const AboutIndex = (props) => {
         {value:"experience" , title:"Experiences" , gridRow : 8 ,expanded:false, height : "240px"},
     ]) 
 
+    const variants = {
+        open: { 
+            opacity:1 ,
+            height:"100%"
+        },
+        // You can do whatever you want here, if you just want it to stop completely use `rotate: 0`
+        close: { 
+            opacity:0,
+            height:0
+         }
+    };
+
+    console.log("modal",modalType)
+
     return(
         <AnimatePresence>
-            <Grid container style={{width:"55%"}}>
-                {profileCards.map((card,index)=>
-                    <Grid key={index} item sm={card.gridRow}>
-                        <div style={{padding:"10px"}}>
-                            <motion.div
-                                initial={{opacity:0}}
-                                animate={{opacity:1 }}
-                                exit={{opacity:0}}
-                                transition={{ 
-                                    delay : (index+1)-0.5 , 
-                                    duration:1
-                                }}
-                            >
-                                <div
-                                    className="profile-card-div"
-                                    style={{
-                                        backgroundColor:theme.secondaryBackground , 
-                                        boxShadow: !theme.isDarkMode && "1px 1px 5px rgba(0,0,0,0.3)",
-                                        height:card.height
+            <Grid container>
+                <Grid container item sm={7}>
+                    {profileCards.map((card,index)=>
+                        <Grid key={index} item sm={card.gridRow}>
+                            <div style={{padding:"10px"}}>
+                                <motion.div
+                                    initial={{opacity:0}}
+                                    animate={{opacity:1 }}
+                                    exit={{opacity:0}}
+                                    transition={{ 
+                                        delay : (index+1)-0.5 , 
+                                        duration:1
                                     }}
                                 >
                                     <div
+                                        className="profile-card-div"
                                         style={{
-                                            // backgroundColor:"#3578E5",
-                                            // padding:card.value==="hobbies" || card.value==="skills" ? "0px" : "2px 10px",
+                                            backgroundColor:theme.secondaryBackground , 
+                                            boxShadow: !theme.isDarkMode && "1px 1px 5px rgba(0,0,0,0.3)",
+                                            height:card.height
                                         }}
                                     >
-                                        <div
-                                            className="profile-card-header-title" 
-                                            style={{
-                                                zIndex:5,
-                                                // backgroundColor:theme.secondaryTextColor
-                                                // backgroundColor: theme.isDarkMode ? "pink": "#3578E5"
-                                                backgroundColor:"#3578E5"
-                                            }}
-                                        >
-                                            <h2 
+                                        <div>
+                                            <div
+                                                className="profile-card-header-title" 
                                                 style={{
-                                                    fontWeight:"bold", 
-                                                    color:theme.primaryBackground
+                                                    zIndex:5,
+                                                    backgroundColor:"#3578E5"
                                                 }}
                                             >
-                                                {card.title}
-                                            </h2>
-                                        </div>
-                                        <div>
-                                            {/* {card.component()} */}
-                                            {card.value==="about" ? 
-                                                <Profile theme={theme} profileData={profileData} showModal={showModal}/>
-                                            :card.value==="skills" ?
-                                                <Skills theme={theme} skillsData={skillsData}/>
-                                            :card.value==="hobbies" ?
-                                                <Hobbies theme={theme} hobbiesData={hobbiesData}/>
-                                            :<Experience theme={theme} experienceData={experienceData} showModal={showModal}/>
-                                            }
+                                                <h2 
+                                                    style={{
+                                                        fontWeight:"bold", 
+                                                        color:theme.primaryBackground
+                                                    }}
+                                                >
+                                                    {card.title}
+                                                </h2>
+                                            </div>
+                                            <div>
+                                                {card.value==="about" ? 
+                                                    <Profile theme={theme} profileData={profileData} showModal={showModal}/>
+                                                :card.value==="skills" ?
+                                                    <Skills theme={theme} skillsData={skillsData}/>
+                                                :card.value==="hobbies" ?
+                                                    <Hobbies theme={theme} hobbiesData={hobbiesData}/>
+                                                :<Experience theme={theme} experienceData={experienceData} showModal={showModal}/>
+                                                }
+                                            </div>
                                         </div>
                                     </div>
+                                </motion.div>
+                            </div>
+                        </Grid>
+                    )}
+                </Grid>
+                <Grid item sm={5} style={{padding:"10px"}}>
+                    <motion.div
+                        variants={variants}
+                        animate={modalType==="" ? 'close' : 'open'}
+                        transition={{
+                            duration:0.5
+                        }}
+                        style={{
+                            borderRadius:"10px",
+                            backgroundColor:theme.secondaryBackground , 
+                            boxShadow: !theme.isDarkMode && "1px 1px 5px rgba(0,0,0,0.3)",
+                            overflow:"hidden"
+                        }}
+                    >   
+                        <div>
+                            <div 
+                                style={{ 
+                                    backgroundColor:"#3578E5",
+                                    display:"flex" , 
+                                    flexDirection:"row" , 
+                                    alignItems:"center" , 
+                                    padding:"5px 10px"
+                                }}
+                            >
+                                <div style={{flex:1 , marginLeft:"10px"}}>
+                                    <h2
+                                        style={{
+                                            fontWeight:"bold", 
+                                            color:theme.primaryBackground,
+                                            margin:0
+                                        }}
+                                    >
+                                        {modalType==="profile"? "Know more about me." 
+                                        :modalType==="experience"? " My Work Experiences" 
+                                        : null}
+                                    </h2>
                                 </div>
-                            </motion.div>
+                                <div style={{flex:1 , textAlign:"right"}}>
+                                    <IconButton onClick={()=>setModalType("")}>
+                                        <HighlightOffIcon
+                                            style={{color:theme.primaryBackground}}
+                                        />
+                                    </IconButton>
+                                </div>
+                            </div>
+
+                            <div
+                                style={{
+                                    height:"440px",
+                                    overflow:"auto"
+                                }}
+                            >
+                                {modalType==="profile"?
+                                    <h1>PROFILE</h1>
+                                :modalType==="experience"?
+                                    <h1>EXPERIENCE</h1>
+                                :null}
+
+                            </div>
                         </div>
-                    </Grid>
-                )}
+                    </motion.div>
+                </Grid>
             </Grid>
         </AnimatePresence>
     )

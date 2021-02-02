@@ -1,5 +1,5 @@
+import { Grid } from "@material-ui/core"
 import React from "react"
-import bg from '../../../images/skillsbg.png'
 
 const Skills = (props) => {
 
@@ -8,50 +8,54 @@ const Skills = (props) => {
     return(
         <div 
             style={{
-                padding:"50px 0px 0px 0px" , 
+                padding:"40px 0px 0px 0px" , 
                 height:"240px" , 
                 width:"100%",
-                // backgroundImage:`linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) , url(${bg})`,
-                backgroundImage:`url(${bg})`,
                 backgroundSize:"cover"
             }}
         >
-            <div style={{ width: "100%", height: "100%" ,position:"relative" , overflow:"hidden"}}>
-                {skillsData.map((skill,index)=>
-                    <div
+            <Grid container>
+            {skillsData.map((skill,index)=>
+                    <Grid
+                        item
+                        sm={4}
                         key={index}
                         style={{
-                            height:skill.value,
-                            width:skill.value,
-                            // backgroundColor:theme.secondaryBackground,
-                            padding:"5px",
-                            borderRadius:"50%",
-                            position:"absolute",
-                            top:skill.top,
-                            left:skill.left,
-                            transform: skill.text==="ReactJS" ?`translate(-50%,-50%)` : null,
+                            padding:"5px 7px",
                             textAlign:"center",
-                            // overflow:"hidden",
-                            display:"flex",
-                            alignItems:"center",
-                            justifyContent:"center"
                         }}
                     >
-                        <img 
+                        <div
+                            className="skill-div"
                             style={{
-                                height:skill.value,
-                                // width:skill.value-10,
-                                // borderRadius:"10px",
-                                "-webkit-filter": `drop-shadow(0px 0px 2px #2f2f2f)`,
-                                filter: `drop-shadow(0px 0px 2px #2f2f2f)`,
-                                // backgroundColor:"#fff"
+                                backgroundColor:theme.primaryBackground,
+                                padding:"5px",
+                                borderRadius:"10px",
+                                overflow:"hidden",
+                                position:"relative"
                             }}
-                            src={skill.logo}
-                            alt={skill.text}
-                        />
-                    </div>
+                        >
+                            <img 
+                                className="skill-img"
+                                style={{
+                                    height:"45px",
+                                    // width:"45px",
+                                    objectFit:"cover"
+                                }}
+                                src={skill.logo}
+                                alt={skill.text}
+                            />
+                            <div
+                                className="skill-label"
+                            >
+                                <p
+                                    style={{color:"#fff",margin:0, fontSize:"12px" , fontWeight:600}}
+                                >{skill.text}</p>
+                            </div>
+                        </div>
+                    </Grid>
                 )}
-            </div>
+            </Grid>
         </div>
     )
 }

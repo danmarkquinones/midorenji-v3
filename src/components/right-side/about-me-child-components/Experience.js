@@ -50,9 +50,9 @@ const Experience = (props) => {
                                     onClick={()=>showModal("experience")}
                                 >
                                     <div
-                                    style={{display:"flex" , alignItems:"center" , fontSize:"12px"}}
+                                    style={{display:"flex" , flexDirection:"row", alignItems:"center" , fontSize:"12px"}}
                                     >
-                                        <span style={{lineHeight:"20px"}}>READ MORE</span> 
+                                        <p>READ MORE</p> 
                                         <DoubleArrowIcon style={{fontSize:"12px"}}/>
                                     </div>
                                 </Button>
