@@ -8,7 +8,7 @@ const Skills = (props) => {
     return(
         <div 
             style={{
-                padding:"40px 0px 0px 0px" , 
+                padding:"40px 15px 0px 15px" , 
                 height:"240px" , 
                 width:"100%",
                 backgroundSize:"cover"

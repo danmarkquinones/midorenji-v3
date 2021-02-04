@@ -57,7 +57,7 @@ const Projects = (props) => {
                             <motion.div 
                                 initial={{opacity:0}}
                                 animate={{opacity:1}}
-                                transition={{delay : (index+1)-0.9 , duration:1}}
+                                transition={{delay : (index+1) , duration:1}}
                                 key={index} 
                             >
                                     <div className="card-div">
