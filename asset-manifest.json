@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "https://danmarkquinones.github.io/midorenji-v3/static/css/main.11218d70.chunk.css",
-    "main.js": "https://danmarkquinones.github.io/midorenji-v3/static/js/main.f57b6848.chunk.js",
-    "main.js.map": "https://danmarkquinones.github.io/midorenji-v3/static/js/main.f57b6848.chunk.js.map",
+    "main.js": "https://danmarkquinones.github.io/midorenji-v3/static/js/main.c70f1ca2.chunk.js",
+    "main.js.map": "https://danmarkquinones.github.io/midorenji-v3/static/js/main.c70f1ca2.chunk.js.map",
     "runtime-main.js": "https://danmarkquinones.github.io/midorenji-v3/static/js/runtime-main.06eebc07.js",
     "runtime-main.js.map": "https://danmarkquinones.github.io/midorenji-v3/static/js/runtime-main.06eebc07.js.map",
     "static/css/2.31d2adee.chunk.css": "https://danmarkquinones.github.io/midorenji-v3/static/css/2.31d2adee.chunk.css",
@@ -51,6 +51,6 @@
     "static/css/2.31d2adee.chunk.css",
     "static/js/2.9500df97.chunk.js",
     "static/css/main.11218d70.chunk.css",
-    "static/js/main.f57b6848.chunk.js"
+    "static/js/main.c70f1ca2.chunk.js"
   ]
 }
