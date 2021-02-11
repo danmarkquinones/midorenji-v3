@@ -30,6 +30,7 @@ const Projects = (props) => {
             opacity:1
         },
         out:{
+            // display:"none",
             width:0,
             opacity:0
         }

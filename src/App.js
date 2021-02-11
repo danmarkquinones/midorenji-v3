@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <ThemeContextProvider>
-        <Router basename={"/portfolio"}>
+        <Router basename={""}>
           {isMobile?
             <h2>Not AVAILABLE</h2>
             :<Main/>
