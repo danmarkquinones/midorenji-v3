@@ -140,9 +140,6 @@
     flex-direction: column;
     padding-top: 60px;
 }
-.about-me-right-grid{
-    /* padding: 10px 20px; */
-}
 .about-me-right-grid h4{
     font-weight: bold;
     font-size: 20px;
