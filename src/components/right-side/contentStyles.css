@@ -205,3 +205,19 @@
     transform: scale(0.8);
     transition: 0.5s;
 }
+
+.customTextField{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 5px 20px;
+    border-radius: 100px;
+}
+.customTextAreaField{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 5px 20px;
+    border-radius: 10px;
+}

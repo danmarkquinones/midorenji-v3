@@ -1,5 +1,5 @@
 import React , {useContext} from 'react'
-import {motion} from 'framer-motion'
+import {AnimatePresence, motion} from 'framer-motion'
 import './contentStyles.css'
 import {projectData} from '../../helpers/data'
 import Slider from 'react-slick'
@@ -51,22 +51,25 @@ const Projects = (props) => {
                     // backgroundColor: theme.isDarkMode ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)"
                 }}
             >
-                <div className="slider-div">
-                    <Slider {...settings} >
-                        {projectData.map((project,index)=>
-                            <motion.div 
-                                initial={{opacity:0}}
-                                animate={{opacity:1}}
-                                transition={{delay : (index+1) , duration:1}}
-                                key={index} 
-                            >
-                                    <div className="card-div">
-                                        <ProjectCards project={project} index={index} theme={theme}/>
-                                    </div>
-                            </motion.div>
-                        )}
-                    </Slider>
-                </div>
+                <AnimatePresence>
+                    <div className="slider-div">
+                        <Slider {...settings} >
+                            {projectData.map((project,index)=>
+                                <motion.div 
+                                    initial={{opacity:0}}
+                                    animate={{opacity:1}}
+                                    exit={{opacity:0}}
+                                    transition={{delay : (index+1) , duration:1}}
+                                    key={index} 
+                                >
+                                        <div className="card-div">
+                                            <ProjectCards project={project} index={index} theme={theme}/>
+                                        </div>
+                                </motion.div>
+                            )}
+                        </Slider>
+                    </div>
+                </AnimatePresence>
             </div>
         </motion.div>
     )

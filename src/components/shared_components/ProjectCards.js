@@ -76,7 +76,7 @@ const ProjectCards = (props) => {
                 <div
                     style={{display:"flex" , flexDirection:"row" , alignItems:"center"}}
                 >
-                    <p style={{margin:"0px"}}>Coding Language Used</p>
+                    <p style={{margin:"0px"}}>Languages</p>
                     <p style={{margin:"0px 5px"}}>:</p>
                     <p style={{margin:"0px"}}>{project.languages.join(" | ")}</p>
                 </div>

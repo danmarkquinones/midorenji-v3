@@ -39,10 +39,11 @@ const Experience = (props) => {
                             </div>
                             <div style={{marginTop : "15px"}}>
                                 <Button
-                                    variant="outlined"
+                                    variant="contained"
                                     size="small"
                                     disableElevation
                                     style={{
+                                        border:"none",
                                         backgroundColor:"#3578E5",
                                         color:"#fff",
                                         borderRadius:"100px",
@@ -50,10 +51,10 @@ const Experience = (props) => {
                                     onClick={()=>showModal("experience")}
                                 >
                                     <div
-                                    style={{display:"flex" , flexDirection:"row", alignItems:"center" , fontSize:"12px"}}
+                                        style={{display:"flex" , alignItems:"center" , fontSize:"10px" ,color:"#fff"}}
                                     >
-                                        <p>READ MORE</p> 
-                                        <DoubleArrowIcon style={{fontSize:"12px"}}/>
+                                        <span style={{lineHeight:"20px"}}>READ MORE</span> 
+                                        <DoubleArrowIcon style={{marginLeft:"3px" , marginBottom:"2px", fontSize:"10px"}}/>
                                     </div>
                                 </Button>
                             </div>

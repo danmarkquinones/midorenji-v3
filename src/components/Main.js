@@ -11,6 +11,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import MailIcon from '@material-ui/icons/Mail';
+import GitHubIcon from '@material-ui/icons/GitHub';
 import { ThemeContext } from "./context/themeContext";
 
 const pageVariants = {
@@ -39,6 +40,10 @@ const Main = (props) => {
     
     const location = useLocation()
     const [theme,setTheme] = useContext(ThemeContext)
+
+    const handleRedirect = (link) => {
+        window.open(link, "_blank")
+    }
     
     return(
         <div 
@@ -57,6 +62,7 @@ const Main = (props) => {
             >
                 <IconButton 
                     className="social-icon-button"
+                    onClick={()=>handleRedirect("https://www.facebook.com/itzmedanmark/")}
                     style={{
                         margin:"5px 0px",
                         backgroundColor: theme.isDarkMode ? "rgba(255, 255, 255, 0.15)" : "rgba(0, 0, 0, 0.3)",
@@ -66,6 +72,7 @@ const Main = (props) => {
                 </IconButton>
                 <IconButton
                     className="social-icon-button"
+                    onClick={()=>handleRedirect("https://twitter.com/hidnlmrks")}
                     style={{
                         margin:"5px 0px",
                         backgroundColor: theme.isDarkMode ? "rgba(255, 255, 255, 0.15)" : "rgba(0, 0, 0, 0.3)"
@@ -75,6 +82,7 @@ const Main = (props) => {
                 </IconButton>
                 <IconButton 
                     className="social-icon-button"
+                    onClick={()=>handleRedirect("https://www.linkedin.com/in/danmark-qui%C3%B1ones-7607601b7/")}
                     style={{
                         margin:"5px 0px",
                         backgroundColor: theme.isDarkMode ? "rgba(255, 255, 255, 0.15)" : "rgba(0, 0, 0, 0.3)"
@@ -84,12 +92,13 @@ const Main = (props) => {
                 </IconButton>
                 <IconButton 
                     className="social-icon-button"
+                    onClick={()=>handleRedirect("https://github.com/danmarkquinones")}
                     style={{
                         margin:"5px 0px",
                         backgroundColor: theme.isDarkMode ? "rgba(255, 255, 255, 0.15)" : "rgba(0, 0, 0, 0.3)"
                     }}
                 >
-                    <MailIcon style={{fontSize:30 , color:theme.primaryTextColor}}/>
+                    <GitHubIcon style={{fontSize:30 , color:theme.primaryTextColor}}/>
                 </IconButton>
             </div>
             

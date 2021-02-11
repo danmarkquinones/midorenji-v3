@@ -6,12 +6,13 @@ import fsrj from '../videos/fsrj.mp4'
 import portfolio from '../videos/portfolio.mp4'
 //bg
 import tmcardbg from '../images/tmcardbg.PNG'
-import mmcardbg from '../images/mmcardbg.PNG'; 
+import mmcardbg from '../images/mmcardbg.jpg'; 
 import rrcardbg from '../images/rrcardbg.PNG'
 import fsrjcardbg from '../images/fsrjcardbg.PNG';
 import figuracardbg from '../images/figuracardbg.PNG';
 import baliktanawcardbg from '../images/baliktanawcardbg.PNG';
-import jspracticecardbg from '../images/jspracticecardbg.PNG';
+import jspracticecardbg from '../images/jsplainbg.PNG';
+import pokemaniacardbg from '../images/pokemania.png'
 import underdevbg from'../images/underdev.jpg';
 //exp
 import mediameter from '../images/mwlogopurple.png';
@@ -133,7 +134,7 @@ export const hobbiesData = [
 
 export const projectData = [
     {
-        name: 'Zeno',
+        name: 'ZENØ - Topic Modeling',
         videoLink : '',
         srcCode :'',
         type : 'cp',
@@ -160,7 +161,7 @@ export const projectData = [
         role : ['Front End (Web and Mobile App)'],
         url:'https://media-meter.net/mm-client/',
         bg:mmcardbg,
-        position:"left"
+        position:"bottom"
     },
     {
         name: 'PokeMania',
@@ -171,26 +172,12 @@ export const projectData = [
         viewSrc : false,
         hasVideo : false,
         hasURL : false,
-        languages : ['React Native' , 'Firebase' ],
+        languages : ['React Native'],
         role : ['Front End' , 'Back End'],
         url:'',
-        bg:underdevbg,
+        bg:pokemaniacardbg,
         position:"left"
     },
-    // {
-    //     name: 'ANGULAR PROJECT',
-    //     videoLink : '',
-    //     srcCode :'',
-    //     type : 'other',
-    //     hasMobile : false,
-    //     viewSrc : false,
-    //     hasVideo : false,
-    //     hasURL : false,
-    //     languages : ['Angular' , 'Firebase' ],
-    //     role : ['Front End' , 'Back End'],
-    //     url:'',
-    //     bg:underdevbg
-    // },
     {
         name: 'ANGULAR ZOOM',
         videoLink : '',

@@ -28,8 +28,8 @@ const Skills = (props) => {
                         <div
                             className="skill-div"
                             style={{
-                                backgroundColor:theme.primaryBackground,
-                                padding:"5px",
+                                // backgroundColor:theme.primaryBackground,
+                                padding:"2px",
                                 borderRadius:"10px",
                                 overflow:"hidden",
                                 position:"relative"
@@ -38,9 +38,9 @@ const Skills = (props) => {
                             <img 
                                 className="skill-img"
                                 style={{
-                                    height:"45px",
+                                    height:"43px",
                                     // width:"45px",
-                                    objectFit:"cover"
+                                    objectFit:"center"
                                 }}
                                 src={skill.logo}
                                 alt={skill.text}

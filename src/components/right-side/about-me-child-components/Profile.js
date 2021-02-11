@@ -38,8 +38,9 @@ const Profile = (props) => {
                         <div
                             style={{
                                 backgroundColor:theme.secondaryBackground,
+                                // backgroundColor: theme.isDarkMode?`rgba(0,0,0,0.9)`: `rgba(250,250,250,0.8)`,
                                 // border:`1px dashed ${theme.primaryTextColor}`,
-                                // borderRadius:"5%",
+                                borderRadius:"5%",
                                 padding:"5px 10px"
                             }}
                         >
@@ -72,9 +73,8 @@ const Profile = (props) => {
                                     style={{display:"flex" , alignItems:"center" , fontSize:"10px" ,color:"#fff"}}
                                 >
                                     <span style={{lineHeight:"20px"}}>READ MORE</span> 
-                                    <DoubleArrowIcon style={{fontSize:"10px"}}/>
+                                    <DoubleArrowIcon style={{marginLeft:"3px" , marginBottom:"1px", fontSize:"10px"}}/>
                                 </div>
-                                
                             </Button>
                         </div>
                     </div>
