@@ -2,7 +2,7 @@ import React , {useContext} from "react";
 import {NavLink } from "react-router-dom";
 import { ThemeContext } from "./context/themeContext";
 import { Switch } from 'antd';
-import logo from '../images/logo.png'
+import logo from '../images/logo2.png'
 
 export default function Routes(props) {
 
@@ -48,7 +48,8 @@ export default function Routes(props) {
                 style={{
                     height:"50px",
                     width:"50px",
-                    overflow:"hidden"
+                    overflow:"hidden",
+                    // backgroundColor:"#fff"
                 }}
             >
                 <img src={logo} style={{height:"50px"}} alt="logo"/>

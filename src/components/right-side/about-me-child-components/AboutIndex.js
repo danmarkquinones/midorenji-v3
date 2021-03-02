@@ -7,6 +7,8 @@ import Hobbies from "./Hobbies";
 import { AnimatePresence } from "framer-motion";
 import Experience from "./Experience";
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
+import ExpandProfile from "./ExpandProfile";
+import ExpandExperience from "./ExpandExperience";
 
 const AboutIndex = (props) => {
 
@@ -140,13 +142,15 @@ const AboutIndex = (props) => {
                             <div
                                 style={{
                                     height:"440px",
-                                    overflow:"auto"
+                                    overflow:"auto",
+                                    // padding:"10px 20px",
+                                    background:theme.primaryBackground
                                 }}
                             >
                                 {modalType==="profile"?
-                                    <h1>PROFILE</h1>
+                                    <ExpandProfile theme={theme}/>
                                 :modalType==="experience"?
-                                    <h1>EXPERIENCE</h1>
+                                    <ExpandExperience theme={theme}/>
                                 :null}
 
                             </div>

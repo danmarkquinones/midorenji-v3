@@ -5,7 +5,7 @@ import figura from '../videos/figura.mp4'
 import fsrj from '../videos/fsrj.mp4'
 import portfolio from '../videos/portfolio.mp4'
 //bg
-import tmcardbg from '../images/tmcardbg.PNG'
+import tmcardbg from '../images/tmcardbg.png'
 import mmcardbg from '../images/mmcardbg.jpg'; 
 import rrcardbg from '../images/rrcardbg.PNG'
 import fsrjcardbg from '../images/fsrjcardbg.PNG';
@@ -116,8 +116,12 @@ export const profileData = {
     age : 24 , 
     location : 'Manila , Philippines',
     contact : '+63 906 509 2731',
-    motto: 'Never judge someone based on a season.',
+    motto: 'Never stop learning.',
+    location :'Manila , Philippines',
+    course : 'Bachelor of Science in Mathematics',
+    college : 'Polytechnic University of the Philippines',
     email : 'danmarkquinones@gmail.com',
+    position :'Front End App Developer',
     skillsFundamental:['HTML' , 'CSS' , 'Javascript'],
     skillsMobile:['Expo' , 'React Native'],
     skillsFE : ['React','Angular'],
@@ -325,10 +329,11 @@ export const experienceData = [
         date:'Jan 2020 - Present',
         logo:mediameter,
         responsibilities:[
-            "Building an app using React.js , Vue.js , Material Designs/UI and Javascript.",
+            "Building an app using React JS , React Native , Angular , Material Designs/UI and Javascript.",
             "Creates a modular and re-usable script using Javascript and React.",
             "Scraping Websites or Data Mining.",
             "Designing a modern user interface and building a great user experience to the app.",
+            "Wireframing and Layouting using Figma",
             "Integrates API using Axios for connecting to database.",
             "Integrates third-party app such as payment portals (e.g. Paypal and RCBC)"
         ]

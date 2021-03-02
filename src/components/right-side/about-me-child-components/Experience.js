@@ -29,7 +29,8 @@ const Experience = (props) => {
                             >
                                 <h2
                                     style={{
-                                        color:theme.primaryTextColor,
+                                        // color:theme.primaryTextColor,
+                                        color:"#3578E5",
                                         fontWeight:"bold",
                                     }}
                                 >{exp.companyName}</h2>

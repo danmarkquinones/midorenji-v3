@@ -16,7 +16,7 @@ const ProjectCards = (props) => {
                 backgroundColor : theme.secondaryBackground,
                 padding:"20px",
                 // top: index%2===0 ? "50px" : "20px"
-                boxShadow : theme.isDarkMode? null : "3px 3px 5px gray"
+                boxShadow : theme.isDarkMode? null : "1px 1px 2px lightgray"
             }}
         >
             <div
@@ -29,7 +29,7 @@ const ProjectCards = (props) => {
                         height:"200px",
                         borderRadius:"10px",
                         overflow:"hidden",
-                        boxShadow: theme.isDarkMode? null : "0px 0px 5px lightgray"
+                        boxShadow: theme.isDarkMode? null : "0px 0px 2px lightgray"
                     }}
                 >
                     <img 

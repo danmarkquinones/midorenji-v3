@@ -44,7 +44,7 @@ const Profile = (props) => {
                                 padding:"5px 10px"
                             }}
                         >
-                            <h4 style={{color:theme.primaryTextColor}}>{profileData.codename}</h4>
+                            <h4 style={{color:"#3578E5"}}>{profileData.codename}</h4>
                             <p style={{fontSize:13,color:theme.primaryTextColor , fontWeight:500}}>
                                 {profileData.intro}
                             </p>
