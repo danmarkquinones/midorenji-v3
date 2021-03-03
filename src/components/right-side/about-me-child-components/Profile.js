@@ -1,7 +1,7 @@
 import { Grid , Button } from "@material-ui/core";
 import React from "react";
 import dp from "../../../images/display.jpg"
-import bg from "../../../images/profile.png"
+import bg from "../../../images/experiencebg.png"
 import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 
 const Profile = (props) => {
@@ -9,15 +9,14 @@ const Profile = (props) => {
     return(
         <div
             style={{
-                // backgroundImage:`linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) , url(${bg})`,
                 backgroundImage:`url(${bg})`,
-                height:"240px",
-                backgroundSize:"center",
-                // backgroundPosition:"bottom"
+                backgroundSize:"cover",
+                backgroundPosition:"bottom",
+                transform:"rotateY(180deg)"
             }}
         >
-            <Grid container style={{padding:"10px 0px"}}>
-                <Grid item sm={4}>
+            <Grid container style={{padding:"10px 0px" , transform:"rotateY(-180deg)"}}>
+                <Grid item sm={6}>
                     <div className="about-me-left-grid">
                         <div 
                             className="profile-dp-cont"
@@ -27,55 +26,21 @@ const Profile = (props) => {
                         >
                             <img src={dp} alt="DP" />
                         </div>
-                        <div 
-                            className="profile-dp-bg" 
-                            style={{backgroundColor: "#3578E5"}}>
-                        </div>
                     </div>
                 </Grid>
-                <Grid item sm={8}>
+                <Grid item sm={6}>
                     <div className="about-me-right-grid" style={{marginLeft:"40px"}}>
                         <div
                             style={{
-                                backgroundColor:theme.secondaryBackground,
-                                // backgroundColor: theme.isDarkMode?`rgba(0,0,0,0.9)`: `rgba(250,250,250,0.8)`,
-                                // border:`1px dashed ${theme.primaryTextColor}`,
-                                borderRadius:"5%",
-                                padding:"5px 10px"
+                                padding:"50px 10px",
+                                textAlign:"right",
+                                color:theme.primaryTextColor
                             }}
                         >
-                            <h4 style={{color:"#3578E5"}}>{profileData.codename}</h4>
-                            <p style={{fontSize:13,color:theme.primaryTextColor , fontWeight:500}}>
-                                {profileData.intro}
-                            </p>
-                        </div>
-                        
-                        <div 
-                            style={{
-                                position:"absolute",
-                                zIndex:5,
-                                bottom:15,
-                                right:10
-                            }}
-                        >
-                            <Button
-                                variant="contained"
-                                size="small"
-                                disableElevation
-                                style={{
-                                    backgroundColor:"#3578E5",
-                                    color:theme.secondaryBackground,
-                                    borderRadius:"100px",
-                                }}
-                                onClick={()=>showModal("profile")}
-                            >
-                                <div
-                                    style={{display:"flex" , alignItems:"center" , fontSize:"10px" ,color:"#fff"}}
-                                >
-                                    <span style={{lineHeight:"20px"}}>READ MORE</span> 
-                                    <DoubleArrowIcon style={{marginLeft:"3px" , marginBottom:"1px", fontSize:"10px"}}/>
-                                </div>
-                            </Button>
+                            <p style={{margin:0 , fontSize:"30px"}}>NEVER</p>
+                            <p style={{margin:0 , fontSize:"50px" , margin : "15px 0px", lineHeight:"0px", fontWeight:"bold" , color:"#f43b62"}}>STOP</p>
+                            <p style={{margin:0 , fontSize:"30px"}}>LEARNING</p>
+                            {/* <p style={{color:theme.primaryBackground}}>{profileData.codename}</p> */}
                         </div>
                     </div>
                 </Grid>

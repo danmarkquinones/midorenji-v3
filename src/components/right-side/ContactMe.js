@@ -1,7 +1,7 @@
 import React , {useState , useContext} from "react"
-import {motion} from 'framer-motion'
+import {AnimatePresence, motion} from 'framer-motion'
 import { ThemeContext } from "../context/themeContext";
-import { Button, Grid, InputAdornment, InputBase, InputLabel, TextareaAutosize, TextField } from "@material-ui/core";
+import { Button, Grid, InputBase, InputLabel, } from "@material-ui/core";
 import emailjs from 'emailjs-com';
 import {profileData} from '../../helpers/data';
 import bg from '../../images/experiencebg.png';
@@ -58,23 +58,17 @@ const ContactMe = (props) => {
         <motion.div
             initial="initial"
             animate="in"
-            exit={{
-                opacity:0,
-                x:1000,
-            }}
+            exit="out"
             variants={pageVariants}
             transition={pageTransition}
             className="page-container"
         >
-            <div
-                style={{
-                    padding:"20px",
-                    
-                }}
-            >
-                <div>
-                    <Grid container>
-                        <Grid item sm={7}>
+            <AnimatePresence>
+                <div 
+                    className="profile-container"
+                >
+                    <Grid container style={{padding:"20px"}}>
+                        <Grid item sm={12} md={7}>
                             <div
                                 style={{
                                     backgroundColor: theme.secondaryBackground,
@@ -94,10 +88,12 @@ const ContactMe = (props) => {
                                         }}
                                     >
                                         <div
-                                            style={{marginTop:"15px", padding:"10px" , color:"#fff"}}
+                                            style={{display:"flex", flexDirection:"column", marginTop:"15px", padding:"10px" , color:"#fff" ,  }}
                                         >
-                                            <p style={{margin:0,fontWeight:"bold" , fontSize:20}}>Contact Information</p>
-                                            <p style={{margin:0}}>Feel free to call me or email me.</p>
+                                            <div style={{ justifyContent:"flex-end" }}>
+                                                <p style={{margin:0,fontWeight:"bold" , fontSize:20}}>Contact Information</p>
+                                                <p style={{margin:0}}>Feel free to call me or email me.</p>
+                                            </div>
 
                                             <div style={{marginTop:"50px"}}>
                                                 <div style={{display:"flex" , flexDirection:"row" , alignItems:"center" , marginBottom:"20px"}}>
@@ -109,13 +105,24 @@ const ContactMe = (props) => {
                                                     <span>{profileData.email}</span>
                                                 </div>
                                             </div>
-                                            
-                                            <p style={{marginTop: "50px"}}>You can also use this form to the right to directly send me an email.</p>
+                                                
+                                            <div style={{flex:1 , justifyContent:"flex-end"}}>
+                                                <p style={{marginTop: "50px"}}>You can also use this form to the right to directly send me an email.</p>
+                                            </div>
                                             
                                         </div>
                                     </Grid>
-                                    <Grid item sm={8}>
-                                        <div style={{padding:"10px 20px"}}>
+                                    <Grid item sm={12} md={8}>
+                                        <motion.div 
+                                            initial={{opacity:0}}
+                                            animate={{opacity:1}}
+                                            exit={{opacity:0}}
+                                            transition={{
+                                                delay : 1,
+                                                duration:1
+                                            }}
+                                            style={{padding:"10px 20px"}}
+                                        >
 
                                             <form autoComplete="off" className="contact-form" onSubmit={sendEmail}>
                                                 <input type="hidden" name="to_email" value={profileData.email} />
@@ -235,16 +242,15 @@ const ContactMe = (props) => {
                                                     </div>
                                                 </div>
                                             </form>
-
-                                        </div>
+                                        </motion.div>
                                     </Grid>
                                 </Grid>
-                               
+                                
                             </div>
                         </Grid>
                     </Grid>
-                </div>
-            </div>
+                </div>    
+            </AnimatePresence>                                 
         </motion.div>
     )
 }

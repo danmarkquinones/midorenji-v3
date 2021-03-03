@@ -10,12 +10,12 @@ const ProjectCards = (props) => {
     
     return (
         <div 
+            // data-aos="slide-left"
             className="card-indiv-div"
             style={{
                 height:"auto",
                 backgroundColor : theme.secondaryBackground,
                 padding:"20px",
-                // top: index%2===0 ? "50px" : "20px"
                 boxShadow : theme.isDarkMode? null : "1px 1px 2px lightgray"
             }}
         >

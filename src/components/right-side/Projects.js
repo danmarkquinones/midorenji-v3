@@ -6,42 +6,27 @@ import Slider from 'react-slick'
 import { ThemeContext } from "../context/themeContext";
 import ReactPlayer from 'react-player'
 import ProjectCards from '../shared_components/ProjectCards'
+import { Grid } from '@material-ui/core';
 
 const Projects = (props) => {
 
     const {pageVariants, pageTransition} = props
     const [theme] = useContext(ThemeContext)
 
-    const settings = {
-        dots: false,
-        infinite: false,
-        speed: 1000,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-    }
-
-    const variants = {
-        initial:{
-            width:0,
-            opacity:0
-        },
-        in:{
-            width:"100%",
-            opacity:1
-        },
-        out:{
-            // display:"none",
-            width:0,
-            opacity:0
-        }
-    }
+    // const settings = {
+    //     dots: false,
+    //     infinite: false,
+    //     speed: 1000,
+    //     slidesToShow: 3,
+    //     slidesToScroll: 3,
+    // }
 
     return(
         <motion.div
             initial="initial"
             animate="in"
             exit="out"
-            variants={variants}
+            variants={pageVariants}
             transition={pageTransition}
             className="page-container"
         >
@@ -49,12 +34,11 @@ const Projects = (props) => {
                 className="projects-main-div"
                 style={{
                     display:"flex",
-                    // backgroundColor: theme.isDarkMode ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.2)"
                 }}
             >
                 <AnimatePresence>
                     <div className="slider-div">
-                        <Slider {...settings} >
+                        {/* <Slider {...settings} >
                             {projectData.map((project,index)=>
                                 <motion.div 
                                     initial={{opacity:0}}
@@ -68,7 +52,28 @@ const Projects = (props) => {
                                         </div>
                                 </motion.div>
                             )}
-                        </Slider>
+                        </Slider> */}
+                        <Grid container>
+                            {projectData.map((project,index)=>
+                                <Grid item sm={12} md={4} key={index} style={{margin:"40px 0px"}}>
+                                    <motion.div 
+                                        initial={{opacity:0}}
+                                        animate={{opacity:1}}
+                                        exit={{opacity:0}}
+                                        transition={{
+                                            delay : [0,1,2].includes(index)? 1 
+                                                    : [3,4,5].includes(index) ? 2 
+                                                    :3, 
+                                            duration:1
+                                        }}
+                                    >
+                                            <div className="card-div">
+                                                <ProjectCards project={project} index={index} theme={theme}/>
+                                            </div>
+                                    </motion.div>
+                                </Grid>
+                            )}
+                        </Grid>
                     </div>
                 </AnimatePresence>
             </div>

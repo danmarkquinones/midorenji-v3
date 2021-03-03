@@ -24,40 +24,19 @@ const Experience = (props) => {
                         <Grid item sm={6} className="exp-left-side">
                             <div
                                 style={{
-                                    color:theme.primaryTextColor
+                                    color:theme.primaryTextColor,
                                 }}
                             >
                                 <h2
                                     style={{
                                         // color:theme.primaryTextColor,
-                                        color:"#3578E5",
+                                        color:"#f43b62",
                                         fontWeight:"bold",
                                     }}
                                 >{exp.companyName}</h2>
 
                                 <p >{exp.date}</p>
                                 <p style={{fontWeight:600}}>{exp.job}</p>
-                            </div>
-                            <div style={{marginTop : "15px"}}>
-                                <Button
-                                    variant="contained"
-                                    size="small"
-                                    disableElevation
-                                    style={{
-                                        border:"none",
-                                        backgroundColor:"#3578E5",
-                                        color:"#fff",
-                                        borderRadius:"100px",
-                                    }}
-                                    onClick={()=>showModal("experience")}
-                                >
-                                    <div
-                                        style={{display:"flex" , alignItems:"center" , fontSize:"10px" ,color:"#fff"}}
-                                    >
-                                        <span style={{lineHeight:"20px"}}>READ MORE</span> 
-                                        <DoubleArrowIcon style={{marginLeft:"3px" , marginBottom:"2px", fontSize:"10px"}}/>
-                                    </div>
-                                </Button>
                             </div>
                         </Grid>
                         <Grid item sm={6} style={{textAlign:"center"}}>

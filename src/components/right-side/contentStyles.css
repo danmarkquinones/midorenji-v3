@@ -9,8 +9,8 @@
 }
 .slider-div{
     /* height: 300px; */
-    width: 100%;
-    padding: 0px 10px;
+    /* width: 100%; */
+    /* padding: 0px 10px; */
 }
 .card-div{
     padding: 0px 10px;
@@ -75,8 +75,6 @@
     transition: 0.5s;
 }
 .card-indiv-body{
-    /* background-color: #fff; */
-    /* height: 200px;     */
     border-radius: 5px;
     overflow: hidden;
 }
@@ -84,8 +82,6 @@
     width: 100%;
     height: 250px;
     object-fit: cover;
-    /* object-position: left; */
-    /* border-radius: 5px; */
 }
 .slick-prev:before , .slick-next:before{
     color : gray !important;
@@ -105,12 +101,13 @@
 .profile-container{
     padding: 0px 10px;
     position: relative;
+    overflow: hidden;
 }
 .profile-card-div {
     border-radius: 10px;
-    /* height: 240px; */
     overflow: hidden;
     position: relative;
+    /* height: 500px; */
 }
 .profile-card-header-title{
     margin: 0;
@@ -122,15 +119,25 @@
 }
 .profile-card-header-title h2{
     /* transform: skewX(35deg); */
-    margin: 0px 30px 5px 30px;
+    margin: 0px 20px 5px 20px;
+}
+.profile-card-footer-title{
+    height: 35px;
+    width: 35px;
+    margin: 0;
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .profile-dp-cont{
     border-radius: 50%;
     overflow: hidden;
-    height: 105px;
-    width: 105px;
-    z-index: 10;
+    /* margin: 0px 50px; */
 }
 .about-me-left-grid{
     position: relative;
@@ -138,15 +145,15 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-top: 60px;
+    padding-top: 40px;
 }
 .about-me-right-grid h4{
     font-weight: bold;
     font-size: 20px;
 }
 .profile-dp-cont img , .profile-dp-bg{
-    height: 100px;
-    width: 100px;
+    height: auto;
+    width: 150px;
 }
 .profile-dp-bg{
     border-radius: 50%;

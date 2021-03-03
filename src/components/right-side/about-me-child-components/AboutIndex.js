@@ -9,14 +9,15 @@ import Experience from "./Experience";
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import ExpandProfile from "./ExpandProfile";
 import ExpandExperience from "./ExpandExperience";
+import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 
 const AboutIndex = (props) => {
 
     const {theme , motion , showModal , modalType , setModalType} = props
 
     const [profileCards , setProfileCards] = useState([
-        {value:"about" , title:"About Me" , gridRow : 8 , expanded:false, height : "240px"},
-        {value:"skills" , title:"Skills" , gridRow : 4 ,expanded:false, height : "240px"},
+        {value:"profile" , title:"About Me" , gridRow : 8 , expanded:false, height : "240px"},
+        {value:"skills" , title:"Skill Set" , gridRow : 4 ,expanded:false, height : "240px"},
         {value:"hobbies" , title:"Hobbies" , gridRow : 4 ,expanded:false, height : "240px"},
         {value:"experience" , title:"Experiences" , gridRow : 8 ,expanded:false, height : "240px"},
     ]) 
@@ -26,18 +27,15 @@ const AboutIndex = (props) => {
             opacity:1 ,
             height:"100%"
         },
-        // You can do whatever you want here, if you just want it to stop completely use `rotate: 0`
         close: { 
             opacity:0,
             height:0
          }
     };
 
-    console.log("modal",modalType)
-
     return(
         <AnimatePresence>
-            <Grid container>
+            <Grid container style={{padding:"0px 20px"}}>
                 <Grid container item sm={7}>
                     {profileCards.map((card,index)=>
                         <Grid key={index} item sm={card.gridRow}>
@@ -47,7 +45,7 @@ const AboutIndex = (props) => {
                                     animate={{opacity:1 }}
                                     exit={{opacity:0}}
                                     transition={{ 
-                                        delay : (index+1)-0.5 , 
+                                        delay : (index+1)-(0.5*index) , 
                                         duration:1
                                     }}
                                 >
@@ -56,7 +54,6 @@ const AboutIndex = (props) => {
                                         style={{
                                             backgroundColor:theme.secondaryBackground , 
                                             boxShadow: !theme.isDarkMode && "1px 1px 5px rgba(0,0,0,0.3)",
-                                            height:card.height
                                         }}
                                     >
                                         <div>
@@ -77,7 +74,7 @@ const AboutIndex = (props) => {
                                                 </h2>
                                             </div>
                                             <div>
-                                                {card.value==="about" ? 
+                                                {card.value==="profile" ? 
                                                     <Profile theme={theme} profileData={profileData} showModal={showModal}/>
                                                 :card.value==="skills" ?
                                                     <Skills theme={theme} skillsData={skillsData}/>
@@ -86,6 +83,24 @@ const AboutIndex = (props) => {
                                                 :<Experience theme={theme} experienceData={experienceData} showModal={showModal}/>
                                                 }
                                             </div>
+
+                                            {card.value==="profile" || card.value==="experience"?
+                                                <div
+                                                    className="profile-card-footer-title" 
+                                                    style={{
+                                                        zIndex:5,
+                                                        backgroundColor:"#3578E5"
+                                                    }}
+                                                >
+                                                    <IconButton
+                                                        onClick={()=>showModal(card.value)}
+                                                    >
+                                                        <DoubleArrowIcon style={{fontSize:"15px" , color : theme.secondaryBackground}}/>
+                                                    </IconButton>
+                                                    
+                                                </div>
+                                            :null}
+
                                         </div>
                                     </div>
                                 </motion.div>

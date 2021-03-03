@@ -1,4 +1,4 @@
-import React , {useContext} from 'react';
+import React , {useContext, useState} from 'react';
 import '../styles/MainStyles.css'
 import {Switch,Route,Redirect , useLocation} from "react-router-dom";
 import Routes from './Routes'
@@ -10,36 +10,44 @@ import { IconButton } from '@material-ui/core';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import MailIcon from '@material-ui/icons/Mail';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import { ThemeContext } from "./context/themeContext";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-const pageVariants = {
-    initial:{
-        opacity:0,
-        // x:"-100vh",
-        scale:0.5
-    },
-    in:{
-        opacity:1,
-        // x:"0",
-        scale:1
-    },
-    out:{
-        opacity:0,
-        // x:"100vh",
-        scale:0.5
-    }
-}
-
-const pageTransition = {
-    duration :"1"
-}
 
 const Main = (props) => {
     
     const location = useLocation()
     const [theme,setTheme] = useContext(ThemeContext)
+    const [navBar , setNavbar] = useState(false)
+
+    AOS.init()
+
+    const pageVariants = {
+        initial:{
+            opacity:0,
+            x:"100vh",
+        },
+        in:{
+            opacity:1,
+            x:"0",
+        },
+        out:{
+            opacity:0,
+            x:"-100vh",
+        }
+    }
+
+    const pageTransition = {duration:1}
+
+    const changeNavBarBackground = (event) => {
+        if(event.target.scrollTop >= 100){
+            setNavbar(true);
+        }else{
+            setNavbar(false);
+        }
+    }
 
     const handleRedirect = (link) => {
         window.open(link, "_blank")
@@ -101,10 +109,17 @@ const Main = (props) => {
                     <GitHubIcon style={{fontSize:30 , color:theme.primaryTextColor}}/>
                 </IconButton>
             </div>
-            
-            <div className="right-side-div">
 
-                <div className='nav-div'>
+            <div className="right-side-div" onScroll={changeNavBarBackground}>
+
+                <div 
+                    className='nav-div'
+                    style={{
+                        background:navBar?theme.primaryBackground:"transparent",
+                        transition:"0.5s",
+                        paddingLeft:"35px"
+                    }}
+                >
                     <Routes/>
                 </div>
 
