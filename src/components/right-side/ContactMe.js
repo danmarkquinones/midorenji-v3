@@ -64,9 +64,7 @@ const ContactMe = (props) => {
             className="page-container"
         >
             <AnimatePresence>
-                <div 
-                    className="profile-container"
-                >
+                <div className="profile-container">
                     <Grid container style={{padding:"20px"}}>
                         <Grid item sm={12} md={7}>
                             <div

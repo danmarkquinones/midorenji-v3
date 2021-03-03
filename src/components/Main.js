@@ -27,15 +27,15 @@ const Main = (props) => {
     const pageVariants = {
         initial:{
             opacity:0,
-            x:"100vh",
+            height:"0",
         },
         in:{
             opacity:1,
-            x:"0",
+            height:"auto",
         },
         out:{
             opacity:0,
-            x:"-100vh",
+            height:"0",
         }
     }
 
