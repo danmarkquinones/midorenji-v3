@@ -49,7 +49,7 @@ export default function Routes(props) {
                     height:"50px",
                     width:"50px",
                     overflow:"hidden",
-                    // backgroundColor:"#fff"
+                    marginRight:"1%"
                 }}
             >
                 <img src={logo} style={{height:"50px"}} alt="logo"/>
@@ -77,7 +77,7 @@ export default function Routes(props) {
                 to="/contact-me">
                     Contacts
             </NavLink>
-            <div style={{marginLeft:"20px"}}>
+            <div style={{position:"absolute" , right:"5%"}}>
                 <Switch  onChange={switchToDarkMode} />
             </div>
         </React.Fragment>

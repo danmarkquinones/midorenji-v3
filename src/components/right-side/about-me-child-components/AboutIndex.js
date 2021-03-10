@@ -2,7 +2,7 @@ import React , {useState} from "react";
 import { Grid , IconButton} from '@material-ui/core';
 import Profile from './Profile';
 import Skills from './Skills';
-import {profileData , skillsData , hobbiesData , experienceData} from "../../../helpers/data";
+import {profileData , skillsData , hobbiesData , experienceData , profileCards} from "../../../helpers/data";
 import Hobbies from "./Hobbies";
 import { AnimatePresence } from "framer-motion";
 import Experience from "./Experience";
@@ -14,13 +14,6 @@ import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 const AboutIndex = (props) => {
 
     const {theme , motion , showModal , modalType , setModalType} = props
-
-    const [profileCards , setProfileCards] = useState([
-        {value:"profile" , title:"About Me" , gridRow : 8 , expanded:false, height : "240px"},
-        {value:"skills" , title:"Skill Set" , gridRow : 4 ,expanded:false, height : "240px"},
-        {value:"hobbies" , title:"Hobbies" , gridRow : 4 ,expanded:false, height : "240px"},
-        {value:"experience" , title:"Experiences" , gridRow : 8 ,expanded:false, height : "240px"},
-    ]) 
 
     const variants = {
         open: { 
@@ -41,11 +34,11 @@ const AboutIndex = (props) => {
                         <Grid key={index} item sm={card.gridRow}>
                             <div style={{padding:"10px"}}>
                                 <motion.div
-                                    initial={{opacity:0}}
-                                    animate={{opacity:1 }}
-                                    exit={{opacity:0}}
+                                    initial={card.initial}
+                                    animate={card.animate}
+                                    exit={card.exit}
                                     transition={{ 
-                                        delay : (index+1)-(0.5*index) , 
+                                        // delay : card.delay , 
                                         duration:1
                                     }}
                                 >
@@ -61,7 +54,8 @@ const AboutIndex = (props) => {
                                                 className="profile-card-header-title" 
                                                 style={{
                                                     zIndex:5,
-                                                    backgroundColor:"#3578E5"
+                                                    background: "rgb(244,59,98)",
+                                                    background: "linear-gradient(90deg, rgba(244,59,98,1) 0%, rgba(53,120,229,1) 50%, rgba(0,212,255,1) 100%)"
                                                 }}
                                             >
                                                 <h2 
@@ -84,16 +78,20 @@ const AboutIndex = (props) => {
                                                 }
                                             </div>
 
-                                            {card.value==="profile" || card.value==="experience"?
+                                            {card.value==="profile"?
                                                 <div
                                                     className="profile-card-footer-title" 
                                                     style={{
                                                         zIndex:5,
-                                                        backgroundColor:"#3578E5"
+                                                        backgroundColor:"#3578E5",
                                                     }}
                                                 >
                                                     <IconButton
                                                         onClick={()=>showModal(card.value)}
+                                                        style={{
+                                                            background: "rgb(244,59,98)",
+                                                            background: "linear-gradient(-315deg, rgba(244,59,98,1) 0%, rgba(53,120,229,1) 50%, rgba(0,212,255,1) 100%)",
+                                                        }}
                                                     >
                                                         <DoubleArrowIcon style={{fontSize:"15px" , color : theme.secondaryBackground}}/>
                                                     </IconButton>
@@ -111,7 +109,9 @@ const AboutIndex = (props) => {
                 <Grid item sm={5} style={{padding:"10px"}}>
                     <motion.div
                         variants={variants}
+                        initial={{opacity:0}}
                         animate={modalType==="" ? 'close' : 'open'}
+                        // exit={{opacity:0}}
                         transition={{
                             duration:0.5
                         }}
@@ -125,11 +125,12 @@ const AboutIndex = (props) => {
                         <div>
                             <div 
                                 style={{ 
-                                    backgroundColor:"#3578E5",
+                                    background: "rgb(244,59,98)",
+                                    background: "linear-gradient(90deg, rgba(244,59,98,1) 0%, rgba(53,120,229,1) 50%, rgba(0,212,255,1) 100%)",
                                     display:"flex" , 
                                     flexDirection:"row" , 
                                     alignItems:"center" , 
-                                    padding:"5px 10px"
+                                    padding:"10px"
                                 }}
                             >
                                 <div style={{flex:1 , marginLeft:"10px"}}>
@@ -146,7 +147,10 @@ const AboutIndex = (props) => {
                                     </h2>
                                 </div>
                                 <div style={{flex:1 , textAlign:"right"}}>
-                                    <IconButton onClick={()=>setModalType("")}>
+                                    <IconButton 
+                                        onClick={()=>setModalType("")}
+                                        
+                                    >
                                         <HighlightOffIcon
                                             style={{color:theme.primaryBackground}}
                                         />
@@ -158,7 +162,6 @@ const AboutIndex = (props) => {
                                 style={{
                                     height:"440px",
                                     overflow:"auto",
-                                    // padding:"10px 20px",
                                     background:theme.primaryBackground
                                 }}
                             >

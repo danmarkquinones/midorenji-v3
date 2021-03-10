@@ -1,4 +1,4 @@
-import { Button, Grid } from "@material-ui/core"
+import { IconButton, Grid } from "@material-ui/core"
 import React from "react"
 import bg from '../../../images/experiencebg.png'
 import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
@@ -37,6 +37,16 @@ const Experience = (props) => {
 
                                 <p >{exp.date}</p>
                                 <p style={{fontWeight:600}}>{exp.job}</p>
+                                <IconButton
+                                    onClick={()=>showModal("experience")}
+                                    style={{
+                                        background: "rgb(244,59,98)",
+                                        background: "linear-gradient(-315deg, rgba(244,59,98,1) 0%, rgba(53,120,229,1) 50%, rgba(0,212,255,1) 100%)",
+                                        marginTop:"10px" , height:"35px" , width:"35px"
+                                    }}
+                                >
+                                    <DoubleArrowIcon style={{fontSize:"15px" , color : theme.secondaryBackground}}/>
+                                </IconButton>
                             </div>
                         </Grid>
                         <Grid item sm={6} style={{textAlign:"center"}}>

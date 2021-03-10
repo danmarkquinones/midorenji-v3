@@ -12,7 +12,7 @@ const ExpandExperience = (props) => {
                 <div key={index} style={{color: theme.primaryTextColor, background: theme.secondaryBackground , padding:"30px 20px" , marginBottom:"10px"}}>
                     <Grid container>
                         <Grid item md={7}>
-                            <p style={{margin:0 , color:"#3578E5", fontWeight:"600" , fontSize:"18px"}}>{work.companyName}</p>
+                            <p style={{margin:0 , color:"#3578E5", fontWeight:"600" , fontSize:"20px"}}>{work.companyName}</p>
                             <p style={{margin:0}}>{work.job}</p>
                             <p style={{margin:0 , fontSize:"12px" , color:"gray"}}>{work.date}</p>
                         </Grid>

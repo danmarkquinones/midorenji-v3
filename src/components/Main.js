@@ -1,4 +1,4 @@
-import React , {useContext, useState} from 'react';
+import React , {useContext, useState , useEffect} from 'react';
 import '../styles/MainStyles.css'
 import {Switch,Route,Redirect , useLocation} from "react-router-dom";
 import Routes from './Routes'
@@ -12,7 +12,6 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import { ThemeContext } from "./context/themeContext";
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 
@@ -21,25 +20,34 @@ const Main = (props) => {
     const location = useLocation()
     const [theme,setTheme] = useContext(ThemeContext)
     const [navBar , setNavbar] = useState(false)
+    const [watermark,setWatermark] = useState("")
 
-    AOS.init()
+    // AOS.init()
+
+    useEffect(()=>{
+        console.log(location.pathname)
+        if(location.pathname==="/profile"){
+            setWatermark("ABOUT MYSELF")
+        }else if(location.pathname==="/my-projects"){
+            setWatermark("MY PROJECTS")
+        }else{
+            setWatermark("CONNECT WITH ME")
+        }
+    },[location])
 
     const pageVariants = {
         initial:{
             opacity:0,
-            height:"0",
         },
         in:{
             opacity:1,
-            height:"auto",
         },
         out:{
             opacity:0,
-            height:"0",
         }
     }
 
-    const pageTransition = {duration:1}
+    const pageTransition = {duration:0.5}
 
     const changeNavBarBackground = (event) => {
         if(event.target.scrollTop >= 100){
@@ -73,49 +81,58 @@ const Main = (props) => {
                     onClick={()=>handleRedirect("https://www.facebook.com/itzmedanmark/")}
                     style={{
                         margin:"5px 0px",
-                        backgroundColor: theme.isDarkMode ? "rgba(255, 255, 255, 0.15)" : "rgba(0, 0, 0, 0.3)",
+                        background: "rgb(244,59,98)",
+                        background: "linear-gradient(-315deg, rgba(244,59,98,1) 0%, rgba(53,120,229,1) 50%, rgba(0,212,255,1) 100%)",
                     }}
                 >
-                    <FacebookIcon style={{fontSize:30 , color:theme.primaryTextColor}}/>
+                    <FacebookIcon style={{fontSize:"30px", transform:"scale(1.2)" , color:theme.secondaryBackground}}/>
                 </IconButton>
                 <IconButton
                     className="social-icon-button"
                     onClick={()=>handleRedirect("https://twitter.com/hidnlmrks")}
                     style={{
                         margin:"5px 0px",
-                        backgroundColor: theme.isDarkMode ? "rgba(255, 255, 255, 0.15)" : "rgba(0, 0, 0, 0.3)"
+                        background: "rgb(244,59,98)",
+                        background: "linear-gradient(-315deg, rgba(244,59,98,1) 0%, rgba(53,120,229,1) 50%, rgba(0,212,255,1) 100%)",
                     }}
                 >
-                    <TwitterIcon style={{fontSize:30 , color:theme.primaryTextColor}}/>
+                    <TwitterIcon style={{fontSize:"30px", transform:"scale(1.2)" , color:theme.secondaryBackground}}/>
                 </IconButton>
                 <IconButton 
                     className="social-icon-button"
                     onClick={()=>handleRedirect("https://www.linkedin.com/in/danmark-qui%C3%B1ones-7607601b7/")}
                     style={{
                         margin:"5px 0px",
-                        backgroundColor: theme.isDarkMode ? "rgba(255, 255, 255, 0.15)" : "rgba(0, 0, 0, 0.3)"
+                        background: "rgb(244,59,98)",
+                        background: "linear-gradient(-315deg, rgba(244,59,98,1) 0%, rgba(53,120,229,1) 50%, rgba(0,212,255,1) 100%)",
                     }}
                 >
-                    <LinkedInIcon style={{fontSize:30 , color:theme.primaryTextColor}}/>
+                    <LinkedInIcon style={{fontSize:"30px", transform:"scale(1.2)" , color:theme.secondaryBackground}}/>
                 </IconButton>
                 <IconButton 
                     className="social-icon-button"
                     onClick={()=>handleRedirect("https://github.com/danmarkquinones")}
                     style={{
                         margin:"5px 0px",
-                        backgroundColor: theme.isDarkMode ? "rgba(255, 255, 255, 0.15)" : "rgba(0, 0, 0, 0.3)"
+                        background: "rgb(244,59,98)",
+                        background: "linear-gradient(-315deg, rgba(244,59,98,1) 0%, rgba(53,120,229,1) 50%, rgba(0,212,255,1) 100%)",
                     }}
                 >
-                    <GitHubIcon style={{fontSize:30 , color:theme.primaryTextColor}}/>
+                    <GitHubIcon style={{fontSize:"30px", transform:"scale(1.2)" , color:theme.secondaryBackground}}/>
                 </IconButton>
             </div>
 
             <div className="right-side-div" onScroll={changeNavBarBackground}>
+                
+                <div style={{position:"absolute" , height:"70%" , width:"80%" , marginTop:"100px", opacity:"0.05" , overflow:"hidden" }}>
+                    <h1 style={{fontSize:"250px" , color:theme.primaryTextColor , fontWeight:"bold" , lineHeight:"200px"}}>{watermark}</h1>
+                </div>
 
                 <div 
                     className='nav-div'
                     style={{
-                        background:navBar?theme.primaryBackground:"transparent",
+                        background:navBar?theme.secondaryBackground:"transparent",
+                        boxShadow:navBar?"0px 0px 10px gray":"none",
                         transition:"0.5s",
                         paddingLeft:"35px"
                     }}
@@ -124,7 +141,7 @@ const Main = (props) => {
                 </div>
 
                 <div className="content-div">
-                    <AnimatePresence>
+                    <AnimatePresence exitBeforeEnter>
                         <Switch location={location} key={location.pathname}>
                             <Route exact path="/"> 
                                 <Redirect to="/my-projects" />

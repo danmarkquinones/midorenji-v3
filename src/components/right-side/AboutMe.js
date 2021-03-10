@@ -2,7 +2,6 @@ import React , {useContext , useState} from 'react'
 import {motion } from 'framer-motion'
 import { ThemeContext } from "../context/themeContext";
 import AboutIndex from './about-me-child-components/AboutIndex';
-import AboutModalComponents from '../shared_components/AboutModalComponents';
 
 const AboutMe = (props) => {
 
@@ -14,7 +13,9 @@ const AboutMe = (props) => {
     const showModal = (type) => {
         setModalType("")
         setTimeout(()=>{
-            setModalType(type)
+            if(modalType!==type){
+                setModalType(type)
+            }
         },500)
     };
 

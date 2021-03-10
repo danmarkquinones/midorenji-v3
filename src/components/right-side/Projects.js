@@ -61,9 +61,7 @@ const Projects = (props) => {
                                         animate={{opacity:1}}
                                         exit={{opacity:0}}
                                         transition={{
-                                            delay : [0,1,2].includes(index)? 1 
-                                                    : [3,4,5].includes(index) ? 2 
-                                                    :3, 
+                                            delay : project.delay, 
                                             duration:1
                                         }}
                                     >

@@ -64,8 +64,8 @@ const ContactMe = (props) => {
             className="page-container"
         >
             <AnimatePresence>
-                <div className="profile-container">
-                    <Grid container style={{padding:"20px"}}>
+                <div className="profile-container" style={{height:"auto"}}>
+                    <Grid container style={{padding:"20px 30px"}}>
                         <Grid item sm={12} md={7}>
                             <div
                                 style={{
@@ -110,13 +110,12 @@ const ContactMe = (props) => {
                                             
                                         </div>
                                     </Grid>
-                                    <Grid item sm={12} md={8}>
+                                    <Grid item sm={12} md={8} style={{overflow:"hidden"}}>
                                         <motion.div 
-                                            initial={{opacity:0}}
-                                            animate={{opacity:1}}
-                                            exit={{opacity:0}}
+                                            initial={{x:"-100vh"}}
+                                            animate={{x:"0"}}
                                             transition={{
-                                                delay : 1,
+                                                // delay : 1,
                                                 duration:1
                                             }}
                                             style={{padding:"10px 20px"}}

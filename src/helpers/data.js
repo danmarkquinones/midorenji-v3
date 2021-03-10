@@ -150,7 +150,8 @@ export const projectData = [
         role : ['Front End'],
         url:'',
         bg:tmcardbg,
-        position:"center"
+        position:"center",
+        delay:0.5
     },
     {
         name: 'Media Meter V3',
@@ -165,7 +166,8 @@ export const projectData = [
         role : ['Front End (Web and Mobile App)'],
         url:'https://media-meter.net/mm-client/',
         bg:mmcardbg,
-        position:"bottom"
+        position:"bottom",
+        delay:0.5
     },
     {
         name: 'PokeMania',
@@ -180,10 +182,11 @@ export const projectData = [
         role : ['Front End' , 'Back End'],
         url:'',
         bg:pokemaniacardbg,
-        position:"left"
+        position:"left",
+        delay:0.5
     },
     {
-        name: 'ANGULAR ZOOM',
+        name: 'COMING SOON',
         videoLink : '',
         srcCode :'',
         type : 'other',
@@ -195,7 +198,8 @@ export const projectData = [
         role : ['Front End' , 'Back End'],
         url:'',
         bg:underdevbg,
-        position:"left"
+        position:"left",
+        delay:1
     },
     {
         name: 'RAGING REINDEER',
@@ -210,7 +214,8 @@ export const projectData = [
         role : ['Front End'],
         url:'https://danmarkquinones.github.io/ragingreindeer/',
         bg:rrcardbg,
-        position:"center"
+        position:"center",
+        delay:1
     },
     {
         name: 'FSRJ',
@@ -225,7 +230,8 @@ export const projectData = [
         role : ['Front End' , 'Back End'],
         url:'https://fsrjconstruction.000webhostapp.com/',
         bg:fsrjcardbg,
-        position:"left"
+        position:"left",
+        delay:1
     },
     {
         name: 'FIGURA',
@@ -240,7 +246,8 @@ export const projectData = [
         role : ['Front End' , 'Back End'],
         url:'https://figura-toys.000webhostapp.com/figura/app/views/index.php',
         bg:figuracardbg,
-        position:"left"
+        position:"left",
+        delay:1.5
     },
     {
         name: 'BALIKTANAW',
@@ -255,7 +262,8 @@ export const projectData = [
         role : ['Front End'],
         url:'https://danmarkquinones.github.io/baliktanaw/',
         bg:baliktanawcardbg,
-        position:"right"
+        position:"right",
+        delay:1.5
     },
     {
         name: 'JS Practice',
@@ -270,7 +278,8 @@ export const projectData = [
         role : ['Front End'],
         url:'https://danmarkquinones.github.io/practice/',
         bg:jspracticecardbg,
-        position:"center"
+        position:"center",
+        delay:1.5
     }, 
 ]
 
@@ -364,4 +373,24 @@ export const experienceData = [
             "Assist the admin in making schedules for classes and teachers."
         ]
     }
+]
+
+
+export const profileCards = [
+    {
+        value:"profile" , title:"About Me" , gridRow : 8 , delay:0, 
+        initial : {x:"-100vh" , opacity:0} , animate:{x:"0" , opacity:1} , exit:{x:"100vh" , opacity:0}
+    },
+    {
+        value:"skills" , title:"Skill Set" , gridRow : 4 ,delay:0.5, 
+        initial : {y:"-100vh" , opacity:0} , animate:{y:"0" , opacity:1} , exit:{y:"100vh" , opacity:0}
+    },
+    {
+        value:"hobbies" , title:"Hobbies" , gridRow : 4 ,delay:1, height : "240px",
+        initial : {y:"100vh" , opacity:0} , animate:{y:"0" , opacity:1} , exit:{y:"-100vh" , opacity:0}
+    },
+    {
+        value:"experience" , title:"Experiences" , gridRow : 8 ,delay:1.5, height : "240px",
+        initial : {x:"100vh" , opacity:0} , animate:{x:"0" , opacity:1} , exit:{x:"-100vh" , opacity:0}
+    },
 ]
