@@ -225,3 +225,23 @@
     padding: 5px 20px;
     border-radius: 10px;
 }
+
+.iconButtonLogo{
+    transform: scale(1.2) rotate(-360deg) !important;
+    transition: 0.2s !important;
+    font-size: 30px !important;
+}
+.iconButtonLogo:hover{
+    transform: scale(2.5) rotate(360deg) !important;
+    transition: 0.2s !important;
+}
+.iconButtonLogoTwitter{
+    transform: scale(1.2) rotate(-360deg) !important;
+    transition: 0.2s !important;
+    font-size: 30px !important;
+}
+.iconButtonLogoTwitter:hover{
+    transform: scale(1.7) rotate(360deg) !important;
+    transition: 0.2s !important;
+    /* color: transparent !important; */
+}   

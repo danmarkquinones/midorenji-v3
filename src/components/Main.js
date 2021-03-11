@@ -76,6 +76,7 @@ const Main = (props) => {
                     boxShadow: !theme.isDarkMode && "0px 0px 10px gray"
                 }}
             >
+                
                 <IconButton 
                     className="social-icon-button"
                     onClick={()=>handleRedirect("https://www.facebook.com/itzmedanmark/")}
@@ -84,9 +85,10 @@ const Main = (props) => {
                         background: "rgb(244,59,98)",
                         background: "linear-gradient(-315deg, rgba(244,59,98,1) 0%, rgba(53,120,229,1) 50%, rgba(0,212,255,1) 100%)",
                     }}
-                >
-                    <FacebookIcon style={{fontSize:"30px", transform:"scale(1.2)" , color:theme.secondaryBackground}}/>
+                >   
+                    <FacebookIcon className="iconButtonLogo" style={{color:theme.secondaryBackground}}/>
                 </IconButton>
+
                 <IconButton
                     className="social-icon-button"
                     onClick={()=>handleRedirect("https://twitter.com/hidnlmrks")}
@@ -96,7 +98,7 @@ const Main = (props) => {
                         background: "linear-gradient(-315deg, rgba(244,59,98,1) 0%, rgba(53,120,229,1) 50%, rgba(0,212,255,1) 100%)",
                     }}
                 >
-                    <TwitterIcon style={{fontSize:"30px", transform:"scale(1.2)" , color:theme.secondaryBackground}}/>
+                    <TwitterIcon className="iconButtonLogoTwitter" style={{color:theme.secondaryBackground}}/>
                 </IconButton>
                 <IconButton 
                     className="social-icon-button"
@@ -107,7 +109,7 @@ const Main = (props) => {
                         background: "linear-gradient(-315deg, rgba(244,59,98,1) 0%, rgba(53,120,229,1) 50%, rgba(0,212,255,1) 100%)",
                     }}
                 >
-                    <LinkedInIcon style={{fontSize:"30px", transform:"scale(1.2)" , color:theme.secondaryBackground}}/>
+                    <LinkedInIcon className="iconButtonLogo" style={{color:theme.secondaryBackground}}/>
                 </IconButton>
                 <IconButton 
                     className="social-icon-button"
@@ -118,7 +120,7 @@ const Main = (props) => {
                         background: "linear-gradient(-315deg, rgba(244,59,98,1) 0%, rgba(53,120,229,1) 50%, rgba(0,212,255,1) 100%)",
                     }}
                 >
-                    <GitHubIcon style={{fontSize:"30px", transform:"scale(1.2)" , color:theme.secondaryBackground}}/>
+                    <GitHubIcon className="iconButtonLogo" style={{color:theme.secondaryBackground}}/>
                 </IconButton>
             </div>
 
