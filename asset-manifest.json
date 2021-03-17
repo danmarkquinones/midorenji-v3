@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "https://danmarkquinones.github.io/midorenji-v3/static/css/main.8742e2ff.chunk.css",
-    "main.js": "https://danmarkquinones.github.io/midorenji-v3/static/js/main.8d246480.chunk.js",
-    "main.js.map": "https://danmarkquinones.github.io/midorenji-v3/static/js/main.8d246480.chunk.js.map",
-    "runtime-main.js": "https://danmarkquinones.github.io/midorenji-v3/static/js/runtime-main.94fa0ce1.js",
-    "runtime-main.js.map": "https://danmarkquinones.github.io/midorenji-v3/static/js/runtime-main.94fa0ce1.js.map",
+    "main.css": "https://danmarkquinones.github.io/midorenji-v3/static/css/main.43bcff74.chunk.css",
+    "main.js": "https://danmarkquinones.github.io/midorenji-v3/static/js/main.8ed3994b.chunk.js",
+    "main.js.map": "https://danmarkquinones.github.io/midorenji-v3/static/js/main.8ed3994b.chunk.js.map",
+    "runtime-main.js": "https://danmarkquinones.github.io/midorenji-v3/static/js/runtime-main.261e0497.js",
+    "runtime-main.js.map": "https://danmarkquinones.github.io/midorenji-v3/static/js/runtime-main.261e0497.js.map",
     "static/css/2.482a99e9.chunk.css": "https://danmarkquinones.github.io/midorenji-v3/static/css/2.482a99e9.chunk.css",
-    "static/js/2.d436a2ac.chunk.js": "https://danmarkquinones.github.io/midorenji-v3/static/js/2.d436a2ac.chunk.js",
-    "static/js/2.d436a2ac.chunk.js.map": "https://danmarkquinones.github.io/midorenji-v3/static/js/2.d436a2ac.chunk.js.map",
-    "static/js/3.b073ce15.chunk.js": "https://danmarkquinones.github.io/midorenji-v3/static/js/3.b073ce15.chunk.js",
-    "static/js/3.b073ce15.chunk.js.map": "https://danmarkquinones.github.io/midorenji-v3/static/js/3.b073ce15.chunk.js.map",
+    "static/js/2.c868a054.chunk.js": "https://danmarkquinones.github.io/midorenji-v3/static/js/2.c868a054.chunk.js",
+    "static/js/2.c868a054.chunk.js.map": "https://danmarkquinones.github.io/midorenji-v3/static/js/2.c868a054.chunk.js.map",
+    "static/js/3.590285d4.chunk.js": "https://danmarkquinones.github.io/midorenji-v3/static/js/3.590285d4.chunk.js",
+    "static/js/3.590285d4.chunk.js.map": "https://danmarkquinones.github.io/midorenji-v3/static/js/3.590285d4.chunk.js.map",
     "index.html": "https://danmarkquinones.github.io/midorenji-v3/index.html",
     "static/css/2.482a99e9.chunk.css.map": "https://danmarkquinones.github.io/midorenji-v3/static/css/2.482a99e9.chunk.css.map",
-    "static/css/main.8742e2ff.chunk.css.map": "https://danmarkquinones.github.io/midorenji-v3/static/css/main.8742e2ff.chunk.css.map",
-    "static/js/2.d436a2ac.chunk.js.LICENSE.txt": "https://danmarkquinones.github.io/midorenji-v3/static/js/2.d436a2ac.chunk.js.LICENSE.txt",
+    "static/css/main.43bcff74.chunk.css.map": "https://danmarkquinones.github.io/midorenji-v3/static/css/main.43bcff74.chunk.css.map",
+    "static/js/2.c868a054.chunk.js.LICENSE.txt": "https://danmarkquinones.github.io/midorenji-v3/static/js/2.c868a054.chunk.js.LICENSE.txt",
     "static/media/accenture.70188df5.png": "https://danmarkquinones.github.io/midorenji-v3/static/media/accenture.70188df5.png",
     "static/media/angular.7c132fab.png": "https://danmarkquinones.github.io/midorenji-v3/static/media/angular.7c132fab.png",
     "static/media/baliktanaw.d8d5ad31.mp4": "https://danmarkquinones.github.io/midorenji-v3/static/media/baliktanaw.d8d5ad31.mp4",
@@ -45,10 +45,10 @@
     "static/media/watching.a4e6abd5.PNG": "https://danmarkquinones.github.io/midorenji-v3/static/media/watching.a4e6abd5.PNG"
   },
   "entrypoints": [
-    "static/js/runtime-main.94fa0ce1.js",
+    "static/js/runtime-main.261e0497.js",
     "static/css/2.482a99e9.chunk.css",
-    "static/js/2.d436a2ac.chunk.js",
-    "static/css/main.8742e2ff.chunk.css",
-    "static/js/main.8d246480.chunk.js"
+    "static/js/2.c868a054.chunk.js",
+    "static/css/main.43bcff74.chunk.css",
+    "static/js/main.8ed3994b.chunk.js"
   ]
 }
