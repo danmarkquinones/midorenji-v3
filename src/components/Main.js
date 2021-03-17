@@ -126,7 +126,7 @@ const Main = (props) => {
 
             <div className="right-side-div" onScroll={changeNavBarBackground}>
                 
-                <div style={{position:"absolute" , height:"70%" , width:"80%" , marginTop:"100px", opacity:"0.05" , overflow:"hidden" }}>
+                <div style={{position:"absolute" , height:"70%" , width:"85%" , marginTop:"100px", opacity:"0.05" , overflow:"hidden" }}>
                     <h1 style={{fontSize:"250px" , color:theme.primaryTextColor , fontWeight:"bold" , lineHeight:"200px"}}>{watermark}</h1>
                 </div>
 

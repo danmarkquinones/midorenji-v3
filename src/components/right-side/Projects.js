@@ -38,24 +38,9 @@ const Projects = (props) => {
             >
                 <AnimatePresence>
                     <div className="slider-div">
-                        {/* <Slider {...settings} >
+                        <Grid container style={{marginTop:"30px"}}>
                             {projectData.map((project,index)=>
-                                <motion.div 
-                                    initial={{opacity:0}}
-                                    animate={{opacity:1}}
-                                    exit={{opacity:0}}
-                                    transition={{delay : (index+1) , duration:1}}
-                                    key={index} 
-                                >
-                                        <div className="card-div">
-                                            <ProjectCards project={project} index={index} theme={theme}/>
-                                        </div>
-                                </motion.div>
-                            )}
-                        </Slider> */}
-                        <Grid container>
-                            {projectData.map((project,index)=>
-                                <Grid item sm={12} md={4} key={index} style={{margin:"40px 0px"}}>
+                                <Grid item sm={12} md={4} key={index} style={{margin:"10px 0px"}}>
                                     <motion.div 
                                         initial={{opacity:0}}
                                         animate={{opacity:1}}

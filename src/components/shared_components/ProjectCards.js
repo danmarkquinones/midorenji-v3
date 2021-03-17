@@ -3,6 +3,7 @@ import LinkIcon from '@material-ui/icons/Link';
 import CodeIcon from '@material-ui/icons/Code';
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
 import { Grid, IconButton } from '@material-ui/core';
+import { Divider } from 'antd';
 
 const ProjectCards = (props) => {
 
@@ -10,120 +11,120 @@ const ProjectCards = (props) => {
     
     return (
         <div 
-            // data-aos="slide-left"
             className="card-indiv-div"
             style={{
                 height:"auto",
                 backgroundColor : theme.secondaryBackground,
-                padding:"20px",
-                boxShadow : theme.isDarkMode? null : "1px 1px 2px lightgray"
+                // background: "linear-gradient(-315deg, rgba(244,59,98,1) 0%, rgba(53,120,229,1) 50%, rgba(0,212,255,1) 100%)",
+                padding:"10px",
+                boxShadow : theme.isDarkMode? null : "2px 2px 6px #8f8f8f"
             }}
         >
             <div
                 style={{
-                    position:"relative"
+                    position:"relative",
+                    overflow:"hidden"
                 }}
             >
                 <div
                     style={{
-                        height:"200px",
                         borderRadius:"10px",
+                        boxShadow: theme.isDarkMode? null : "0px 0px 2px lightgray",
                         overflow:"hidden",
-                        boxShadow: theme.isDarkMode? null : "0px 0px 2px lightgray"
                     }}
-                >
-                    <img 
+                >   
+                    <div
                         style={{
-                            height:"100%",
-                            width:"100%",
-                            objectPosition:project.position,
-                            objectFit:"cover"
-                        }} 
-                        src={project.bg} alt={"background"}
-                    />
-                </div>
-                <div
-                    style={{
-                        position:"absolute",
-                        bottom:"-10px",
-                        left:"10px"
-                    }}
-                >
-                    <div 
-                        style={{
-                            height:"20px",
-                            width:"20px",
-                            borderRadius:"50%",
-                            backgroundImage:!project.hasURL? "linear-gradient(to right, red , orange)":"linear-gradient(to right, green , lime)"
+                            height:"200px",
+                            borderRadius:"10px",
+                            overflow:"hidden",
                         }}
-                    >    
+                    >
+                        <img 
+                            style={{
+                                height:"100%",
+                                width:"100%",
+                                objectPosition:project.position,
+                                objectFit:"cover"
+                            }} 
+                            src={project.bg} alt={"background"}
+                        />
+                    </div>
+                    <div
+                        style={{
+                            position:"absolute",
+                            bottom:"-20px",
+                            right:"-20px",
+                        }}
+                    >
+                        <div 
+                            className="project-card-info-container" 
+                            style={{
+                                backgroundColor:theme.secondaryBackground
+                                // background: "linear-gradient(-315deg, rgba(244,59,98,1) 0%, rgba(53,120,229,1) 50%, rgba(0,212,255,1) 100%)"
+                            }}
+                        >
+                            <div className="project-card-info-details" style={{color:theme.primaryTextColor}}>
+                                <p style={{fontSize:"20px" , fontWeight:"bold" , color:"#f43b62"}}>{project.name}</p>
+                                <Divider style={{margin:"5px 0px"}}/>
+                                <p style={{fontWeight:"600"}}>Languages : </p>
+                                <p style={{marginLeft:"20px"}}>{project.languages.join(" | ")}</p>
+                                <p style={{fontWeight:"600"}}>Role : </p>
+                                <p style={{marginLeft:"20px"}}>{project.role.join(" | ")}</p>
+                                <Divider style={{margin:"5px 0px"}}/>
+                                <div>
+                                    <IconButton 
+                                        style={{padding:0 , backgroundColor:"transparent"}} 
+                                        disableRipple
+                                        disabled = {!project.hasURL}
+                                    >
+                                        <LinkIcon 
+                                            className="card-icons" 
+                                            style={{color:!project.hasURL?"#4f4f4f":theme.primaryTextColor}}
+                                        />
+                                    </IconButton>
+                                    <IconButton 
+                                        style={{padding:0 , 
+                                            backgroundColor:"transparent"
+                                        }} 
+                                        disableRipple
+                                        disabled = {!project.viewSrc}
+                                    >
+                                        <CodeIcon 
+                                            className="card-icons" 
+                                            style={{color:!project.viewSrc?"#4f4f4f":theme.primaryTextColor}}
+                                        />
+                                    </IconButton>
+                                    <IconButton 
+                                        style={{padding:0 , backgroundColor:"transparent"}} 
+                                        disableRipple
+                                        disabled = {!project.hasVideo}
+                                    >
+                                        <InfoOutlinedIcon 
+                                            className="card-icons" 
+                                            style={{color:!project.hasVideo?"#4f4f4f":theme.primaryTextColor}}
+                                        />
+                                    </IconButton>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
             <div
                 style={{
-                    color:theme.primaryTextColor,
-                    marginLeft:"10px"
+                    position:"absolute",
+                    bottom:"7px",
+                    right:"7px",
                 }}
             >
-                <p
+                <div 
+                    className="online-status-icon"
                     style={{
-                        fontSize:"20px",
-                        fontWeight:"bold",
-                        margin:"10px 0px 0px 0px"
+                        backgroundImage:!project.hasURL? "linear-gradient(to right, red , orange)":"linear-gradient(to right, green , lime)"
                     }}
-                >{project.name}</p>
-                <div
-                    style={{display:"flex" , flexDirection:"row" , alignItems:"center"}}
-                >
-                    <p style={{margin:"0px"}}>Languages</p>
-                    <p style={{margin:"0px 5px"}}>:</p>
-                    <p style={{margin:"0px"}}>{project.languages.join(" | ")}</p>
-                </div>
-                <div
-                    style={{display:"flex" , flexDirection:"row" , alignItems:"center"}}
-                >
-                    <p style={{margin:"0px"}}>Role</p>
-                    <p style={{margin:"0px 5px"}}>:</p>
-                    <p style={{margin:"0px"}}>{project.role.join(" | ")}</p>
-                </div>
-                
-            </div>
-
-            <div>
-                <div style={{textAlign:"right"}}>
-                    <IconButton 
-                        style={{padding:0 , backgroundColor:"transparent"}} 
-                        disableRipple
-                        disabled = {!project.hasURL}
-                    >
-                        <LinkIcon 
-                            className="card-icons" 
-                            style={{color:!project.hasURL?"#4f4f4f":theme.primaryTextColor}}
-                        />
-                    </IconButton>
-                    <IconButton 
-                        style={{padding:0 , 
-                            backgroundColor:"transparent"
-                        }} 
-                        disableRipple
-                        disabled = {!project.viewSrc}
-                    >
-                        <CodeIcon 
-                            className="card-icons" 
-                            style={{color:!project.viewSrc?"#4f4f4f":theme.primaryTextColor}}
-                        />
-                    </IconButton>
-                    <IconButton 
-                        style={{padding:0 , backgroundColor:"transparent"}} 
-                        disableRipple
-                        disabled = {!project.hasVideo}
-                    >
-                        <InfoOutlinedIcon 
-                            className="card-icons" 
-                            style={{color:!project.hasVideo?"#4f4f4f":theme.primaryTextColor}}
-                        />
-                    </IconButton>
+                >    
                 </div>
             </div>
         </div>

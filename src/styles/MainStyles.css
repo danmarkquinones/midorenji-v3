@@ -56,14 +56,19 @@
 
 /* ROUTES */
 .nav-links{
-    margin-left: 10px;
     font-weight: 600;
+    padding-left: 5px;
+    transition: 0.5s;
+    border-left: 3px solid transparent;
 }
 .nav-links:hover{
-    color: #3578E5;
+    color: #3578E5 !important;
+    transition: 0.5s;
 }
 .nav-links.active{
     color: #3578E5 !important;
+    border-left: 3px solid #f43b62;
+    font-weight: bold;
 }
 
 

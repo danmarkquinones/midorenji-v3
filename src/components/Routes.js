@@ -54,29 +54,36 @@ export default function Routes(props) {
             >
                 <img src={logo} style={{height:"50px"}} alt="logo"/>
             </div>
-            <NavLink 
-                className="nav-links" 
-                activeClassName="active" 
-                style={{color:theme.secondaryTextColor}} 
-                to="/my-projects"
-            >
-                Projects
-            </NavLink>
-            <NavLink 
-                className="nav-links" 
-                activeClassName="active" 
-                style={{color:theme.secondaryTextColor}} 
-                to="/profile"
-            >
-                Profile
-            </NavLink>
-            <NavLink 
-                className="nav-links" 
-                activeClassName="active" 
-                style={{color:theme.secondaryTextColor}} 
-                to="/contact-me">
-                    Contacts
-            </NavLink>
+            <div>
+                <NavLink 
+                    className="nav-links"
+                    activeClassName="active" 
+                    style={{color:theme.secondaryTextColor}} 
+                    to="/my-projects"
+                >
+                    Projects
+                </NavLink>
+            </div>
+            <div style={{marginLeft:"10px"}}>
+                <NavLink 
+                    className="nav-links" 
+                    activeClassName="active" 
+                    style={{color:theme.secondaryTextColor}} 
+                    to="/profile"
+                >
+                    Profile
+                </NavLink>
+            </div>
+            <div style={{marginLeft:"10px"}}>
+                <NavLink 
+                    className="nav-links" 
+                    style={{marginLeft:"10px"}}
+                    activeClassName="active" 
+                    style={{color:theme.secondaryTextColor}} 
+                    to="/contact-me">
+                        Contacts
+                </NavLink>
+            </div>
             <div style={{position:"absolute" , right:"5%"}}>
                 <Switch  onChange={switchToDarkMode} />
             </div>
