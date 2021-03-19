@@ -5,6 +5,7 @@ import {HashRouter as Router} from "react-router-dom";
 import 'antd/dist/antd.css';
 import {ThemeContextProvider} from './components/context/themeContext'
 import {isMobile} from 'react-device-detect';
+import LandingPage from "./components/revised_v3/LandingPage";
 
 
 function App() {
@@ -14,7 +15,8 @@ function App() {
         <Router basename={""}>
           {isMobile?
             <h2>Not AVAILABLE</h2>
-            :<Main/>
+            // :<Main/>
+            :<LandingPage/>
           }
         </Router>
       </ThemeContextProvider>

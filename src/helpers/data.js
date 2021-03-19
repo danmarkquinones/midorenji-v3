@@ -361,7 +361,7 @@ export const experienceData = [
         ]
     },
     {
-        companyName:'MSA Ortigas',
+        companyName:'MSA',
         job:'Academic Consultant in Mathematics',
         date:'May 2017 - June 2018',
         logo:msa,

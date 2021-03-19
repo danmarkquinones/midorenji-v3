@@ -16,6 +16,7 @@
     "emailjs-com": "^2.6.4",
     "framer-motion": "^3.2.1",
     "gifffer": "^1.5.4",
+    "hover.css": "^2.3.2",
     "radium": "^0.26.1",
     "react": "^17.0.1",
     "react-animations": "^1.0.0",

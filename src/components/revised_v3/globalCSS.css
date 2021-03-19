@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Sniglet&display=swap');
+
+.landing-page-container{
+    font-family: "Sniglet" !important;
+}
+.hoverable-div{
+    cursor: pointer;
+    animation: textMove 1s infinite;
+}
+@keyframes textMove {
+    0%   {rotate: 30deg;}
+    100% {rotate: 0deg;}
+}
+
+.social-icons-container{
+    position: absolute;
+    padding: 10px 15px;
+    /* display: flex; */
+    transition: 0.5s;
+    border:"1px solid black";
+}
+.icons-div{
+    margin: .5vw;
+    cursor: pointer;
+}
+.icons{
+    font-size: 3vw !important;
+    color:#2D3D66;
+}
+.iconsShare {
+    font-size: 3vw !important;
+    color:#2D3D66;
+    cursor: pointer !important;
+    transition: 0.5s;
+}
+.iconsShare:hover{
+    transition: 0.5s;
+}
+.view-works-btn{
+    width: 40% !important; 
+    height: 50% !important;
+    border-radius: 50px !important;
+    border:0.2vw solid #2D3D66 !important;
+}
+.view-works-btn span {
+    font-size: 1.3vw !important;
+    font-family: "Sniglet" !important;
+    color:#2D3D66;
+    overflow: hidden;
+}
+
+.headerText{
+    font-size: 3.5vw;
+    margin:0;
+}
+.contentText{
+    font-size: 1.5vw;
+    margin:0;
+}
+.submitBtn{
+    border-radius: 1.6vw !important;
+    width: 30% !important;
+    height: 3vw !important;
+    font-size: 1vw !important;
+    transition: 0.5s !important;
+}
+.submitBtn:hover{
+    background-color: #fff !important;
+    border:.2vw solid #fff !important;
+    color : #2D3D66 !important;
+    transition: 0.5s !important;
+}
+.stepBtn{
+    border-radius: 1.6vw !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: #2D3D66 !important;
+    border:.2vw solid #fff !important;
+    color:#fff !important;
+    font-size: 1vw !important;
+    transition: 0.5s !important;
+}
+.stepBtn:hover{
+    border:.2vw solid #fff !important;
+    background-color: #fff !important;
+    color: #2D3D66 !important;
+}
+.forward-icon{
+    font-size: 1.2vw !important;
+    margin-left:.5vw;
+    /* transition: 0.5s; */
+}
+.backward-icon{
+    font-size: 1.2vw !important;
+    margin-right:.5vw;
+    /* transition: 0.5s; */
+}
+/* .stepBtn:hover .forward-icon{
+    padding-left:10px;
+    transition: 0.5s;
+}
+.stepBtn:hover .backward-icon{
+    padding-right: 10px;
+    transition: 0.5s;
+} */
+.card-project-div{
+    padding: 1%;
+    width: 100%;
+    height: 10vw;
+    border-radius: 1vw;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    transform: scale(1);
+    transition: 0.5s;
+}
+.card-project-div img{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50% , -50%) scale(1);
+    opacity: 1;
+    transition: 0.5s;
+}
+.card-project-div p{
+    color: #2D3D66 !important;
+    margin: 0;
+    font-weight: 600;
+    font-size: 1vw;
+}
+.card-project-div .company-name{
+    font-size: 2vw;
+}
+.card-text-content{
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    width: 100%;
+    transition: 0.5s;
+    transform: translate(-50% , -50%);
+}
+
+.card-project-div:hover img{
+    transition: 0.5s;
+    transform: translate(-50% , -50%) scale(2);
+    opacity: 0.2;
+}
+.card-project-div:hover .card-text-content{
+    transition: 0.5s;
+    left: 50%;
+}
+.card-project-div:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.custom-text-field{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 1vw;
+    margin-top: 1vw;
+    padding: 2%;
+    border-radius: 2vw;
+    background-color: #fff;
+    height: 3vw;
+}
+.custom-text-area-field{
+    margin-bottom: 1vw;
+    margin-top: 1vw;
+    padding: 2%;
+    border-radius: 1vw;
+    background-color: #fff;
+    height: 12vw;
+    overflow: hidden;
+}
