@@ -50,7 +50,7 @@ const AboutMe = (props) => {
                             animate="animate" 
                             transition={{delay:1 , duration:0.5}}
                         >
-                            I graduated Bachelor of Science in Mathematics at Polytechnic University of the Philippines. During my college year I already know that math is not for me, so after teaching Math for a year, I decided to shift my career where I can use my degree and pursue my passion in art. Yeah. that is why I am an App Developer now.
+                            I graduated Bachelor of Science in Mathematics at Polytechnic University of the Philippines. During my college year I already know that math is not for me, so after teaching Math for a year, I decided to shift my career where I can use my degree and pursue my passion in arts.Thats how I become an App Developer.
                         </motion.p>
                     </div>
                 </div>
