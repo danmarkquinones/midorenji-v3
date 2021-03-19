@@ -5,11 +5,7 @@
 }
 .hoverable-div{
     cursor: pointer;
-    animation: textMove 1s infinite;
-}
-@keyframes textMove {
-    0%   {rotate: 30deg;}
-    100% {rotate: 0deg;}
+    transition: 0.5s;
 }
 
 .social-icons-container{
@@ -160,7 +156,7 @@
     flex-direction: row;
     margin-bottom: 1vw;
     margin-top: 1vw;
-    padding: 2%;
+    padding: 3%;
     border-radius: 2vw;
     background-color: #fff;
     height: 3vw;
@@ -168,7 +164,7 @@
 .custom-text-area-field{
     margin-bottom: 1vw;
     margin-top: 1vw;
-    padding: 2%;
+    padding: 3%;
     border-radius: 1vw;
     background-color: #fff;
     height: 12vw;
