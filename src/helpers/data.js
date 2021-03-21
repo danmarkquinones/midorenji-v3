@@ -1,4 +1,7 @@
-import {FacebookOutlined , GithubOutlined , MailOutlined , PhoneOutlined ,DownloadOutlined} from '@ant-design/icons';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 //mp4
 import baliktanaw from '../videos/baliktanaw.mp4'
 import figura from '../videos/figura.mp4'
@@ -123,10 +126,10 @@ export const profileData = {
     email : 'danmarkquinones@gmail.com',
     position :'Front End App Developer',
     skillsFundamental:['HTML' , 'CSS' , 'Javascript'],
-    skillsMobile:['Expo' , 'React Native'],
-    skillsFE : ['React','Angular'],
-    skillsBE : ['PHP/Laravel','MySQL','Python'],
-    designingLibraries : ['Bootstrap','Material UI','Ant Design','Framer Motion'],
+    skillsUI:["Figma" , "Photoshoppe"],
+    skillsFE : ['React','Angular' , 'Expo' , 'React Native'],
+    skillsBE : ['PHP/Laravel','MySQL','Python' , 'NodeJS'],
+    designingLibraries : ['Material UI','Ant Design','Framer Motion' , 'ThreeJS'],
     hobbies:['Drawing' , 'Handcrafts' , 'Playing Online Games' , 'Watching Anime'],
     intro :"YOSH!! Welcome to my page 👋😁. I’m  Dan, a professional Front End developer, and I specialize in creating React applications that just work across all platforms and browsers. I care about building interfaces that are usable and pleasant for the most number of people possible."
 }
@@ -138,6 +141,7 @@ export const hobbiesData = [
 
 export const projectData = [
     {
+        id:7,
         name: 'ZENØ - Topic Modeling',
         videoLink : '',
         srcCode :'',
@@ -148,12 +152,14 @@ export const projectData = [
         hasURL : false,
         languages : ['React' , 'Ant Design' , 'Material UI'],
         role : ['Front End'],
+        platform:['Web'],
         url:'',
         bg:tmcardbg,
         position:"center",
         delay:0.5
     },
     {
+        id:6,
         name: 'Media Meter V3',
         videoLink : 'https://www.youtube.com/watch?v=fs2HneOJDdI',
         srcCode :'',
@@ -163,13 +169,15 @@ export const projectData = [
         hasVideo : true,
         hasURL : true,
         languages : ['React' , 'React Native' , 'Material UI'],
-        role : ['Front End (Web and Mobile App)'],
+        role : ['Front End'],
+        platform:['Web','IOS' , 'Android'],
         url:'https://media-meter.net/mm-client/',
         bg:mmcardbg,
         position:"bottom",
         delay:0.5
     },
     {
+        id:5,
         name: 'PokeMania',
         videoLink : '',
         srcCode :'',
@@ -180,28 +188,14 @@ export const projectData = [
         hasURL : false,
         languages : ['React Native'],
         role : ['Front End' , 'Back End'],
+        platform:['IOS' , 'Android'],
         url:'',
         bg:pokemaniacardbg,
         position:"left",
         delay:0.5
     },
     {
-        name: 'COMING SOON',
-        videoLink : '',
-        srcCode :'',
-        type : 'other',
-        hasMobile : false,
-        viewSrc : false,
-        hasVideo : false,
-        hasURL : false,
-        languages : ['MEAN' , 'Socket.io', 'PeerJS'],
-        role : ['Front End' , 'Back End'],
-        url:'',
-        bg:underdevbg,
-        position:"left",
-        delay:1
-    },
-    {
+        id:4,
         name: 'RAGING REINDEER',
         videoLink : '',
         srcCode :'https://github.com/danmarkquinones/ragingreindeer',
@@ -212,12 +206,14 @@ export const projectData = [
         hasURL : true,
         languages : ['HTML' , 'CSS' , 'Adobe Photoshop'],
         role : ['Front End'],
+        platform:['Web'],
         url:'https://danmarkquinones.github.io/ragingreindeer/',
         bg:rrcardbg,
         position:"center",
         delay:1
     },
     {
+        id:3,
         name: 'FSRJ',
         videoLink : fsrj,
         srcCode :'https://github.com/danmarkquinones/fsrj',
@@ -228,12 +224,14 @@ export const projectData = [
         hasURL : true,
         languages : ['Laravel' , 'MySQL' , 'Javascript'],
         role : ['Front End' , 'Back End'],
+        platform:['Web'],
         url:'https://fsrjconstruction.000webhostapp.com/',
         bg:fsrjcardbg,
         position:"left",
         delay:1
     },
     {
+        id:2,
         name: 'FIGURA',
         videoLink : figura,
         srcCode :'',
@@ -244,12 +242,14 @@ export const projectData = [
         hasURL : true,
         languages : ['PHP' , 'MySQL' , 'Javascript'],
         role : ['Front End' , 'Back End'],
+        platform:['Web'],
         url:'https://figura-toys.000webhostapp.com/figura/app/views/index.php',
         bg:figuracardbg,
         position:"left",
         delay:1.5
     },
     {
+        id:1,
         name: 'BALIKTANAW',
         videoLink : baliktanaw,
         srcCode :'https://github.com/danmarkquinones/baliktanaw',
@@ -260,72 +260,73 @@ export const projectData = [
         hasURL : true,
         languages : ['HTML' , 'CSS' , 'Javascript'],
         role : ['Front End'],
+        platform:['Web'],
         url:'https://danmarkquinones.github.io/baliktanaw/',
         bg:baliktanawcardbg,
         position:"right",
         delay:1.5
     },
-    {
-        name: 'JS Practice',
-        videoLink : '',
-        srcCode :'https://github.com/danmarkquinones/practice',
-        type : 'other',
-        hasMobile : false,
-        viewSrc : true,
-        hasVideo : true,
-        hasURL : true,
-        languages : ['JQuery'],
-        role : ['Front End'],
-        url:'https://danmarkquinones.github.io/practice/',
-        bg:jspracticecardbg,
-        position:"center",
-        delay:1.5
-    }, 
+    // {
+    //     name: 'JS Practice',
+    //     videoLink : '',
+    //     srcCode :'https://github.com/danmarkquinones/practice',
+    //     type : 'other',
+    //     hasMobile : false,
+    //     viewSrc : true,
+    //     hasVideo : true,
+    //     hasURL : true,
+    //     languages : ['JQuery'],
+    //     role : ['Front End'],
+    //     url:'https://danmarkquinones.github.io/practice/',
+    //     bg:jspracticecardbg,
+    //     position:"center",
+    //     delay:1.5
+    // }, 
 ]
 
-export const contactsData = [
-    {
-        name:'github',
-        tooltip:'danmarkquinones@github.io',
-        component : (style)=>{
-            return(
-                <GithubOutlined className={style}/>
-            )
-        }
-    },
-    {
-        name:'email',
-        tooltip:'danmarkquinones@gmail.com',
-        component : (style)=>{
-            return(
-                <MailOutlined className={style}/>
-            )
-        }
-    },
+const redirectTo = (link) => {
+    console.log(link)
+    window.open(link, "_blank")
+}
+
+export const socialData = [
     {
         name:'facebook',
         tooltip:'danmarkquinones@gmail.com',
+        url:'https://www.facebook.com/itzmedanmark/',
         component : (style)=>{
             return(
-                <FacebookOutlined className={style}/>
+                <FacebookIcon className={style} onClick={()=>redirectTo("https://www.facebook.com/itzmedanmark/")}/>
             )
         }
     },
     {
-        name:'phone',
-        tooltip:'+63 906 509 2731',
+        name:'github',
+        tooltip:'https://github.com/danmarkquinones',
+        url:'https://github.com/danmarkquinones',
         component : (style)=>{
             return(
-                <PhoneOutlined className={style}/>
+                <GitHubIcon className={style} onClick={()=>redirectTo("https://github.com/danmarkquinones")}/>
             )
         }
     },
     {
-        name:'cv',
-        tooltip:'Download CV',
+        name:'twitter',
+        tooltip:'@hidnlmrks',
+        url:'https://twitter.com/hidnlmrks',
         component : (style)=>{
             return(
-                <DownloadOutlined className={style}/>
+                <TwitterIcon className={style} onClick={()=>redirectTo("https://twitter.com/hidnlmrks")}/>
+            )
+        }
+    },
+    {
+        name:'linkedin',
+        tooltip:'@hidnlmrks',
+        url:'https://www.linkedin.com/in/danmark-qui%C3%B1ones-7607601b7/',
+        component : (style)=>{
+            return(
+                <LinkedInIcon className={style} onClick={()=>redirectTo("https://www.linkedin.com/in/danmark-qui%C3%B1ones-7607601b7/")}/>
             )
         }
     },
@@ -336,6 +337,7 @@ export const experienceData = [
         companyName:'Media Meter',
         job:'Front End App Developer',
         date:'Jan 2020 - Present',
+        delay:0.5,
         logo:mediameter,
         responsibilities:[
             "Building an app using React JS , React Native , Angular , Material Designs/UI and Javascript.",
@@ -351,6 +353,7 @@ export const experienceData = [
         companyName:'Accenture',
         job:'Associate Software Engineer',
         date:'March 2019 - Jan 2020',
+        delay:1,
         logo:accenture,
         responsibilities:[
             "Performing enhancements of client's web and app applications using HTML , CSS , Javascript for front end and PLSQL for some back ends.",
@@ -364,6 +367,7 @@ export const experienceData = [
         companyName:'MSA',
         job:'Academic Consultant in Mathematics',
         date:'May 2017 - June 2018',
+        delay:1.5,
         logo:msa,
         responsibilities:[
             "Teach Mathematics, statistics, and other basic subjects.",

@@ -1,16 +1,16 @@
 import React , {useState , useEffect} from "react";
 import MailIcon from '@material-ui/icons/Mail';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import { Button } from "@material-ui/core";
 import './globalCSS.css';
 import AboutMe from "./AboutMe";
 import 'hover.css/css/hover.css'
 import { motion} from "framer-motion"
 import ContactMe from "./ContactMe";
+import { socialData } from "../../helpers/data";
+import bg from "../../images/experiencebg.png";
+import Projects from "./Projects";
+import { fadeIn, fadeinLeft, fadeinRight, infiniteBounceInOut } from "./framerMotionAnimations";
 
 
 const LandingPage = (props) => {
@@ -85,10 +85,11 @@ const LandingPage = (props) => {
                         zIndex:1,
                     }}
                 >
-                    <div className="icons-div hvr-bounce-in"><FacebookIcon className="icons"/></div>
-                    <div className="icons-div hvr-bounce-in"><TwitterIcon className="icons"/></div>
-                    <div className="icons-div hvr-bounce-in"><GitHubIcon className="icons"/></div>
-                    <div className="icons-div hvr-bounce-in"><LinkedInIcon className="icons"/></div>
+                    {socialData.map((social,i)=>
+                        <motion.div variants={infiniteBounceInOut} whileHover="hover" className="icons-div">
+                            {social.component("icons")}
+                        </motion.div>
+                    )}
                 </div>
             </div>
 
@@ -123,12 +124,12 @@ const LandingPage = (props) => {
                             <AboutMe/>
                         </div>
                     :pageState!=="project"?
-                        <div className="hoverable-div hvr-bounce-in" style={{position:"absolute" , top:"15%" , left :"10%"}}>  
-                            <h2 style={{fontSize:"3vw", color:"#fff"}}>KNOW A BIT <br/> OF ME !</h2>
-                        </div>
-                    :<div className="hoverable-div hvr-bounce-in" style={{position:"absolute" , top:"15%" , left:"15%"}}>
+                        <motion.div variants={infiniteBounceInOut} whileHover="hover"  style={{cursor:"pointer",position:"absolute" , top:"15%" , left :"10%"}}>  
+                            <motion.h2 variants={fadeinLeft} initial="initial" animate="animate" style={{fontSize:"3vw", color:"#fff"}}>KNOW A BIT <br/> OF ME !</motion.h2>
+                        </motion.div>
+                    :<motion.div variants={infiniteBounceInOut} whileHover="hover"  style={{cursor:"pointer",position:"absolute" , top:"15%" , left:"15%"}}>
                         <AccountCircleIcon style={{fontSize:"4.5vw", color:"#fff"}}/>
-                    </div>}
+                    </motion.div>}
                 </div>
             </div>
 
@@ -156,31 +157,36 @@ const LandingPage = (props) => {
                             lineHeight:1,
                         }}
                     >
-                        <h1 style={{color:"#2D3D66"}}>Ow.. Hi there! It's me Dan, and welcome to my profile.</h1>
-                        <div className="hvr-bounce-in" style={{width:"100%" , overflow:"hidden"}}>
-                            <Button 
-                                className="view-works-btn"
-                                disableElevation
-                                onClick={()=>setPageState("project")}
-                            >
-                                <span>view my works</span>
-                            </Button>  
-                        </div>
+                        <motion.div
+                            variants={fadeIn} initial="initial" animate="animate"
+                        >
+                            <motion.h1 style={{color:"#2D3D66"}}>Ow.. Hi there! It's me Dan, and welcome to my profile.</motion.h1>
+                            <motion.div variants={infiniteBounceInOut} whileHover="hover"  style={{width:"100%" , overflow:"hidden"}}>
+                                <Button 
+                                    className="view-works-btn"
+                                    disableElevation
+                                    onClick={()=>setPageState("project")}
+                                >
+                                    <span>view my works</span>
+                                </Button>  
+                            </motion.div>
+                        </motion.div>
                     </div>
                 :pageState!=="project"?
-                    <div 
-                        className="hoverable-div hvr-bounce-in"
+                    <motion.div 
+                        variants={infiniteBounceInOut} whileHover="hover"
                         onClick={()=>setPageState("project")}
                         style={{
+                            cursor:"pointer",
                             position:"absolute",
                             top:"40%",
                             left:pageState==="contact"?"7%":"32%",
                         }}
                     >
                         <h2 style={{fontSize:"3vw", color:"#2D3D66"}}>MY PROJECTS!</h2>
-                    </div>
-                :<div>
-                    PROJECT CARDS
+                    </motion.div>
+                :<div style={{display:"flex" , height:"100%" , alignItems:"center" , justifyContent:"center"}}>
+                    <Projects/>
                 </div>
                 }
             </div>
@@ -210,15 +216,16 @@ const LandingPage = (props) => {
                 <div onClick={()=>setPageState("contact")}>
                     {pageState==="contact"?
                         <div style={{position:"absolute" , bottom:"0%" , right:"0%" , height:"100%" , padding:"4% 7%"}}>
+                            <img src={bg} style={{height:"100%" , position:"absolute" , right:0,top:0 , opacity:0.2}}/>
                             <ContactMe/>
                         </div>
                     :pageState!=="project"?
-                        <div className="hoverable-div hvr-bounce-in" style={{position:"absolute" , top:"55%" , left:"35%"}}>  
-                            <h2 style={{fontSize:"3vw", color:"#fff"}}>EMAIL ME !</h2>
-                        </div>
-                    :<div className="hoverable-div hvr-bounce-in" style={{position:"absolute" , top:"40%" , left:"40%"}}>
+                        <motion.div variants={infiniteBounceInOut} whileHover="hover" style={{ cursor:"pointer",position:"absolute" , top:"55%" , left:"35%"}}>  
+                            <motion.h2 variants={fadeinRight} initial="initial" animate="animate" style={{fontSize:"3vw", color:"#fff"}}>EMAIL ME !</motion.h2>
+                        </motion.div>
+                    :<motion.div variants={infiniteBounceInOut} whileHover="hover" style={{cursor:"pointer",position:"absolute" , top:"40%" , left:"40%"}}>
                         <MailIcon style={{fontSize:"4.5vw", color:"#fff"}}/>
-                    </div>}
+                    </motion.div>}
                 </div>
             </div>
 

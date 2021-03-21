@@ -4,7 +4,7 @@ import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import { motion} from "framer-motion";
 import me from "../../images/me.png";
 import { Button , Grid } from "@material-ui/core";
-import { experienceData } from "../../helpers/data";
+import { experienceData , profileData } from "../../helpers/data";
 
 const AboutMe = (props) => {
 
@@ -61,42 +61,50 @@ const AboutMe = (props) => {
                             <p className="headerText">My skill set</p>
                         </motion.div>
                         <div style={{marginTop:"10px"}}>
-                            <motion.p 
+                            <motion.div 
                                 className="contentText"
                                 variants={textVariants} 
                                 initial="initial" 
                                 animate="animate" 
                                 transition={{delay:0.5 , duration:0.2}}
+                                style={{display:"flex"}}
                             >
-                                Front End :
-                            </motion.p>
-                            <motion.p 
+                                <div style={{ width:"15%"}}><span >Front End : </span> </div>
+                                <span>{profileData.skillsFE.join(" , ")}</span>
+                            </motion.div>
+                            <motion.div 
                                 className="contentText"
                                 variants={textVariants} 
                                 initial="initial" 
                                 animate="animate" 
                                 transition={{delay:0.7 , duration:0.2}}
+                                style={{display:"flex"}}
                             >
-                                UI/UX :
-                            </motion.p>
-                            <motion.p 
+                                <div style={{ width:"15%"}}><span >UI/UX : </span> </div>
+                                <span>{profileData.skillsUI.join(" , ")}</span>
+                            </motion.div>
+                            <motion.div 
                                 className="contentText"
                                 variants={textVariants} 
                                 initial="initial" 
                                 animate="animate" 
                                 transition={{delay:0.9 , duration:0.2}}
+                                style={{display:"flex"}}
                             >
-                                Back End :
-                            </motion.p>
-                            <motion.p 
+                                <div style={{ width:"15%"}}><span >Back end : </span> </div>
+                                <span>{profileData.skillsBE.join(" , ")}</span>
+                            </motion.div>
+                            <motion.div 
                                 className="contentText"
                                 variants={textVariants} 
                                 initial="initial" 
                                 animate="animate" 
                                 transition={{delay:1.1 , duration:0.2}}
+                                style={{display:"flex"}}
                             >
-                                Others :
-                            </motion.p>
+                                <div style={{ width:"15%"}}><span >Others : </span> </div>
+                                <span>{profileData.designingLibraries.join(" , ")}</span>
+                            </motion.div>
                         </div>
                     </div>
                     <div>
@@ -111,7 +119,7 @@ const AboutMe = (props) => {
                                 animate="animate" 
                                 transition={{delay:1.8 , duration:0.5}}
                             >
-                                Well, actually aside from eating I do like everything related to arts. I use to do portraits using color pencil. I am also an awkward dancer and likes to sing, eventhough the notes doesnt like me back. But most especially I like doing movie marathon during my chill times.
+                                Well, actually aside from eating I do like everything related to arts. I used to make portraits using color pencils. I'm also an awkward dancer and likes to sing, eventhough notes doesnt like me back. But most especially I love doing movie marathon during my chill times.
                             </motion.p>
                         </div>
                     </div>
@@ -125,14 +133,19 @@ const AboutMe = (props) => {
                     <Grid container style={{paddingTop:"20px"}}>
                         {experienceData.map((data,i)=>
                             <Grid item sm={6} md={4} key={i} style={{padding:"1%"}}>
-                                <div className="card-project-div">
+                                <motion.div 
+                                    initial="initial" animate="animate"
+                                    variants={textVariants}
+                                    transition={{delay:data.delay}}
+                                    className="card-project-div"
+                                >
                                     <img src={data.logo} style={{ height:"90%",width:data.companyName==="MSA"?"80%":"auto", textAlign:"center"}}/>
                                     <div className="card-text-content">
                                         <p className="company-name">{data.companyName}</p>
                                         <p>{data.job}</p>
                                         <p>{data.date}</p>
                                     </div>
-                                </div>
+                                </motion.div>
                             </Grid>
                         )}
                     </Grid>
@@ -141,10 +154,10 @@ const AboutMe = (props) => {
                 <div style={{marginTop:"10px"}}>
                     <motion.p 
                         className="contentText"
-                        variants={textVariants} 
+                        variants={headerVariants} 
                         initial="initial" 
                         animate="animate" 
-                        transition={{delay:0.5 , duration:0.5}}
+                        transition={{delay:2}}
                     >
                         You can view or download my CV for more details about my roles and responsibilities in my previous employer.
                     </motion.p>
