@@ -68,7 +68,7 @@ const ContactMe = (props) => {
 
     return(
         <div style={{color:"#fff" , height:"100%" , width:"100%", position:"relative" , padding:"0vw 5vw"}}>
- 
+
             <motion.div variants={headerVariants} initial="initial" animate="animate" transition={{delay:0.5}}>
                 <p className="headerText">Contact Me</p>
             </motion.div>
@@ -111,12 +111,12 @@ const ContactMe = (props) => {
                 animate="animate" 
                 transition={{delay:2 , duration:0.5}}
                 style={{
-                    marginTop:"3vh",
-                    padding:"0vw 5vw",
-                    width:"100%" , 
-                    position:"absolute",
-                    bottom:"-5%",
-                    right:"0%"
+                    // marginTop:"3vh",
+                    // padding:"0vw 5vw",
+                    // width:"100%" , 
+                    // position:"absolute",
+                    // top:"0%",
+                    // right:"0%"
                 }}
             >
                 <form autoComplete="off" className="contact-form" onSubmit={sendEmail}>
