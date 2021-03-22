@@ -67,7 +67,8 @@ const ContactMe = (props) => {
     }
 
     return(
-        <div style={{color:"#fff" , height:"100%" , width:"100%", position:"relative" , paddingRight:"10vw"}}>
+        <div style={{color:"#fff" , height:"100%" , width:"100%", position:"relative" , padding:"0vw 5vw"}}>
+ 
             <motion.div variants={headerVariants} initial="initial" animate="animate" transition={{delay:0.5}}>
                 <p className="headerText">Contact Me</p>
             </motion.div>
@@ -78,7 +79,7 @@ const ContactMe = (props) => {
                 animate="animate" 
                 transition={{delay:1 , duration:0.5}}
             >
-                You can contact me via phone or email. you could also use this form below to directly email me.
+                You can contact me via phone or email. You can also use the form below to directly email me.
             </motion.p>
             <motion.div
                 style={{marginTop:"1vw"}}
@@ -109,7 +110,14 @@ const ContactMe = (props) => {
                 initial="initial" 
                 animate="animate" 
                 transition={{delay:2 , duration:0.5}}
-                style={{position:"absolute" , width:"90%" , bottom:"-2%", right:"10%"}}
+                style={{
+                    marginTop:"3vh",
+                    padding:"0vw 5vw",
+                    width:"100%" , 
+                    position:"absolute",
+                    bottom:"-5%",
+                    right:"0%"
+                }}
             >
                 <form autoComplete="off" className="contact-form" onSubmit={sendEmail}>
                     <input type="hidden" name="to_email" value={profileData.email} />
@@ -233,6 +241,7 @@ const ContactMe = (props) => {
                     </div>
                 </form>
             </motion.div>
+
         </div>
     )
 }

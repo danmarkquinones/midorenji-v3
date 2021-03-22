@@ -50,7 +50,7 @@ const AboutMe = (props) => {
                             animate="animate" 
                             transition={{delay:1 , duration:0.5}}
                         >
-                            I graduated Bachelor of Science in Mathematics at Polytechnic University of the Philippines. During my college year I already know that math is not for me, so after teaching Math for a year, I decided to shift my career where I can use my degree and pursue my passion in arts.Thats how I become an App Developer.
+                            I graduated Bachelor of Science in Mathematics at Polytechnic University of the Philippines. Teaching math for one year had me realize that something is missing. My passion in art is slowly fading. So I decided to change my career path where I can use my degree and pursue my passion at the same time. Thats how I become an App Developer.
                         </motion.p>
                     </div>
                 </div>
@@ -129,8 +129,8 @@ const AboutMe = (props) => {
                     <p className="headerText">Companies I work with</p>
                 </motion.div>
                 
-                <div style={{height:"50vh"}}>
-                    <Grid container style={{paddingTop:"20px"}}>
+                <div style={{height:"50vh" , display:"flex" , alignItems:"center"}}>
+                    <Grid container >
                         {experienceData.map((data,i)=>
                             <Grid item sm={6} md={4} key={i} style={{padding:"1%"}}>
                                 <motion.div 

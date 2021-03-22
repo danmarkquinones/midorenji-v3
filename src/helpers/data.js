@@ -126,10 +126,10 @@ export const profileData = {
     email : 'danmarkquinones@gmail.com',
     position :'Front End App Developer',
     skillsFundamental:['HTML' , 'CSS' , 'Javascript'],
-    skillsUI:["Figma" , "Photoshoppe"],
-    skillsFE : ['React','Angular' , 'Expo' , 'React Native'],
+    skillsUI:["Figma" , "Adobe Photoshop"],
+    skillsFE : ['React JS','Angular' , 'Expo' , 'React Native'],
     skillsBE : ['PHP/Laravel','MySQL','Python' , 'NodeJS'],
-    designingLibraries : ['Material UI','Ant Design','Framer Motion'],
+    designingLibraries : ['Material UI','Ant Design','Framer Motion' , 'ThreeJS'],
     hobbies:['Drawing' , 'Handcrafts' , 'Playing Online Games' , 'Watching Anime'],
     intro :"YOSH!! Welcome to my page 👋😁. I’m  Dan, a professional Front End developer, and I specialize in creating React applications that just work across all platforms and browsers. I care about building interfaces that are usable and pleasant for the most number of people possible."
 }

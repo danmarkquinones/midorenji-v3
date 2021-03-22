@@ -237,7 +237,7 @@ const LandingPage = (props) => {
                 <div onClick={()=>setPageState("contact")}>
                     {pageState==="contact"?
                         <div 
-                            style={{position:"absolute" , bottom:"0%" , right:"0%" , height:"100%" , padding:"4% 7%"}}
+                            style={{position:"absolute" , bottom:"0%" , right:"0%" , height:"100%" , width:"100%", padding:"5% 7%"}}
                         >
                             <img src={bg} style={{height:"100%" , position:"absolute" , right:0,top:0 , opacity:0.2}}/>
                             <ContactMe/>
