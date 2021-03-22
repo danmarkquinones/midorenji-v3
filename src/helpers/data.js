@@ -129,7 +129,7 @@ export const profileData = {
     skillsUI:["Figma" , "Photoshoppe"],
     skillsFE : ['React','Angular' , 'Expo' , 'React Native'],
     skillsBE : ['PHP/Laravel','MySQL','Python' , 'NodeJS'],
-    designingLibraries : ['Material UI','Ant Design','Framer Motion' , 'ThreeJS'],
+    designingLibraries : ['Material UI','Ant Design','Framer Motion'],
     hobbies:['Drawing' , 'Handcrafts' , 'Playing Online Games' , 'Watching Anime'],
     intro :"YOSH!! Welcome to my page 👋😁. I’m  Dan, a professional Front End developer, and I specialize in creating React applications that just work across all platforms and browsers. I care about building interfaces that are usable and pleasant for the most number of people possible."
 }
