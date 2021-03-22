@@ -171,7 +171,7 @@ export const projectData = [
         languages : ['React' , 'React Native' , 'Material UI'],
         role : ['Front End'],
         platform:['Web','IOS' , 'Android'],
-        url:'https://media-meter.net/mm-client/',
+        url:'https://media-meter.net/',
         bg:mmcardbg,
         position:"bottom",
         delay:0.5

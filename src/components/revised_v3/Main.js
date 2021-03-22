@@ -17,7 +17,7 @@ const Loader = () => (
         <motion.div
           variants={loaderAnimation}
           animate="animationOne"
-          exit={{x:-250,y:-200 , scale:5}}
+          exit={{x:-400,y:200 , scale:6}}
           style={{
             height:"20vh",
             width:"20vh",
@@ -29,7 +29,7 @@ const Loader = () => (
         <motion.div
           variants={loaderAnimation}
           animate="animationTwo"
-          exit={{scale:5}}
+          exit={{scale:10}}
           style={{
             height:"20vh",
             width:"20vh",
@@ -41,7 +41,7 @@ const Loader = () => (
         <motion.div
           variants={loaderAnimation}
           animate="animationThree"
-          exit={{x:250,y:200, scale:5}}
+          exit={{x:400,y:-200, scale:6}}
           style={{
             height:"20vh",
             width:"20vh",

@@ -47,13 +47,15 @@ const Projects = (props) => {
                     initial={{opacity:0 , x:-100}}
                     animate={{opacity:1 , x:0}}
                     transition={{delay:0.5}}
-                    style={{height:"95%" , width:"60%" , overflow:"hidden" ,background:"black"}}
+                    style={{height:"95%" , width:"60%" , overflow:"hidden" , background:"black"}}
                 >
-                    {activeProject.hasVideo?
-                        <ReactPlayer url={activeProject.videoLink} controls={true} width="100%" height="100%"/>
-                    :!activeProject.hasVideo ? 
-                        <img src={activeProject.bg} height="100%" width="100%" alt="bg"/>
-                    :null}
+                    <AnimatePresence>
+                        {activeProject.hasVideo?
+                            <ReactPlayer url={activeProject.videoLink} controls={true} width="100%" height="100%"/>
+                        :activeProject==="" ? 
+                            null
+                        :<img src={activeProject.bg} height="100%" width="100%" alt="bg"/>}
+                    </AnimatePresence>
                 </motion.div>
 
                 <motion.div 
@@ -119,11 +121,31 @@ const Projects = (props) => {
                                         <p className="active-project-subheader"> Role/s :</p>
                                         <p className="active-project-subheader-content">{activeProject.role.join(" , ")}</p>
                                         <div style={{marginTop:"1vh" , display:"flex" , justifyContent:"flex-end" , width:"100%"}}>
-                                            <motion.div variants={infiniteBounceInOut} whileHover="hover">
-                                                <LinkIcon className="active-project-icons"/>
+                                            <motion.div 
+                                                variants={infiniteBounceInOut} 
+                                                whileHover={activeProject.hasURL&&"hover"}
+                                                onClick={activeProject.hasURL?()=>window.open(activeProject.url,"_blank"):null}
+                                            >
+                                                <LinkIcon 
+                                                    style={{
+                                                        color:activeProject.hasURL?"#2D3D66":"gray",
+                                                        cursor:activeProject.hasURL?"pointer":"no-drop",
+                                                    }}
+                                                    className="active-project-icons"
+                                                />
                                             </motion.div>
-                                            <motion.div variants={infiniteBounceInOut} whileHover="hover">
-                                                <CodeIcon className="active-project-icons"/>
+                                            <motion.div 
+                                                variants={infiniteBounceInOut} 
+                                                whileHover={activeProject.viewSrc&&"hover"}
+                                                onClick={activeProject.viewSrc?()=>window.open(activeProject.srcCode,"_blank"):null}
+                                            >
+                                                <CodeIcon 
+                                                    style={{
+                                                        color:activeProject.viewSrc?"#2D3D66":"gray",
+                                                        cursor:activeProject.viewSrc?"pointer":"no-drop",
+                                                    }}
+                                                    className="active-project-icons"
+                                                />
                                             </motion.div>
                                         </div>
                                     </motion.div>
