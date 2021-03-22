@@ -53,6 +53,10 @@
     font-size: 1.5vw;
     margin:0;
 }
+.contentText-contact{
+    font-size: 1vw;
+    margin:0;
+}
 .submitBtn{
     border-radius: 1.6vw !important;
     width: 30% !important;
@@ -167,7 +171,7 @@
     padding: 3%;
     border-radius: 1vw;
     background-color: #fff;
-    height: 12vw;
+    height: 18vw;
     overflow: hidden;
 }
 .project-card-div{
@@ -185,6 +189,16 @@
     transition: 0.5s;
     /* transform: scale(1.07); */
     opacity: 1 !important;
+}
+
+.project-card-div-name{
+    position:absolute;
+    bottom:0;
+    background:#2D3D66;
+    width:100%;
+    text-align:center;
+    color:#fff;
+    padding:0.5vh 0vw;
 }
 .active-project-header{
     margin:0;
@@ -204,8 +218,26 @@
 }
 
 .active-project-icons{
-    font-size: 2vw !important;
+    font-size: 2.5vw !important;
     color: #2D3D66;
     cursor: pointer;
     margin-left: 1vw;
+}
+
+.indicator-div{
+    position:absolute;
+    bottom:0vw;
+    right:-0.3vw;
+    padding:1vw;
+    background:#2D3D66;
+    border-radius:50%;
+}
+.indicator-div-color{
+    height:1.5vw;
+    width:1.5vw;
+    border-radius:50%;
+}
+.slick-arrow::before{
+    color: #2D3D66 !important;
+    font-size: 2vw !important;
 }

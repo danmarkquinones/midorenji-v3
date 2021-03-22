@@ -50,8 +50,9 @@ const Projects = (props) => {
                     style={{height:"95%" , width:"60%" , overflow:"hidden" ,background:"black"}}
                 >
                     {activeProject.hasVideo?
-                        <ReactPlayer url={activeProject.videoLink} controls={true} style={{height:"100%" , width:"100%"}}/>
-                    :!activeProject.hasVideo ? <img src={activeProject.bg} height="100%" width="100%" alt="bg"/>
+                        <ReactPlayer url={activeProject.videoLink} controls={true} width="100%" height="100%"/>
+                    :!activeProject.hasVideo ? 
+                        <img src={activeProject.bg} height="100%" width="100%" alt="bg"/>
                     :null}
                 </motion.div>
 
@@ -160,18 +161,17 @@ const Projects = (props) => {
                                     }}
                                 >
                                     <img src={project.bg} height="100%"  width="100%" style={{objectFit:"cover" ,objectPosition:project.position}}/>
-                                    <div
-                                        style={{
-                                            position:"absolute",
-                                            bottom:0,
-                                            background:"#2D3D66",
-                                            width:"100%",
-                                            textAlign:"center",
-                                            color:"#fff",
-                                            padding:"0.5vh 0vw"
-                                        }}
-                                    >
-                                        <p style={{margin:0}}>{project.name}</p>
+                                    <div className="project-card-div-name">
+                                        <p style={{margin:0 , fontSize:"1vw"}}>{project.name}</p>
+                                    </div>
+                                    <div className="indicator-div">
+                                        <div 
+                                            className="indicator-div-color"
+                                            style={{
+                                                backgroundImage:!project.hasURL? "linear-gradient(to right, red , orange)":"linear-gradient(to right, green , lime)"
+                                            }}
+                                        >    
+                                        </div>
                                     </div>
                                 </div>
                             </div>

@@ -56,7 +56,9 @@ const LandingPage = (props) => {
     },[pageState])
 
     return(
-        <div
+        <motion.div
+            key="/profile"
+            exit={{opacity:0}}
             className="landing-page-container"
             style={{height:"100vh" , background:"#fff" , position:"relative", overflow:"hidden"}}
         >
@@ -86,7 +88,7 @@ const LandingPage = (props) => {
                     }}
                 >
                     {socialData.map((social,i)=>
-                        <motion.div variants={infiniteBounceInOut} whileHover="hover" className="icons-div">
+                        <motion.div key={i} variants={infiniteBounceInOut} whileHover="hover" className="icons-div">
                             {social.component("icons")}
                         </motion.div>
                     )}
@@ -124,10 +126,24 @@ const LandingPage = (props) => {
                             <AboutMe/>
                         </div>
                     :pageState!=="project"?
-                        <motion.div variants={infiniteBounceInOut} whileHover="hover"  style={{cursor:"pointer",position:"absolute" , top:"15%" , left :"10%"}}>  
-                            <motion.h2 variants={fadeinLeft} initial="initial" animate="animate" style={{fontSize:"3vw", color:"#fff"}}>KNOW A BIT <br/> OF ME !</motion.h2>
+                        <motion.div 
+                            variants={infiniteBounceInOut} 
+                            whileHover="hover"  
+                            style={{cursor:"pointer",position:"absolute" , top:"15%" , left :"10%"}}
+                        >  
+                            <motion.h2 
+                                variants={fadeinLeft} 
+                                initial="initial" 
+                                animate="animate" 
+                                style={{fontSize:"3vw", color:"#fff"}}
+                            >KNOW A BIT <br/> OF ME !
+                            </motion.h2>
                         </motion.div>
-                    :<motion.div variants={infiniteBounceInOut} whileHover="hover"  style={{cursor:"pointer",position:"absolute" , top:"15%" , left:"15%"}}>
+                    :<motion.div 
+                        variants={infiniteBounceInOut} 
+                        whileHover="hover"  
+                        style={{cursor:"pointer",position:"absolute" , top:"15%" , left:"15%"}}
+                    >
                         <AccountCircleIcon style={{fontSize:"4.5vw", color:"#fff"}}/>
                     </motion.div>}
                 </div>
@@ -161,7 +177,11 @@ const LandingPage = (props) => {
                             variants={fadeIn} initial="initial" animate="animate"
                         >
                             <motion.h1 style={{color:"#2D3D66"}}>Ow.. Hi there! It's me Dan, and welcome to my profile.</motion.h1>
-                            <motion.div variants={infiniteBounceInOut} whileHover="hover"  style={{width:"100%" , overflow:"hidden"}}>
+                            <motion.div 
+                                variants={infiniteBounceInOut} 
+                                whileHover="hover" 
+                                style={{width:"100%" , overflow:"hidden"}}
+                            >
                                 <Button 
                                     className="view-works-btn"
                                     disableElevation
@@ -174,7 +194,8 @@ const LandingPage = (props) => {
                     </div>
                 :pageState!=="project"?
                     <motion.div 
-                        variants={infiniteBounceInOut} whileHover="hover"
+                        variants={infiniteBounceInOut} 
+                        whileHover="hover"
                         onClick={()=>setPageState("project")}
                         style={{
                             cursor:"pointer",
@@ -215,21 +236,37 @@ const LandingPage = (props) => {
                 </div>
                 <div onClick={()=>setPageState("contact")}>
                     {pageState==="contact"?
-                        <div style={{position:"absolute" , bottom:"0%" , right:"0%" , height:"100%" , padding:"4% 7%"}}>
+                        <div 
+                            style={{position:"absolute" , bottom:"0%" , right:"0%" , height:"100%" , padding:"4% 7%"}}
+                        >
                             <img src={bg} style={{height:"100%" , position:"absolute" , right:0,top:0 , opacity:0.2}}/>
                             <ContactMe/>
                         </div>
                     :pageState!=="project"?
-                        <motion.div variants={infiniteBounceInOut} whileHover="hover" style={{ cursor:"pointer",position:"absolute" , top:"55%" , left:"35%"}}>  
-                            <motion.h2 variants={fadeinRight} initial="initial" animate="animate" style={{fontSize:"3vw", color:"#fff"}}>EMAIL ME !</motion.h2>
+                        <motion.div 
+                            variants={infiniteBounceInOut} 
+                            whileHover="hover" 
+                            style={{ cursor:"pointer",position:"absolute" , top:"55%" , left:"35%"}}
+                        >  
+                            <motion.h2 
+                                variants={fadeinRight} 
+                                initial="initial" 
+                                animate="animate" 
+                                style={{fontSize:"3vw", color:"#fff"}}
+                            >EMAIL ME !
+                            </motion.h2>
                         </motion.div>
-                    :<motion.div variants={infiniteBounceInOut} whileHover="hover" style={{cursor:"pointer",position:"absolute" , top:"40%" , left:"40%"}}>
+                    :<motion.div 
+                        variants={infiniteBounceInOut} 
+                        whileHover="hover" 
+                        style={{cursor:"pointer",position:"absolute" , top:"40%" , left:"40%"}}
+                    >
                         <MailIcon style={{fontSize:"4.5vw", color:"#fff"}}/>
                     </motion.div>}
                 </div>
             </div>
 
-        </div>
+        </motion.div>
     )
 }
 

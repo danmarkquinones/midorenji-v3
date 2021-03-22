@@ -67,12 +67,12 @@ const ContactMe = (props) => {
     }
 
     return(
-        <div style={{color:"#fff" , height:"100%" , width:"100%", position:"relative"}}>
+        <div style={{color:"#fff" , height:"100%" , width:"100%", position:"relative" , paddingRight:"10vw"}}>
             <motion.div variants={headerVariants} initial="initial" animate="animate" transition={{delay:0.5}}>
                 <p className="headerText">Contact Me</p>
             </motion.div>
             <motion.p 
-                className="contentText" 
+                className="contentText-contact" 
                 variants={textVariants} 
                 initial="initial" 
                 animate="animate" 
@@ -82,7 +82,7 @@ const ContactMe = (props) => {
             </motion.p>
             <motion.div
                 style={{marginTop:"1vw"}}
-                className="contentText" 
+                className="contentText-contact" 
                 variants={textVariants} 
                 initial="initial" 
                 animate="animate" 
@@ -90,15 +90,15 @@ const ContactMe = (props) => {
             >
                 <Grid container>
                     <Grid item sm={6}>
-                        <div style={{display:"flex" , alignItems:"center" , justifyContent:"center"}}>
+                        <div style={{display:"flex" , alignItems:"center" , justifyContent:"flex-start"}}>
                             <EmailIcon style={{fontSize:"2vw"}}/>
-                            <p className="contentText" style={{margin:"0vw 1vw"}}>{profileData.email}</p>
+                            <p className="contentText-contact" style={{margin:"0vw 1vw"}}>{profileData.email}</p>
                         </div>
                     </Grid>
                     <Grid item sm={6}>
-                        <div style={{display:"flex" , alignItems:"center" , justifyContent:"center"}}>
+                        <div style={{display:"flex" , alignItems:"center" , justifyContent:"flex-start"}}>
                             <PhoneAndroidIcon style={{fontSize:"2vw"}}/>
-                            <p className="contentText" style={{margin:"0vw 1vw"}}>{profileData.contact}</p>
+                            <p className="contentText-contact" style={{margin:"0vw 1vw"}}>{profileData.contact}</p>
                         </div>
                     </Grid>
                 </Grid>
@@ -109,7 +109,7 @@ const ContactMe = (props) => {
                 initial="initial" 
                 animate="animate" 
                 transition={{delay:2 , duration:0.5}}
-                style={{position:"absolute" , width:"100%" , bottom:0, right:0,}}
+                style={{position:"absolute" , width:"90%" , bottom:"-2%", right:"10%"}}
             >
                 <form autoComplete="off" className="contact-form" onSubmit={sendEmail}>
                     <input type="hidden" name="to_email" value={profileData.email} />
@@ -119,7 +119,7 @@ const ContactMe = (props) => {
                         <InputLabel 
                             style={{
                                 fontWeight:"bold",
-                                fontSize:"2vw",
+                                fontSize:"1.5vw",
                                 width:"20%",
                                 color: focusedForm==="from_email"?"#2D3D66": "#c4c4c4"
                             }}
@@ -138,7 +138,7 @@ const ContactMe = (props) => {
                                 style:{
                                     color:"#2D3D66",
                                     overflow:"auto",
-                                    fontSize:"2vw",
+                                    fontSize:"1.5vw",
                                 }
                             }}
                         />
@@ -150,8 +150,8 @@ const ContactMe = (props) => {
                         <InputLabel 
                             style={{
                                 fontWeight:"bold",
-                                fontSize:"2vw",
-                                width:"25%",
+                                fontSize:"1.5vw",
+                                width:"20%",
                                 color: focusedForm==="subject"?"#2D3D66": "#c4c4c4"
                             }}
                         >
@@ -167,7 +167,7 @@ const ContactMe = (props) => {
                                 style:{
                                     color:"#2D3D66",
                                     overflow:"auto",
-                                    fontSize:"2vw",
+                                    fontSize:"1.5vw",
                                 }
                             }}
                         />
@@ -179,7 +179,7 @@ const ContactMe = (props) => {
                         <InputLabel 
                             style={{
                                 fontWeight:"bold",
-                                fontSize:"2vw",
+                                fontSize:"1.5vw",
                                 width:"100%",
                                 color: focusedForm==="message"?"#2D3D66": "#c4c4c4"
                             }}
@@ -193,10 +193,10 @@ const ContactMe = (props) => {
                             inputProps={{
                                 style:{
                                     color:"#2D3D66",
-                                    height:"7vw",
+                                    height:"30vh",
                                     overflow:"auto",
-                                    fontSize:"2vw",
-                                    lineHeight:"2vw"
+                                    fontSize:"1.5vw",
+                                    lineHeight:"1.5vw"
                                 }
                             }}
                             onFocus={()=>handleFocus("message")}
