@@ -50,7 +50,7 @@ const AboutMe = (props) => {
                             animate="animate" 
                             transition={{delay:1 , duration:0.5}}
                         >
-                            I graduated Bachelor of Science in Mathematics at Polytechnic University of the Philippines. Teaching math for one year had me realize that something is missing. My passion in art is slowly fading. So I decided to change my career path where I can use my degree and pursue my passion at the same time. Thats how I become an App Developer.
+                            Graduate of Bachelor of Science in Mathematics at Polytechnic University of the Philippines. Teaching math for a year had me realize that something is missing and my passion for arts is fading. So I decided to change my career where I can use my degree and pursue my passion at the same time. Thats how I become an App Developer.
                         </motion.p>
                     </div>
                 </div>
@@ -69,7 +69,7 @@ const AboutMe = (props) => {
                                 transition={{delay:0.5 , duration:0.2}}
                                 style={{display:"flex"}}
                             >
-                                <div style={{ width:"15%"}}><span >Front End : </span> </div>
+                                <div style={{ width:"22%"}}><span >Front End : </span> </div>
                                 <span>{profileData.skillsFE.join(" , ")}</span>
                             </motion.div>
                             <motion.div 
@@ -80,7 +80,7 @@ const AboutMe = (props) => {
                                 transition={{delay:0.7 , duration:0.2}}
                                 style={{display:"flex"}}
                             >
-                                <div style={{ width:"15%"}}><span >UI/UX : </span> </div>
+                                <div style={{ width:"22%"}}><span >UI/UX : </span> </div>
                                 <span>{profileData.skillsUI.join(" , ")}</span>
                             </motion.div>
                             <motion.div 
@@ -91,7 +91,7 @@ const AboutMe = (props) => {
                                 transition={{delay:0.9 , duration:0.2}}
                                 style={{display:"flex"}}
                             >
-                                <div style={{ width:"15%"}}><span >Back end : </span> </div>
+                                <div style={{ width:"22%"}}><span >Back end : </span> </div>
                                 <span>{profileData.skillsBE.join(" , ")}</span>
                             </motion.div>
                             <motion.div 
@@ -102,7 +102,18 @@ const AboutMe = (props) => {
                                 transition={{delay:1.1 , duration:0.2}}
                                 style={{display:"flex"}}
                             >
-                                <div style={{ width:"15%"}}><span >Others : </span> </div>
+                                <div style={{ width:"22%"}}><span >Version Control : </span> </div>
+                                <span>GIT</span>
+                            </motion.div>
+                            <motion.div 
+                                className="contentText"
+                                variants={textVariants} 
+                                initial="initial" 
+                                animate="animate" 
+                                transition={{delay:1.3 , duration:0.2}}
+                                style={{display:"flex"}}
+                            >
+                                <div style={{ width:"22%"}}><span >Others : </span> </div>
                                 <span>{profileData.designingLibraries.join(" , ")}</span>
                             </motion.div>
                         </div>
@@ -119,7 +130,7 @@ const AboutMe = (props) => {
                                 animate="animate" 
                                 transition={{delay:1.8 , duration:0.5}}
                             >
-                                Well, actually aside from eating I do like everything related to arts. I used to make portraits using color pencils. I'm also an awkward dancer and likes to sing, eventhough notes doesnt like me back. But most especially I love doing movie marathon during my chill times.
+                                Aside from eating I like everything related to arts. I used to make portraits using color pencils. I'm also an awkward dancer and likes to sing, eventhough notes doesnt like me back. But most especially I love doing movie marathon during my chill times.
                             </motion.p>
                         </div>
                     </div>

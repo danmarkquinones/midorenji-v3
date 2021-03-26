@@ -122,7 +122,7 @@ const LandingPage = (props) => {
                 </div>
                 <div onClick={()=>setPageState("about")}>
                     {pageState==="about"?
-                        <div style={{position:"absolute" , top:"0%" , left:"0%" , height:"100%" , padding:"7%"}}>
+                        <div style={{position:"absolute" , top:"0%" , left:"0%" , height:"100%" , padding:"5% 7%"}}>
                             <AboutMe/>
                         </div>
                     :pageState!=="project"?
