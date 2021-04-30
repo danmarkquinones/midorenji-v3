@@ -1,23 +1,24 @@
 {
   "files": {
     "main.css": "https://danmarkquinones.github.io/midorenji-v3/static/css/main.a820a6a0.chunk.css",
-    "main.js": "https://danmarkquinones.github.io/midorenji-v3/static/js/main.25dfafb3.chunk.js",
-    "main.js.map": "https://danmarkquinones.github.io/midorenji-v3/static/js/main.25dfafb3.chunk.js.map",
-    "runtime-main.js": "https://danmarkquinones.github.io/midorenji-v3/static/js/runtime-main.775bb7d0.js",
-    "runtime-main.js.map": "https://danmarkquinones.github.io/midorenji-v3/static/js/runtime-main.775bb7d0.js.map",
+    "main.js": "https://danmarkquinones.github.io/midorenji-v3/static/js/main.a6a43b60.chunk.js",
+    "main.js.map": "https://danmarkquinones.github.io/midorenji-v3/static/js/main.a6a43b60.chunk.js.map",
+    "runtime-main.js": "https://danmarkquinones.github.io/midorenji-v3/static/js/runtime-main.55802347.js",
+    "runtime-main.js.map": "https://danmarkquinones.github.io/midorenji-v3/static/js/runtime-main.55802347.js.map",
     "static/css/2.559b5ef0.chunk.css": "https://danmarkquinones.github.io/midorenji-v3/static/css/2.559b5ef0.chunk.css",
-    "static/js/2.2f86dbb6.chunk.js": "https://danmarkquinones.github.io/midorenji-v3/static/js/2.2f86dbb6.chunk.js",
-    "static/js/2.2f86dbb6.chunk.js.map": "https://danmarkquinones.github.io/midorenji-v3/static/js/2.2f86dbb6.chunk.js.map",
-    "static/js/3.1782a06a.chunk.js": "https://danmarkquinones.github.io/midorenji-v3/static/js/3.1782a06a.chunk.js",
-    "static/js/3.1782a06a.chunk.js.map": "https://danmarkquinones.github.io/midorenji-v3/static/js/3.1782a06a.chunk.js.map",
+    "static/js/2.9e1ba750.chunk.js": "https://danmarkquinones.github.io/midorenji-v3/static/js/2.9e1ba750.chunk.js",
+    "static/js/2.9e1ba750.chunk.js.map": "https://danmarkquinones.github.io/midorenji-v3/static/js/2.9e1ba750.chunk.js.map",
+    "static/js/3.7c994aa0.chunk.js": "https://danmarkquinones.github.io/midorenji-v3/static/js/3.7c994aa0.chunk.js",
+    "static/js/3.7c994aa0.chunk.js.map": "https://danmarkquinones.github.io/midorenji-v3/static/js/3.7c994aa0.chunk.js.map",
     "index.html": "https://danmarkquinones.github.io/midorenji-v3/index.html",
     "static/css/2.559b5ef0.chunk.css.map": "https://danmarkquinones.github.io/midorenji-v3/static/css/2.559b5ef0.chunk.css.map",
     "static/css/main.a820a6a0.chunk.css.map": "https://danmarkquinones.github.io/midorenji-v3/static/css/main.a820a6a0.chunk.css.map",
-    "static/js/2.2f86dbb6.chunk.js.LICENSE.txt": "https://danmarkquinones.github.io/midorenji-v3/static/js/2.2f86dbb6.chunk.js.LICENSE.txt",
+    "static/js/2.9e1ba750.chunk.js.LICENSE.txt": "https://danmarkquinones.github.io/midorenji-v3/static/js/2.9e1ba750.chunk.js.LICENSE.txt",
     "static/media/accenture.70188df5.png": "https://danmarkquinones.github.io/midorenji-v3/static/media/accenture.70188df5.png",
     "static/media/angular.7c132fab.png": "https://danmarkquinones.github.io/midorenji-v3/static/media/angular.7c132fab.png",
     "static/media/baliktanaw.d8d5ad31.mp4": "https://danmarkquinones.github.io/midorenji-v3/static/media/baliktanaw.d8d5ad31.mp4",
     "static/media/baliktanawcardbg.29f2faaa.PNG": "https://danmarkquinones.github.io/midorenji-v3/static/media/baliktanawcardbg.29f2faaa.PNG",
+    "static/media/cv_quinones.c43b3a5f.pdf": "https://danmarkquinones.github.io/midorenji-v3/static/media/cv_quinones.c43b3a5f.pdf",
     "static/media/drawing.4b9bf398.png": "https://danmarkquinones.github.io/midorenji-v3/static/media/drawing.4b9bf398.png",
     "static/media/experiencebg.cfbddcd2.png": "https://danmarkquinones.github.io/midorenji-v3/static/media/experiencebg.cfbddcd2.png",
     "static/media/figura.d5293737.mp4": "https://danmarkquinones.github.io/midorenji-v3/static/media/figura.d5293737.mp4",
@@ -44,10 +45,10 @@
     "static/media/watching.a4e6abd5.PNG": "https://danmarkquinones.github.io/midorenji-v3/static/media/watching.a4e6abd5.PNG"
   },
   "entrypoints": [
-    "static/js/runtime-main.775bb7d0.js",
+    "static/js/runtime-main.55802347.js",
     "static/css/2.559b5ef0.chunk.css",
-    "static/js/2.2f86dbb6.chunk.js",
+    "static/js/2.9e1ba750.chunk.js",
     "static/css/main.a820a6a0.chunk.css",
-    "static/js/main.25dfafb3.chunk.js"
+    "static/js/main.a6a43b60.chunk.js"
   ]
 }
