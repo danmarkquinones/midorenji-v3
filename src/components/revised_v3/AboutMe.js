@@ -5,6 +5,8 @@ import { motion} from "framer-motion";
 import me from "../../images/me.png";
 import { Button , Grid } from "@material-ui/core";
 import { experienceData , profileData } from "../../helpers/data";
+import zIndex from "@material-ui/core/styles/zIndex";
+import cv from "../../images/cv_quinones.pdf";
 
 const AboutMe = (props) => {
 
@@ -24,11 +26,12 @@ const AboutMe = (props) => {
         animate:{opacity:1}
     }
 
+
     return(
         <div style={{color:"#fff"}}>
-            <img src={me} alt="me" style={{height:"100%" , position:"absolute" , left:0 , opacity:0.1}}/>
+            <img src={me} alt="me" draggable={false} style={{height:"100%" , position:"absolute" , left:0 , opacity:0.1, zIndex:0}}/>
             {step===0?
-                <div>
+                <div style={{zIndex:1}}>
                     <motion.div variants={headerVariants} initial="initial" animate="animate">
                         <p className="headerText">Who am I ?</p>
                     </motion.div>
@@ -40,7 +43,7 @@ const AboutMe = (props) => {
                             animate="animate" 
                             transition={{delay:0.5 , duration:0.5}}
                         >
-                            I’m  Danmark Quinones, you can call me Dan. I am professional Front End developer , UI/UX Designer and a liitle Back End developer in my heart. I specialize in creating React applications that just work across all platforms and browsers. I care about building interfaces that are usable and pleasant for the most number of people possible.
+                            I’m  Danmark Quinones, you can call me Dan. I am professional Front End developer , UI/UX Designer and a little Back End developer in my heart. I specialize in creating React applications that just work across all platforms and browsers. I care about building interfaces that are usable and pleasant for the most number of people possible.
                         </motion.p>
                         <motion.p 
                             className="contentText" 
@@ -140,7 +143,7 @@ const AboutMe = (props) => {
                     <p className="headerText">Companies I work with</p>
                 </motion.div>
                 
-                <div style={{height:"50vh" , display:"flex" , alignItems:"center"}}>
+                <div style={{width:"55vw" , display:"flex"  , alignItems:"center" , height:"50vh"}}>
                     <Grid container >
                         {experienceData.map((data,i)=>
                             <Grid item sm={6} md={4} key={i} style={{padding:"1%"}}>
@@ -161,8 +164,11 @@ const AboutMe = (props) => {
                         )}
                     </Grid>
                 </div>
+            </div>
+            }
 
-                <div style={{marginTop:"10px"}}>
+            {step===2?
+                <div style={{marginTop:"10px" , position:"absolute"  ,bottom:"15%"}}>
                     <motion.p 
                         className="contentText"
                         variants={headerVariants} 
@@ -170,11 +176,15 @@ const AboutMe = (props) => {
                         animate="animate" 
                         transition={{delay:2}}
                     >
-                        You can view or download my CV for more details about my roles and responsibilities in my previous employer.
+                        For more information about my roles and responsibilities in my previous employer.
+                        You can 
+                            <a href={cv} target="_blank"> view </a> 
+                        or 
+                            <a href={cv} download> download </a> 
+                        my CV 
                     </motion.p>
                 </div>
-            </div>
-            }
+            :null}
 
             <div style={{position:"absolute" , bottom:"5%" , display:"flex" , width:"85%"}}>
                 {step!==0?
