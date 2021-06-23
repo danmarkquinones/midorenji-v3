@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "https://danmarkquinones.github.io/midorenji-v3/static/css/main.a820a6a0.chunk.css",
-    "main.js": "https://danmarkquinones.github.io/midorenji-v3/static/js/main.4646dc95.chunk.js",
-    "main.js.map": "https://danmarkquinones.github.io/midorenji-v3/static/js/main.4646dc95.chunk.js.map",
+    "main.js": "https://danmarkquinones.github.io/midorenji-v3/static/js/main.7cd0c53e.chunk.js",
+    "main.js.map": "https://danmarkquinones.github.io/midorenji-v3/static/js/main.7cd0c53e.chunk.js.map",
     "runtime-main.js": "https://danmarkquinones.github.io/midorenji-v3/static/js/runtime-main.55802347.js",
     "runtime-main.js.map": "https://danmarkquinones.github.io/midorenji-v3/static/js/runtime-main.55802347.js.map",
     "static/css/2.559b5ef0.chunk.css": "https://danmarkquinones.github.io/midorenji-v3/static/css/2.559b5ef0.chunk.css",
@@ -18,7 +18,7 @@
     "static/media/angular.7c132fab.png": "https://danmarkquinones.github.io/midorenji-v3/static/media/angular.7c132fab.png",
     "static/media/baliktanaw.d8d5ad31.mp4": "https://danmarkquinones.github.io/midorenji-v3/static/media/baliktanaw.d8d5ad31.mp4",
     "static/media/baliktanawcardbg.29f2faaa.PNG": "https://danmarkquinones.github.io/midorenji-v3/static/media/baliktanawcardbg.29f2faaa.PNG",
-    "static/media/cv_quinones.0456ee1a.pdf": "https://danmarkquinones.github.io/midorenji-v3/static/media/cv_quinones.0456ee1a.pdf",
+    "static/media/cv_quinones.c689a559.pdf": "https://danmarkquinones.github.io/midorenji-v3/static/media/cv_quinones.c689a559.pdf",
     "static/media/drawing.4b9bf398.png": "https://danmarkquinones.github.io/midorenji-v3/static/media/drawing.4b9bf398.png",
     "static/media/experiencebg.cfbddcd2.png": "https://danmarkquinones.github.io/midorenji-v3/static/media/experiencebg.cfbddcd2.png",
     "static/media/figura.d5293737.mp4": "https://danmarkquinones.github.io/midorenji-v3/static/media/figura.d5293737.mp4",
@@ -49,6 +49,6 @@
     "static/css/2.559b5ef0.chunk.css",
     "static/js/2.b9093c14.chunk.js",
     "static/css/main.a820a6a0.chunk.css",
-    "static/js/main.4646dc95.chunk.js"
+    "static/js/main.7cd0c53e.chunk.js"
   ]
 }
