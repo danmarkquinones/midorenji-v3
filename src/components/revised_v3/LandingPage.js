@@ -11,6 +11,7 @@ import { socialData } from "../../helpers/data";
 import bg from "../../images/experiencebg.png";
 import Projects from "./Projects";
 import { fadeIn, fadeinLeft, fadeinRight, infiniteBounceInOut } from "./framerMotionAnimations";
+import ProjectsV2 from "./ProjectsV2";
 
 
 const LandingPage = (props) => {
@@ -208,6 +209,7 @@ const LandingPage = (props) => {
                     </motion.div>
                 :<div style={{display:"flex" , height:"100%" , alignItems:"center" , justifyContent:"center"}}>
                     <Projects/>
+                    {/* <ProjectsV2/> */}
                 </div>
                 }
             </div>
